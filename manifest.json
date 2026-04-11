@@ -1,0 +1,40 @@
+{
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "79fadc88-d702-4705-84de-b6e8f86d9d79",
+      "version": [
+        0,
+        0,
+        2
+      ],
+      "description": "Easy Fern Anti Cheat"
+    }
+  ],
+  "header": {
+    "uuid": "74c37ab4-99e7-466b-abf6-d2177c5f121e",
+    "version": [
+      0,
+      0,
+      2
+    ],
+    "description": "Easy Fern Anti Cheat",
+    "name": Fern Anti Cheat",
+    "min_engine_version": [
+      1,
+      20,
+      0
+    ]
+  },
+  "format_version": 2,
+  "dependencies": [
+    {
+      "uuid": "6879d931-0c16-4c36-bdc2-e54011ac0c59",
+      "version": [
+        0,
+        0,
+        1
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1724 @@
+﻿{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.jump": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"jump": "query.is_jumping"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove jump",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aJUMP§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}",
+						"/scoreboard players add @s PCJ 1"
+					]
+				},
+				"jump": {
+					"transitions": [
+						{
+							"default": "!query.is_jumping"
+						}
+					],
+					"on_entry": [
+						"/tag @s add jump",
+						"/tp @s[tag=freeze] ~~-0.5~",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aJUMP§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}",
+						"/scoreboard players add @s PCJ 1"
+					]
+				}
+			}
+		},
+		"controller.animation.glide": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"glide": "query.is_gliding"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove gliding",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aGLIDE§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+					]
+				},
+				"glide": {
+					"transitions": [
+						{
+							"default": "!query.is_gliding"
+						}
+					],
+					"on_entry": [
+						"/tag @s add gliding",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aGLIDE§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+					]
+				}
+			}
+		},
+		"controller.animation.attacktime": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attacktime": "variable.attack_time"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove attacktime",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aLEVITATE§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+					]
+				},
+				"attacktime": {
+					"transitions": [
+						{
+							"default": "!variable.attack_time"
+						}
+					],
+					"on_entry": [
+						"/tag @s add attacktime",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aLEVITATE§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+					]
+				}
+			}
+		},
+		"controller.animation.levitate": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"levitate": "query.is_levitating"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove levitating",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aLEVITATE§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+					]
+				},
+				"levitate": {
+					"transitions": [
+						{
+							"default": "!query.is_levitating"
+						}
+					],
+					"on_entry": [
+						"/tag @s add levitating",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aLEVITATE§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+					]
+				}
+			}
+		},
+		"controller.animation.ground": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"ground": "query.is_on_ground"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove ground",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aGROUND§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}",
+						"/scoreboard players add @s PC 1"
+					]
+				},
+				"ground": {
+					"transitions": [
+						{
+							"default": "!query.is_on_ground"
+						}
+					],
+					"on_entry": [
+						"/tag @s add ground",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aGROUND§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}",
+						"/scoreboard players add @s PC 1"
+					]
+				}
+			}
+		},
+		"controller.animation.death": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"dead": "!query.is_alive"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove dead",
+						"/tag @s add alive",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aDEATH§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+					]
+				},
+				"dead": {
+					"transitions": [
+						{
+							"default": "query.is_alive"
+						}
+					],
+					"on_entry": [
+						"/tag @s add dead",
+						"/tag @s remove alive",
+						"/tag @s remove right",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aDEATH§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+					]
+				}
+			}
+		},
+		"controller.animation.ride": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"ride": "query.is_riding"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove riding",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aRIDE§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+					]
+				},
+				"ride": {
+					"transitions": [
+						{
+							"default": "!query.is_riding"
+						}
+					],
+					"on_entry": [
+						"/tag @s add riding",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aRIDE§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}",
+						"/tag @s remove moving"
+					]
+				}
+			}
+		},
+		"controller.animation.left": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"left": "variable.attack_time"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove left",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aLEFT§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+					]
+				},
+				"left": {
+					"transitions": [
+						{
+							"default": "!variable.attack_time"
+						}
+					],
+					"on_entry": [
+						"/tag @s add left",
+						"/scriptevent conla:left",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aLEFT§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+					]
+				}
+			}
+		},
+		"controller.animation.right": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							// Wacky solution at fixing a false positive, but whatever
+							"right": "query.is_using_item && !query.is_item_name_any('slot.weapon.mainhand','minecraft:fishing_rod')"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove right",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aRIGHT§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop,ticks=\"},{\"score\":{\"name\":\"@s\",\"objective\":\"right\"}},{\"text\":\")\"}]}",
+						"/scoreboard players set @s right 0"
+					]
+				},
+				"right": {
+					"transitions": [
+						{
+							"default": "!query.is_using_item"
+						}
+					],
+					"on_entry": [
+						"/tag @s add right",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aRIGHT§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start,ticks=0)\"}]}",
+						"/execute @s[tag=hasGUIopen] ~~~ function checks/alerts/invmove"
+					]
+				}
+			}
+		},
+		"controller.animation.sneak": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"sneak": "query.is_sneaking"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove sneak",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSNEAK§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+					]
+				},
+				"sneak": {
+					"transitions": [
+						{
+							"default": "!query.is_sneaking"
+						}
+					],
+					"on_entry": [
+						"/tag @s add sneak",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSNEAK§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+					]
+				}
+			}
+		},
+		"controller.animation.move": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"move": "query.is_moving"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove moving",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aMOVE§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}",
+						"/scoreboard players add @s PCM 1"
+					]
+				},
+				"move": {
+					"transitions": [
+						{
+							"default": "!query.is_moving"
+						}
+					],
+					"on_entry": [
+						"/tag @s add moving",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aMOVE§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}",
+						"/tp @s[tag=freeze] ~~~",
+						"/scoreboard players set @s last_move 0",
+						"/scoreboard players add @s PCM 1"
+					]
+				}
+			}
+		},
+		"controller.animation.movement.forward": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"forward": "query.is_moving && ((query.cardinal_facing_2d == 2 && query.movement_direction(2) < -0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) > 0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) > 0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) < -0.35))"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove forward"
+					]
+				},
+				"forward": {
+					"transitions": [
+						{
+							"default": "!query.is_moving || ((query.cardinal_facing_2d == 2 && query.movement_direction(2) >= -0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) <= 0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) <= 0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) >= -0.35))"
+						}
+					],
+					"on_entry": [
+						"/tag @s add forward"
+					]
+				}
+			}
+		},
+		"controller.animation.movement.backward": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"backward": "query.is_moving && ((query.cardinal_facing_2d == 2 && query.movement_direction(2) > 0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) < -0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) < -0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) > 0.35))"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove backward"
+					]
+				},
+				"backward": {
+					"transitions": [
+						{
+							"default": "!query.is_moving || ((query.cardinal_facing_2d == 2 && query.movement_direction(2) <= 0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) >= -0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) >= -0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) <= 0.35))"
+						}
+					],
+					"on_entry": [
+						"/tag @s add backward"
+					]
+				}
+			}
+		},
+		"controller.animation.movement.leftward": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"leftward": "query.moving && ((query.cardinal_facing_2d == 2 && query.movement_direction(0) < -0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) > 0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) < -0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) > 0.35))"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove leftward"
+					]
+				},
+				"leftward": {
+					"transitions": [
+						{
+							"default": "!query.is_moving || ((query.cardinal_facing_2d == 2 && query.movement_direction(0) >= -0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) <= 0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) >= -0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) <= 0.35))"
+						}
+					],
+					"on_entry": [
+						"/tag @s add leftward"
+					]
+				}
+			}
+		},
+		"controller.animation.movement.rightward": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"rightward": "query.is_moving && ((query.cardinal_facing_2d == 2 && query.movement_direction(0) > 0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) < -0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) > 0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) < -0.35))"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove rightward"
+					]
+				},
+				"rightward": {
+					"transitions": [
+						{
+							"default": "!query.is_moving || ((query.cardinal_facing_2d == 2 && query.movement_direction(0) <= 0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) >= -0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) <= 0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) >= -0.35))"
+						}
+					],
+					"on_entry": [
+						"/tag @s add rightward"
+					]
+				}
+			}
+		},
+		"controller.animation.swim": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swim": "query.is_swimming"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove swimming",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSWIM§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+					]
+				},
+				"swim": {
+					"transitions": [
+						{
+							"default": "!query.is_swimming"
+						}
+					],
+					"on_entry": [
+						"/tag @s add swimming",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSWIM§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+					]
+				}
+			}
+		},"controller.animation.is_using_item": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"is_using_item": "query.is_using_item"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove using_item",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSWIM§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+					]
+				},
+				"is_using_item": {
+					"transitions": [
+						{
+							"default": "!query.is_using_item"
+						}
+					],
+					"on_entry": [
+						"/tag @s add using_item",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSWIM§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+					]
+				}
+			}
+		},
+		"controller.animation.sleep": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"sleeping": "query.is_sleeping"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove sleeping",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSLEEP§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+					]
+				},
+				"sleeping": {
+					"transitions": [
+						{
+							"default": "!query.is_sleeping"
+						}
+					],
+					"on_entry": [
+						"/tag @s add sleeping",
+						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSLEEP§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+					]
+				}
+			}
+		},
+		"controller.animation.trident": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"trident": "query.is_item_name_any('slot.weapon.mainhand','minecraft:trident') && query.is_in_water_or_rain && query.is_using_item"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove trident"
+					]
+				},
+				"trident": {
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:trident') || !query.is_in_water_or_rain"
+						},
+						{
+							"riptide": "query.is_item_name_any('slot.weapon.mainhand','minecraft:trident') && query.is_in_water_or_rain && !query.is_using_item"
+						}
+					],
+					"on_entry": [
+						"/tag @s add trident"
+					]
+				},
+				"riptide": {
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:trident') || !query.is_in_water_or_rain"
+						},
+						{
+							"trident": "query.is_item_name_any('slot.weapon.mainhand','minecraft:trident') && query.is_in_water_or_rain && query.is_using_item"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove trident",
+						"/tag @s add riptide"
+					]
+				}
+			}
+		},
+		"controller.animation.can_climb": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"can_climb": "query.can_climb"}
+          ],
+          "on_entry": [
+            "/tag @s remove can_climb"
+          ]
+        },
+        "can_climb": {
+          "transitions": [
+            {"default": "!query.can_climb"}
+          ],
+          "on_entry": [
+            "/tag @s add can_climb"
+          ]
+        }
+      }
+    },
+    "controller.animation.can_damage_nearby_mobs": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"can_damage": "query.can_damage_nearby_mobs"}
+          ],
+          "on_entry": [
+            "/tag @s remove can_damage_mobs"
+          ]
+        },
+        "can_damage": {
+          "transitions": [
+            {"default": "!query.can_damage_nearby_mobs"}
+          ],
+          "on_entry": [
+            "/tag @s add can_damage_mobs"
+          ]
+        }
+      }
+    },
+"controller.animation.has_collision": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"has_collisio": "query.has_collision"}
+          ],
+          "on_entry": [
+            "/tag @s remove has_collision"
+          ]
+        },
+        "has_collisio": {
+          "transitions": [
+            {"default": "!query.has_collision"}
+          ],
+          "on_entry": [
+            "/tag @s add has_collision"
+          ]
+        }
+      }
+    },"controller.animation.is_wall_climbing": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"has_collisio": "query.is_wall_climbing"}
+          ],
+          "on_entry": [
+            "/tag @s remove is_wall_climbing"
+          ]
+        },
+        "has_collisio": {
+          "transitions": [
+            {"default": "!query.is_wall_climbing"}
+          ],
+          "on_entry": [
+            "/tag @s add is_wall_climbing"
+          ]
+        }
+      }
+    },
+    "controller.animation.can_dash": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"can_dash": "query.can_dash"}
+          ],
+          "on_entry": [
+            "/tag @s remove can_dash"
+          ]
+        },
+        "can_dash": {
+          "transitions": [
+            {"default": "!query.can_dash"}
+          ],
+          "on_entry": [
+            "/tag @s add can_dash"
+          ]
+        }
+      }
+    },
+    "controller.animation.can_fly": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"can_fly": "query.can_fly"}
+          ],
+          "on_entry": [
+            "/tag @s remove can_fly"
+          ]
+        },
+        "can_fly": {
+          "transitions": [
+            {"default": "!query.can_fly"}
+          ],
+          "on_entry": [
+            "/tag @s add can_fly"
+          ]
+        }
+      }
+    },
+    "controller.animation.can_power_jump": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"can_power_jump": "query.can_power_jump"}
+          ],
+          "on_entry": [
+            "/tag @s remove can_power_jump"
+          ]
+        },
+        "can_power_jump": {
+          "transitions": [
+            {"default": "!query.can_power_jump"}
+          ],
+          "on_entry": [
+            "/tag @s add can_power_jump"
+          ]
+        }
+      }
+    },
+    "controller.animation.can_swim": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"can_swim": "query.can_swim"}
+          ],
+          "on_entry": [
+            "/tag @s remove can_swim"
+          ]
+        },
+        "can_swim": {
+          "transitions": [
+            {"default": "!query.can_swim"}
+          ],
+          "on_entry": [
+            "/tag @s add can_swim"
+          ]
+        }
+      }
+    },
+    "controller.animation.can_walk": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"can_walk": "query.can_walk"}
+          ],
+          "on_entry": [
+            "/tag @s remove can_walk"
+          ]
+        },
+        "can_walk": {
+          "transitions": [
+            {"default": "!query.can_walk"}
+          ],
+          "on_entry": [
+            "/tag @s add can_walk"
+          ]
+        }
+      }
+    },
+"controller.animation.helmet": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"noh": "!(query.has_armor_slot(0))"},
+            {"leatherh": "query.armor_texture_slot(0) == 0"},
+            {"chainh": "query.armor_texture_slot(0) == 1"},
+            {"ironh": "query.armor_texture_slot(0) == 2"},
+            {"diamondh": "query.armor_texture_slot(0) == 3"},
+            {"goldh": "query.armor_texture_slot(0) == 4"},
+            {"elytra": "query.armor_texture_slot(0) == 5"},
+            {"turtleh": "query.armor_texture_slot(0) == 6"},
+            {"netheriteh": "query.armor_texture_slot(0) == 7"}
+          ]
+        },
+        "noh": {
+          "transitions": [
+            {"leatherh": "query.armor_texture_slot(0) == 0"},
+            {"chainh": "query.armor_texture_slot(0) == 1"},
+            {"ironh": "query.armor_texture_slot(0) == 2"},
+            {"diamondh": "query.armor_texture_slot(0) == 3"},
+            {"goldh": "query.armor_texture_slot(0) == 4"},
+            {"elytra": "query.armor_texture_slot(0) == 5"},
+            {"turtleh": "query.armor_texture_slot(0) == 6"},
+            {"netheriteh": "query.armor_texture_slot(0) == 7"}
+          ],
+          "on_entry": [
+            "/scoreboard players set @s helmet 0"
+          ]
+        },
+        "leatherh": {"transitions": [{"default": "query.armor_texture_slot(0) != 0"}],"on_entry": ["/scoreboard players set @s helmet 1"]},
+        "chainh": {"transitions": [{"default": "query.armor_texture_slot(0) != 1"}],"on_entry": ["/scoreboard players set @s helmet 2"]},
+        "ironh": {"transitions": [{"default": "query.armor_texture_slot(0) != 2"}],"on_entry": ["/scoreboard players set @s helmet 3"]},
+        "diamondh": {"transitions": [{"default": "query.armor_texture_slot(0) != 3"}],"on_entry": ["/scoreboard players set @s helmet 4"]},
+        "goldh": {"transitions": [{"default": "query.armor_texture_slot(0) != 4"}],"on_entry": ["/scoreboard players set @s helmet 5"]},
+        "elytra": {"transitions": [{"default": "query.armor_texture_slot(0) != 5"}],"on_entry": ["/scoreboard players set @s helmet 6"]},
+        "turtleh": {"transitions": [{"default": "query.armor_texture_slot(0) != 6"}],"on_entry": ["/scoreboard players set @s helmet 7"]},
+        "netheriteh": {"transitions": [{"default": "query.armor_texture_slot(0) != 7"}],"on_entry": ["/scoreboard players set @s helmet 8"]}
+      }
+    },
+    "controller.animation.chestplate": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"noc": "!(query.has_armor_slot(1))"},
+            {"leatherc": "query.armor_texture_slot(1) == 0"},
+            {"chainc": "query.armor_texture_slot(1) == 1"},
+            {"ironc": "query.armor_texture_slot(1) == 2"},
+            {"diamondc": "query.armor_texture_slot(1) == 3"},
+            {"goldc": "query.armor_texture_slot(1) == 4"},
+            {"elytra": "query.armor_texture_slot(1) == 5"},
+            {"netheritec": "query.armor_texture_slot(1) == 7"}
+          ]
+        },
+        "noc": {
+          "transitions": [
+            {"leatherc": "query.armor_texture_slot(1) == 0"},
+            {"chainc": "query.armor_texture_slot(1) == 1"},
+            {"ironc": "query.armor_texture_slot(1) == 2"},
+            {"diamondc": "query.armor_texture_slot(1) == 3"},
+            {"goldc": "query.armor_texture_slot(1) == 4"},
+            {"elytra": "query.armor_texture_slot(1) == 5"},
+            {"netheritec": "query.armor_texture_slot(1) == 7"}
+          ],
+          "on_entry": [
+            "/scoreboard players set @s chestplate 0"
+          ]
+        },
+        "leatherc": {"transitions": [{"default": "query.armor_texture_slot(1) != 0"}],"on_entry": ["/scoreboard players set @s chestplate 1"]},
+        "chainc": {"transitions": [{"default": "query.armor_texture_slot(1) != 1"}],"on_entry": ["/scoreboard players set @s chestplate 2"]},
+        "ironc": {"transitions": [{"default": "query.armor_texture_slot(1) != 2"}],"on_entry": ["/scoreboard players set @s chestplate 3"]},
+        "diamondc": {"transitions": [{"default": "query.armor_texture_slot(1) != 3"}],"on_entry": ["/scoreboard players set @s chestplate 4"]},
+        "goldc": {"transitions": [{"default": "query.armor_texture_slot(1) != 4"}],"on_entry": ["/scoreboard players set @s chestplate 5"]},
+        "elytra": {"transitions": [{"default": "query.armor_texture_slot(1) != 5"}],"on_entry": ["/scoreboard players set @s chestplate 6"]},
+        "netheritec": {"transitions": [{"default": "query.armor_texture_slot(1) != 7"}],"on_entry": ["/scoreboard players set @s chestplate 8"]}
+      }
+    },
+    "controller.animation.leggings": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"nol": "!(query.has_armor_slot(2))"},
+            {"leatherl": "query.armor_texture_slot(2) == 0"},
+            {"chainl": "query.armor_texture_slot(2) == 1"},
+            {"ironl": "query.armor_texture_slot(2) == 2"},
+            {"diamondl": "query.armor_texture_slot(2) == 3"},
+            {"goldl": "query.armor_texture_slot(2) == 4"},
+            {"netheritel": "query.armor_texture_slot(2) == 7"}
+          ]
+        },
+        "nol": {
+          "transitions": [
+            {"leatherl": "query.armor_texture_slot(2) == 0"},
+            {"chainl": "query.armor_texture_slot(2) == 1"},
+            {"ironl": "query.armor_texture_slot(2) == 2"},
+            {"diamondl": "query.armor_texture_slot(2) == 3"},
+            {"goldl": "query.armor_texture_slot(2) == 4"},
+            {"netheritel": "query.armor_texture_slot(2) == 7"}
+          ],
+          "on_entry": [
+            "/scoreboard players set @s leggings 0"
+          ]
+        },
+        "leatherl": {"transitions": [{"default": "query.armor_texture_slot(2) != 0"}],"on_entry": ["/scoreboard players set @s leggings 1"]},
+        "chainl": {"transitions": [{"default": "query.armor_texture_slot(2) != 1"}],"on_entry": ["/scoreboard players set @s leggings 2"]},
+        "ironl": {"transitions": [{"default": "query.armor_texture_slot(2) != 2"}],"on_entry": ["/scoreboard players set @s leggings 3"]},
+        "diamondl": {"transitions": [{"default": "query.armor_texture_slot(2) != 3"}],"on_entry": ["/scoreboard players set @s leggings 4"]},
+        "goldl": {"transitions": [{"default": "query.armor_texture_slot(2) != 4"}],"on_entry": ["/scoreboard players set @s leggings 5"]},
+        "netheritel": {"transitions": [{"default": "query.armor_texture_slot(2) != 7"}],"on_entry": ["/scoreboard players set @s leggings 8"]}
+      }
+    },
+    "controller.animation.boots": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"nob": "!(query.has_armor_slot(3))"},
+            {"leatherb": "query.armor_texture_slot(3) == 0"},
+            {"chainb": "query.armor_texture_slot(3) == 1"},
+            {"ironb": "query.armor_texture_slot(3) == 2"},
+            {"diamondb": "query.armor_texture_slot(3) == 3"},
+            {"goldb": "query.armor_texture_slot(3) == 4"},
+            {"netheriteb": "query.armor_texture_slot(3) == 7"}
+          ]
+        },
+        "nob": {
+          "transitions": [
+            {"leatherb": "query.armor_texture_slot(3) == 0"},
+            {"chainb": "query.armor_texture_slot(3) == 1"},
+            {"ironb": "query.armor_texture_slot(3) == 2"},
+            {"diamondb": "query.armor_texture_slot(3) == 3"},
+            {"goldb": "query.armor_texture_slot(3) == 4"},
+            {"netheriteb": "query.armor_texture_slot(3) == 7"}
+          ],
+          "on_entry": [
+            "/scoreboard players set @s boots 0"
+          ]
+        },
+        "leatherb": {"transitions": [{"default": "query.armor_texture_slot(3) != 0"}],"on_entry": ["/scoreboard players set @s boots 1"]},
+        "chainb": {"transitions": [{"default": "query.armor_texture_slot(3) != 1"}],"on_entry": ["/scoreboard players set @s boots 2"]},
+        "ironb": {"transitions": [{"default": "query.armor_texture_slot(3) != 2"}],"on_entry": ["/scoreboard players set @s boots 3"]},
+        "diamondb": {"transitions": [{"default": "query.armor_texture_slot(3) != 3"}],"on_entry": ["/scoreboard players set @s boots 4"]},
+        "goldb": {"transitions": [{"default": "query.armor_texture_slot(3) != 4"}],"on_entry": ["/scoreboard players set @s boots 5"]},
+        "netheriteb":{"transitions": [{"default": "query.armor_texture_slot(3) != 7"}],"on_entry": ["/scoreboard players set @s boots 8"]}
+      }
+    },
+	"controller.animation.breath": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "breath": "query.is_breathing"
+            }
+          ],
+          "on_entry": [
+            "/tag @s remove breath"
+          ]
+        },
+        "breath": {
+          "transitions": [
+            {
+              "default": "!query.is_breathing"
+            }
+          ],
+          "on_entry": [
+            "/tag @s add breath"
+          ]
+        }
+      }
+    },
+    "controller.animation.fireimmune": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "fireimmune": "query.is_fire_immune"
+            }
+          ],
+          "on_entry": [
+            "/tag @s remove fireimmune"
+          ]
+        },
+        "fireimmune": {
+          "transitions": [
+            {
+              "default": "!query.is_fire_immune"
+            }
+          ],
+          "on_entry": [
+            "/tag @s add fireimmune"
+          ]
+        }
+      }
+    },"controller.animation.item": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "item": "query.is_item_equipped(0)"
+            }
+          ],
+          "on_entry": [
+            "/tag @s remove item"
+          ]
+        },
+        "item": {
+          "transitions": [
+            {
+              "default": "!query.is_item_equipped(0)"
+            }
+          ],
+          "on_entry": [
+            "/tag @s add item"
+          ]
+        }
+      }
+    },
+    "controller.animation.leftitem": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "leftitem": "query.is_item_equipped(1)"
+            }
+          ],
+          "on_entry": [
+            "/tag @s remove leftitem"
+          ]
+        },
+        "leftitem": {
+          "transitions": [
+            {
+              "default": "!query.is_item_equipped(1)"
+            }
+          ],
+          "on_entry": [
+            "/tag @s add leftitem"
+          ]
+        }
+      }
+    },
+	"controller.animation.hand_equip_Left": {
+		"states": {
+			"default": {
+				"transitions": [
+					{"totem": "query.is_item_name_any('slot.weapon.offhand','minecraft:totem_of_undying')"},
+					{"shield": "query.is_item_name_any('slot.weapon.offhand','minecraft:shield')"},
+					{"arrow": "query.is_item_name_any('slot.weapon.offhand','minecraft:arrow')"}
+				],
+				"on_entry": [ "/scoreboard players set @s itemL 0" ]
+			},
+			"totem": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.offhand','minecraft:totem_of_undying')"} ], "on_entry": [ "/scoreboard players set @s itemL 449" ] },
+			"shield": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.offhand','minecraft:shield')"} ], "on_entry": [ "/scoreboard players set @s itemL 513" ] },
+			"arrow": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.offhand','minecraft:arrow')"} ], "on_entry": [ "/scoreboard players set @s itemL 262" ] }
+		}
+	},
+	"controller.animation.hand_equip_Right": {
+		"states": {
+			"default": {
+				"transitions": [
+					{"Ishovel": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_shovel')"},
+					{"Ipickaxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_pickaxe')"},
+					{"Iaxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_axe')"},
+					{"FAS": "query.is_item_name_any('slot.weapon.mainhand','minecraft:flint_and_steel')"},
+					{"apple": "query.is_item_name_any('slot.weapon.mainhand','minecraft:apple')"},
+					{"bow": "query.is_item_name_any('slot.weapon.mainhand','minecraft:bow')"},
+					{"arrow": "query.is_item_name_any('slot.weapon.mainhand','minecraft:arrow')"},
+					{"coal": "query.is_item_name_any('slot.weapon.mainhand','minecraft:coal')"},
+					{"charcoal": "query.is_item_name_any('slot.weapon.mainhand','minecraft:charcoal')"},
+					{"diamond": "query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond')"},
+					{"Iingot": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_ingot')"},
+					{"Gingot": "query.is_item_name_any('slot.weapon.mainhand','minecraft:gold_ingot')"},
+					{"Isword": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_sword')"},
+					{"Wsword": "query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_sword')"},
+					{"Wshovel": "query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_shovel')"},
+					{"Wpickaxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_pickaxe')"},
+					{"Waxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_axe')"},
+					{"Ssword": "query.is_item_name_any('slot.weapon.mainhand','minecraft:stone_sword')"},
+					{"Sshovel": "query.is_item_name_any('slot.weapon.mainhand','minecraft:stone_shovel')"},
+					{"Spickaxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:stone_pickaxe')"},
+					{"Saxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:stone_axe')"},
+					{"Dsword": "query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_sword')"},
+					{"Dshovel": "query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_shovel')"},
+					{"Dpickaxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_pickaxe')"},
+					{"Daxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_axe')"},
+					{"stick": "query.is_item_name_any('slot.weapon.mainhand','minecraft:stick')"},
+					{"bowl": "query.is_item_name_any('slot.weapon.mainhand','minecraft:bowl')"},
+					{"Mstew": "query.is_item_name_any('slot.weapon.mainhand','minecraft:mushroom_stew')"},
+					{"Gsword": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_sword')"},
+					{"Gshovel": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_shovel')"},
+					{"Gpickaxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_pickaxe')"},
+					{"Gaxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_axe')"},
+					{"string": "query.is_item_name_any('slot.weapon.mainhand','minecraft:string')"},
+					{"feather": "query.is_item_name_any('slot.weapon.mainhand','minecraft:feather')"},
+					{"gunpowder": "query.is_item_name_any('slot.weapon.mainhand','minecraft:gunpowder')"},
+					{"Whoe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_hoe')"},
+					{"Shoe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:stone_hoe')"},
+					{"Ihoe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_hoe')"},
+					{"Dhoe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_hoe')"},
+					{"Ghoe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_hoe')"},
+					{"Wseeds": "query.is_item_name_any('slot.weapon.mainhand','minecraft:wheat_seeds')"},
+					{"wheat": "query.is_item_name_any('slot.weapon.mainhand','minecraft:wheat')"},
+					{"bread": "query.is_item_name_any('slot.weapon.mainhand','minecraft:bread')"},
+					{"Lhelmet": "query.is_item_name_any('slot.weapon.mainhand','minecraft:leather_helmet')"},
+					{"Lchestplate": "query.is_item_name_any('slot.weapon.mainhand','minecraft:leather_chestplate')"},
+					{"Lleggings": "query.is_item_name_any('slot.weapon.mainhand','minecraft:leather_leggings')"},
+					{"Lboots": "query.is_item_name_any('slot.weapon.mainhand','minecraft:leather_boots')"},
+					{"Chelmet": "query.is_item_name_any('slot.weapon.mainhand','minecraft:chainmail_helmet')"},
+					{"Cchestplate": "query.is_item_name_any('slot.weapon.mainhand','minecraft:chainmail_chestplate')"},
+					{"Cleggings": "query.is_item_name_any('slot.weapon.mainhand','minecraft:chainmail_leggings')"},
+					{"Cboots": "query.is_item_name_any('slot.weapon.mainhand','minecraft:chainmail_boots')"},
+					{"Ihelmet": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_helmet')"},
+					{"Ichestplate": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_chestplate')"},
+					{"Ileggings": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_leggings')"},
+					{"Iboots": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_boots')"},
+					{"Dhelmet": "query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_helmet')"},
+					{"Dchestplate": "query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_chestplate')"},
+					{"Dleggings": "query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_leggings')"},
+					{"Dboots": "query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_boots')"},
+					{"Ghelmet": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_helmet')"},
+					{"Gchestplate": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_chestplate')"},
+					{"Gleggings": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_leggings')"},
+					{"Gboots": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_boots')"},
+					{"flint": "query.is_item_name_any('slot.weapon.mainhand','minecraft:flint')"},
+					{"porkchop": "query.is_item_name_any('slot.weapon.mainhand','minecraft:porkchop')"},
+					{"Cporkchop": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_porkchop')"},
+					{"painting": "query.is_item_name_any('slot.weapon.mainhand','minecraft:painting')"},
+					{"Gapple": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_apple')"},
+					{"sign": "query.is_item_name_any('slot.weapon.mainhand','minecraft:oak_sign')"},
+					{"Wdoor": "query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_door')"},
+					{"bucket": "query.is_item_name_any('slot.weapon.mainhand','minecraft:bucket')"},
+					{"Mbucket": "query.is_item_name_any('slot.weapon.mainhand','minecraft:milk_bucket')"},
+					{"Cbucket": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cod_bucket')"},
+					{"Sbucket": "query.is_item_name_any('slot.weapon.mainhand','minecraft:salmon_bucket')"},
+					{"TFbucket": "query.is_item_name_any('slot.weapon.mainhand','minecraft:tropical_fish_bucket')"},
+					{"Pbucket": "query.is_item_name_any('slot.weapon.mainhand','minecraft:pufferfish_bucket')"},
+					{"Wbucket": "query.is_item_name_any('slot.weapon.mainhand','minecraft:water_bucket')"},
+					{"Lbucket": "query.is_item_name_any('slot.weapon.mainhand','minecraft:lava_bucket')"},
+					{"minecart": "query.is_item_name_any('slot.weapon.mainhand','minecraft:minecart')"},
+					{"saddle": "query.is_item_name_any('slot.weapon.mainhand','minecraft:saddle')"},
+					{"Idoor": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_door')"},
+					{"redstone": "query.is_item_name_any('slot.weapon.mainhand','minecraft:redstone')"},
+					{"snowball": "query.is_item_name_any('slot.weapon.mainhand','minecraft:snowball')"},
+					{"Oboat": "query.is_item_name_any('slot.weapon.mainhand','minecraft:oak_boat')"},
+					{"Sboat": "query.is_item_name_any('slot.weapon.mainhand','minecraft:spruce_boat')"},
+					{"Bboat": "query.is_item_name_any('slot.weapon.mainhand','minecraft:birch_boat')"},
+					{"Jboat": "query.is_item_name_any('slot.weapon.mainhand','minecraft:jungle_boat')"},
+					{"Aboat": "query.is_item_name_any('slot.weapon.mainhand','minecraft:acacia_boat')"},
+					{"Dboat": "query.is_item_name_any('slot.weapon.mainhand','minecraft:dark_oak_boat')"},
+					{"leather": "query.is_item_name_any('slot.weapon.mainhand','minecraft:leather')"},
+					{"kelp": "query.is_item_name_any('slot.weapon.mainhand','minecraft:kelp')"},
+					{"brick": "query.is_item_name_any('slot.weapon.mainhand','minecraft:brick')"},
+					{"Cball": "query.is_item_name_any('slot.weapon.mainhand','minecraft:clay_ball')"},
+					{"reeds": "query.is_item_name_any('slot.weapon.mainhand','minecraft:sugar_cane')"},
+					{"paper": "query.is_item_name_any('slot.weapon.mainhand','minecraft:paper')"},
+					{"book": "query.is_item_name_any('slot.weapon.mainhand','minecraft:book')"},
+					{"Sball": "query.is_item_name_any('slot.weapon.mainhand','minecraft:slime_ball')"},
+					{"Cminecart": "query.is_item_name_any('slot.weapon.mainhand','minecraft:chest_minecart')"},
+					{"egg": "query.is_item_name_any('slot.weapon.mainhand','minecraft:egg')"},
+					{"compass": "query.is_item_name_any('slot.weapon.mainhand','minecraft:compass')"},
+					{"Frod": "query.is_item_name_any('slot.weapon.mainhand','minecraft:fishing_rod')"},
+					{"clock": "query.is_item_name_any('slot.weapon.mainhand','minecraft:clock')"},
+					{"Gdust": "query.is_item_name_any('slot.weapon.mainhand','minecraft:glowstone_dust')"},
+					{"fish": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cod')"},
+					{"Cfish": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_cod')"},
+					{"Llazuli": "query.is_item_name_any('slot.weapon.mainhand','minecraft:lapis_lazuli')"},
+					{"Cbeans": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cocoa_beans')"},
+					{"Isac": "query.is_item_name_any('slot.weapon.mainhand','minecraft:ink_sac')"},
+					{"Bmeal": "query.is_item_name_any('slot.weapon.mainhand','minecraft:bone_meal')"},
+					{"Bdye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:black_dye')"},
+					{"Rdye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:red_dye')"},
+					{"Gdye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:green_dye')"},
+					{"Brdye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:brown_dye')"},
+					{"Bldye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:blue_dye')"},
+					{"Pdye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:purple_dye')"},
+					{"Cdye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cyan_dye')"},
+					{"Ldye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:light_gray_dye')"},
+					{"Grdye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:gray_dye')"},
+					{"Pidye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:pink_dye')"},
+					{"Lidye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:lime_dye')"},
+					{"Ydye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:yellow_dye')"},
+					{"LBdye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:light_blue_dye')"},
+					{"Mdye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:magenta_dye')"},
+					{"Odye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:orange_dye')"},
+					{"Wdye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:white_dye')"},
+					{"bone": "query.is_item_name_any('slot.weapon.mainhand','minecraft:bone')"},
+					{"sugar": "query.is_item_name_any('slot.weapon.mainhand','minecraft:sugar')"},
+					{"cake": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cake')"},
+					{"bed": "query.is_item_name_any('slot.weapon.mainhand','minecraft:bed')"},
+					{"repeater": "query.is_item_name_any('slot.weapon.mainhand','minecraft:repeater')"},
+					{"cookie": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cookie')"},
+					{"Mfilled": "query.is_item_name_any('slot.weapon.mainhand','minecraft:filled_map')"},
+					{"shears": "query.is_item_name_any('slot.weapon.mainhand','minecraft:shears')"},
+					{"Mslice": "query.is_item_name_any('slot.weapon.mainhand','minecraft:melon_slice')"},
+					{"Pseeds": "query.is_item_name_any('slot.weapon.mainhand','minecraft:pumpkin_seeds')"},
+					{"Mseeds": "query.is_item_name_any('slot.weapon.mainhand','minecraft:melon_seeds')"},
+					{"beef": "query.is_item_name_any('slot.weapon.mainhand','minecraft:beef')"},
+					{"Cbeef": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_beef')"},
+					{"chicken": "query.is_item_name_any('slot.weapon.mainhand','minecraft:chicken')"},
+					{"Cchicken": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_chicken')"},
+					{"Rflesh": "query.is_item_name_any('slot.weapon.mainhand','minecraft:rotten_flesh')"},
+					{"Epearl": "query.is_item_name_any('slot.weapon.mainhand','minecraft:ender_pearl')"},
+					{"Brod": "query.is_item_name_any('slot.weapon.mainhand','minecraft:blaze_rod')"},
+					{"Gtear": "query.is_item_name_any('slot.weapon.mainhand','minecraft:ghast_tear')"},
+					{"Gnugget": "query.is_item_name_any('slot.weapon.mainhand','minecraft:gold_nugget')"},
+					{"Nwart": "query.is_item_name_any('slot.weapon.mainhand','minecraft:nether_wart')"},
+					{"potion": "query.is_item_name_any('slot.weapon.mainhand','minecraft:potion')"},
+					{"Gbottle": "query.is_item_name_any('slot.weapon.mainhand','minecraft:glass_bottle')"},
+					{"Seye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:spider_eye')"},
+					{"FSeye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:fermented_spider_eye')"},
+					{"Bpowder": "query.is_item_name_any('slot.weapon.mainhand','minecraft:blaze_powder')"},
+					{"Mcream": "query.is_item_name_any('slot.weapon.mainhand','minecraft:magma_cream')"},
+					{"Bstand": "query.is_item_name_any('slot.weapon.mainhand','minecraft:brewing_stand')"},
+					{"cauldron": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cauldron')"},
+					{"Eeye": "query.is_item_name_any('slot.weapon.mainhand','minecraft:ender_eye')"},
+					{"Smelon": "query.is_item_name_any('slot.weapon.mainhand','minecraft:glistering_melon_slice')"},
+					{"Segg": "query.is_item_name_any('slot.weapon.mainhand','minecraft:spawn_egg')"},
+					{"Ebottle": "query.is_item_name_any('slot.weapon.mainhand','minecraft:experience_bottle')"},
+					{"fireball": "query.is_item_name_any('slot.weapon.mainhand','minecraft:fire_charge')"},
+					{"Webook": "query.is_item_name_any('slot.weapon.mainhand','minecraft:writable_book')"},
+					{"Wnbook": "query.is_item_name_any('slot.weapon.mainhand','minecraft:written_book')"},
+					{"emerald": "query.is_item_name_any('slot.weapon.mainhand','minecraft:emerald')"},
+					{"frame": "query.is_item_name_any('slot.weapon.mainhand','minecraft:frame')"},
+					{"Fpot": "query.is_item_name_any('slot.weapon.mainhand','minecraft:flower_pot')"},
+					{"carrot": "query.is_item_name_any('slot.weapon.mainhand','minecraft:carrot')"},
+					{"potato": "query.is_item_name_any('slot.weapon.mainhand','minecraft:potato')"},
+					{"Bpotato": "query.is_item_name_any('slot.weapon.mainhand','minecraft:baked_potato')"},
+					{"Ppotato": "query.is_item_name_any('slot.weapon.mainhand','minecraft:poisonous_potato')"},
+					{"emptymap": "query.is_item_name_any('slot.weapon.mainhand','minecraft:empty_map')"},
+					{"Gcarrot": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_carrot')"},
+					{"skull": "query.is_item_name_any('slot.weapon.mainhand','minecraft:skull')"},
+					{"carrotonastick": "query.is_item_name_any('slot.weapon.mainhand','minecraft:carrot_on_a_stick')"},
+					{"netherstar": "query.is_item_name_any('slot.weapon.mainhand','minecraft:nether_star')"},
+					{"Ppie": "query.is_item_name_any('slot.weapon.mainhand','minecraft:pumpkin_pie')"},
+					{"fireworks": "query.is_item_name_any('slot.weapon.mainhand','minecraft:firework_rocket')"},
+					{"fireworkscharge": "query.is_item_name_any('slot.weapon.mainhand','minecraft:firework_star')"},
+					{"Ebook": "query.is_item_name_any('slot.weapon.mainhand','minecraft:enchanted_book')"},
+					{"comparator": "query.is_item_name_any('slot.weapon.mainhand','minecraft:comparator')"},
+					{"netherbrick": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherbrick')"},
+					{"quartz": "query.is_item_name_any('slot.weapon.mainhand','minecraft:quartz')"},
+					{"Tminecart": "query.is_item_name_any('slot.weapon.mainhand','minecraft:tnt_minecart')"},
+					{"Hminecart": "query.is_item_name_any('slot.weapon.mainhand','minecraft:hopper_minecart')"},
+					{"Pshard": "query.is_item_name_any('slot.weapon.mainhand','minecraft:prismarine_shard')"},
+					{"hopper": "query.is_item_name_any('slot.weapon.mainhand','minecraft:hopper')"},
+					{"rabbit": "query.is_item_name_any('slot.weapon.mainhand','minecraft:rabbit')"},
+					{"Crabbit": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_rabbit')"},
+					{"Rstew": "query.is_item_name_any('slot.weapon.mainhand','minecraft:rabbit_stew')"},
+					{"Rfoot": "query.is_item_name_any('slot.weapon.mainhand','minecraft:rabbit_foot')"},
+					{"Rhide": "query.is_item_name_any('slot.weapon.mainhand','minecraft:rabbit_hide')"},
+					{"horsearmorleather": "query.is_item_name_any('slot.weapon.mainhand','minecraft:leather_horse_armor')"},
+					{"horsearmoriron": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_horse_armor')"},
+					{"horsearmorgold": "query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_horse_armor')"},
+					{"horsearmordiamond": "query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_horse_armor')"},
+					{"lead": "query.is_item_name_any('slot.weapon.mainhand','minecraft:lead')"},
+					{"Ntag": "query.is_item_name_any('slot.weapon.mainhand','minecraft:name_tag')"},
+					{"Pcrystals": "query.is_item_name_any('slot.weapon.mainhand','minecraft:prismarine_crystals')"},
+					{"muttonraw": "query.is_item_name_any('slot.weapon.mainhand','minecraft:mutton')"},
+					{"muttoncooked": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_mutton')"},
+					{"Astand": "query.is_item_name_any('slot.weapon.mainhand','minecraft:armor_stand')"},
+					{"Ecrystal": "query.is_item_name_any('slot.weapon.mainhand','minecraft:end_crystal')"},
+					{"Sdoor": "query.is_item_name_any('slot.weapon.mainhand','minecraft:spruce_door')"},
+					{"Bdoor": "query.is_item_name_any('slot.weapon.mainhand','minecraft:birch_door')"},
+					{"Jdoor": "query.is_item_name_any('slot.weapon.mainhand','minecraft:jungle_door')"},
+					{"Adoor": "query.is_item_name_any('slot.weapon.mainhand','minecraft:acacia_door')"},
+					{"DOdoor": "query.is_item_name_any('slot.weapon.mainhand','minecraft:dark_oak_door')"},
+					{"Cfruit": "query.is_item_name_any('slot.weapon.mainhand','minecraft:chorus_fruit')"},
+					{"CFpopped": "query.is_item_name_any('slot.weapon.mainhand','minecraft:popped_chorus_fruit')"},
+					{"Bpattern": "query.is_item_name_any('slot.weapon.mainhand','minecraft:banner_pattern')"},
+					{"Dbreath": "query.is_item_name_any('slot.weapon.mainhand','minecraft:dragon_breath')"},
+					{"Spotion": "query.is_item_name_any('slot.weapon.mainhand','minecraft:splash_potion')"},
+					{"Lpotion": "query.is_item_name_any('slot.weapon.mainhand','minecraft:lingering_potion')"},
+					{"CBminecart": "query.is_item_name_any('slot.weapon.mainhand','minecraft:command_block_minecart')"},
+					{"elytra": "query.is_item_name_any('slot.weapon.mainhand','minecraft:elytra')"},
+					{"Sshell": "query.is_item_name_any('slot.weapon.mainhand','minecraft:shulker_shell')"},
+					{"banner": "query.is_item_name_any('slot.weapon.mainhand','minecraft:banner')"},
+					{"totem": "query.is_item_name_any('slot.weapon.mainhand','minecraft:totem_of_undying')"},
+					{"Inugget": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_nugget')"},
+					{"trident": "query.is_item_name_any('slot.weapon.mainhand','minecraft:trident')"},
+					{"beetroot": "query.is_item_name_any('slot.weapon.mainhand','minecraft:beetroot')"},
+					{"Bseeds": "query.is_item_name_any('slot.weapon.mainhand','minecraft:beetroot_seeds')"},
+					{"Bsoup": "query.is_item_name_any('slot.weapon.mainhand','minecraft:beetroot_soup')"},
+					{"salmon": "query.is_item_name_any('slot.weapon.mainhand','minecraft:salmon')"},
+					{"clownfish": "query.is_item_name_any('slot.weapon.mainhand','minecraft:tropical_fish')"},
+					{"pufferfish": "query.is_item_name_any('slot.weapon.mainhand','minecraft:pufferfish')"},
+					{"Csalmon": "query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_salmon')"},
+					{"Dkelp": "query.is_item_name_any('slot.weapon.mainhand','minecraft:dried_kelp')"},
+					{"Nshell": "query.is_item_name_any('slot.weapon.mainhand','minecraft:nautilus_shell')"},
+					{"appleenchanted": "query.is_item_name_any('slot.weapon.mainhand','minecraft:enchanted_golden_apple')"},
+					{"HOTsea": "query.is_item_name_any('slot.weapon.mainhand','minecraft:heart_of_the_sea')"},
+					{"TSpiece": "query.is_item_name_any('slot.weapon.mainhand','minecraft:turtle_shell_piece')"},
+					{"Thelmet": "query.is_item_name_any('slot.weapon.mainhand','minecraft:turtle_helmet')"},
+					{"Pmembrane": "query.is_item_name_any('slot.weapon.mainhand','minecraft:phantom_membrane')"},
+					{"crossbow": "query.is_item_name_any('slot.weapon.mainhand','minecraft:crossbow')"},
+					{"Ssign": "query.is_item_name_any('slot.weapon.mainhand','minecraft:spruce_sign')"},
+					{"Bsign": "query.is_item_name_any('slot.weapon.mainhand','minecraft:birch_sign')"},
+					{"Jsign": "query.is_item_name_any('slot.weapon.mainhand','minecraft:jungle_sign')"},
+					{"Asign": "query.is_item_name_any('slot.weapon.mainhand','minecraft:acacia_sign')"},
+					{"Dsign": "query.is_item_name_any('slot.weapon.mainhand','minecraft:dark_oak_sign')"},
+					{"Sberries": "query.is_item_name_any('slot.weapon.mainhand','minecraft:sweet_berries')"},
+					{"camera": "query.is_item_name_any('slot.weapon.mainhand','minecraft:camera')"},
+					{"record13": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_13')"},
+					{"recordcat": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_cat')"},
+					{"recordblocks": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_blocks')"},
+					{"recordchirp": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_chirp')"},
+					{"recordfar": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_far')"},
+					{"recordmall": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_mall')"},
+					{"recordmellohi": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_mellohi')"},
+					{"recordstal": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_stal')"},
+					{"recordstrad": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_strad')"},
+					{"recordward": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_ward')"},
+					{"record11": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_11')"},
+					{"recordwait": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_wait')"},
+					{"shield": "query.is_item_name_any('slot.weapon.mainhand','minecraft:shield')"},
+					{"campfire": "query.is_item_name_any('slot.weapon.mainhand','minecraft:campfire')"},
+					{"Sstew": "query.is_item_name_any('slot.weapon.mainhand','minecraft:suspicious_stew')"},
+					{"honeycomb": "query.is_item_name_any('slot.weapon.mainhand','minecraft:honeycomb')"},
+					{"Hbottle": "query.is_item_name_any('slot.weapon.mainhand','minecraft:honey_bottle')"},
+					{"lodestonecompass": "query.is_item_name_any('slot.weapon.mainhand','minecraft:lodestonecompass')"},
+					{"Ningot": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_ingot')"},
+					{"Nsword": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_sword')"},
+					{"Nshovel": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_shovel')"},
+					{"Npickaxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_pickaxe')"},
+					{"Naxe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_axe')"},
+					{"Nhoe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_hoe')"},
+					{"Nhelmet": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_helmet')"},
+					{"Nchestplate": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_chestplate')"},
+					{"Nleggings": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_leggings')"},
+					{"Nboots": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_boots')"},
+					{"Nscrap": "query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_scrap')"},
+					{"Csign": "query.is_item_name_any('slot.weapon.mainhand','minecraft:crimson_sign')"},
+					{"Wsign": "query.is_item_name_any('slot.weapon.mainhand','minecraft:warped_sign')"},
+					{"Cdoor": "query.is_item_name_any('slot.weapon.mainhand','minecraft:crimson_door')"},
+					{"Wadoor": "query.is_item_name_any('slot.weapon.mainhand','minecraft:warped_door')"},
+					{"WFOAstick": "query.is_item_name_any('slot.weapon.mainhand','minecraft:warped_fungus_on_a_stick')"},
+					{"chain": "query.is_item_name_any('slot.weapon.mainhand','minecraft:chain')"},
+					{"recordpigstep": "query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_pigstep')"},
+					{"Nsprouts": "query.is_item_name_any('slot.weapon.mainhand','minecraft:nether_sprouts')"},
+					{"Scampfire": "query.is_item_name_any('slot.weapon.mainhand','minecraft:soul_campfire')"},
+					{"barrier": "query.is_item_name_any('slot.weapon.mainhand','minecraft:barrier')"},
+					{"tnt": "query.is_item_name_any('slot.weapon.mainhand','minecraft:tnt')"},
+					{"Ctable": "query.is_item_name_any('slot.weapon.mainhand','minecraft:crafting_table')"},
+					{"furnace": "query.is_item_name_any('slot.weapon.mainhand','minecraft:furnace')"},
+					{"anvil": "query.is_item_name_any('slot.weapon.mainhand','minecraft:anvil')"},
+					{"Cpumpkin": "query.is_item_name_any('slot.weapon.mainhand','minecraft:carved_pumpkin')"},
+					{"Lpumpkin": "query.is_item_name_any('slot.weapon.mainhand','minecraft:lit_pumpkin')"},
+					{"Etable": "query.is_item_name_any('slot.weapon.mainhand','minecraft:enchanting_table')"},
+					{"EPframe": "query.is_item_name_any('slot.weapon.mainhand','minecraft:end_portal_frame')"},
+					{"Degg": "query.is_item_name_any('slot.weapon.mainhand','minecraft:dragon_egg')"},
+					{"chest": "query.is_item_name_any('slot.weapon.mainhand','minecraft:chest')"},
+					{"Echest": "query.is_item_name_any('slot.weapon.mainhand','minecraft:ender_chest')"},
+					{"Cchest": "query.is_item_name_any('slot.weapon.mainhand','minecraft:trapped_chest')"},
+					{"Thook": "query.is_item_name_any('slot.weapon.mainhand','minecraft:tripwire_hook')"},
+					{"waterlily": "query.is_item_name_any('slot.weapon.mainhand','minecraft:waterlily')"},
+					{"bamboo": "query.is_item_name_any('slot.weapon.mainhand','minecraft:bamboo')"},
+					{"web": "query.is_item_name_any('slot.weapon.mainhand','minecraft:web')"},
+					{"Ibars": "query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_bars')"},
+					{"ladder": "query.is_item_name_any('slot.weapon.mainhand','minecraft:ladder')"},
+					{"Tegg": "query.is_item_name_any('slot.weapon.mainhand','minecraft:turtle_egg')"},
+					{"lantern": "query.is_item_name_any('slot.weapon.mainhand','minecraft:lantern')"},
+					{"Slantern": "query.is_item_name_any('slot.weapon.mainhand','minecraft:soul_lantern')"},
+					{"torch": "query.is_item_name_any('slot.weapon.mainhand','minecraft:torch')"},
+					{"Storch": "query.is_item_name_any('slot.weapon.mainhand','minecraft:soul_torch')"},
+					{"Rtorch": "query.is_item_name_any('slot.weapon.mainhand','minecraft:redstone_torch')"},
+					{"lever": "query.is_item_name_any('slot.weapon.mainhand','minecraft:lever')"},
+					{"Spickle": "query.is_item_name_any('slot.weapon.mainhand','minecraft:sea_pickle')"}
+				],
+				"on_entry": [ "/scoreboard players set @s itemR 0" ]
+			},
+			"Ishovel": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_shovel')"} ], "on_entry": [ "/scoreboard players set @s itemR 256" ] },
+			"Ipickaxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_pickaxe')"} ], "on_entry": [ "/scoreboard players set @s itemR 257" ] },
+			"Iaxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_axe')"} ], "on_entry": [ "/scoreboard players set @s itemR 258" ] },
+			"FAS": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:flint_and_steel')"} ], "on_entry": [ "/scoreboard players set @s itemR 259" ] },
+			"apple": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:apple')"} ], "on_entry": [ "/scoreboard players set @s itemR 260" ] },
+			"bow": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:bow')"} ], "on_entry": [ "/scoreboard players set @s itemR 261" ] },
+			"arrow": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:arrow')"} ], "on_entry": [ "/scoreboard players set @s itemR 262" ] },
+			"coal": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:coal')"} ], "on_entry": [ "/scoreboard players set @s itemR 2630" ] },
+			"charcoal": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:charcoal')"} ], "on_entry": [ "/scoreboard players set @s itemR 2631" ] },
+			"diamond": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond')"} ], "on_entry": [ "/scoreboard players set @s itemR 264" ] },
+			"Iingot": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_ingot')"} ], "on_entry": [ "/scoreboard players set @s itemR 265" ] },
+			"Gingot": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:gold_ingot')"} ], "on_entry": [ "/scoreboard players set @s itemR 266" ] },
+			"Isword": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_sword')"} ], "on_entry": [ "/scoreboard players set @s itemR 267" ] },
+			"Wsword": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_sword')"} ], "on_entry": [ "/scoreboard players set @s itemR 268" ] },
+			"Wshovel": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_shovel')"} ], "on_entry": [ "/scoreboard players set @s itemR 269" ] },
+			"Wpickaxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_pickaxe')"} ], "on_entry": [ "/scoreboard players set @s itemR 270" ] },
+			"Waxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_axe')"} ], "on_entry": [ "/scoreboard players set @s itemR 271" ] },
+			"Ssword": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:stone_sword')"} ], "on_entry": [ "/scoreboard players set @s itemR 272" ] },
+			"Sshovel": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:stone_shovel')"} ], "on_entry": [ "/scoreboard players set @s itemR 273" ] },
+			"Spickaxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:stone_pickaxe')"} ], "on_entry": [ "/scoreboard players set @s itemR 274" ] },
+			"Saxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:stone_axe')"} ], "on_entry": [ "/scoreboard players set @s itemR 275" ] },
+			"Dsword": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_sword')"} ], "on_entry": [ "/scoreboard players set @s itemR 276" ] },
+			"Dshovel": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_shovel')"} ], "on_entry": [ "/scoreboard players set @s itemR 277" ] },
+			"Dpickaxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_pickaxe')"} ], "on_entry": [ "/scoreboard players set @s itemR 278" ] },
+			"Daxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_axe')"} ], "on_entry": [ "/scoreboard players set @s itemR 279" ] },
+			"stick": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:stick')"} ], "on_entry": [ "/scoreboard players set @s itemR 280" ] },
+			"bowl": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:bowl')"} ], "on_entry": [ "/scoreboard players set @s itemR 281" ] },
+			"Mstew": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:mushroom_stew')"} ], "on_entry": [ "/scoreboard players set @s itemR 282" ] },
+			"Gsword": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_sword')"} ], "on_entry": [ "/scoreboard players set @s itemR 283" ] },
+			"Gshovel": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_shovel')"} ], "on_entry": [ "/scoreboard players set @s itemR 284" ] },
+			"Gpickaxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_pickaxe')"} ], "on_entry": [ "/scoreboard players set @s itemR 285" ] },
+			"Gaxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_axe')"} ], "on_entry": [ "/scoreboard players set @s itemR 286" ] },
+			"string": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:string')"} ], "on_entry": [ "/scoreboard players set @s itemR 287" ] },
+			"feather": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:feather')"} ], "on_entry": [ "/scoreboard players set @s itemR 288" ] },
+			"gunpowder": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:gunpowder')"} ], "on_entry": [ "/scoreboard players set @s itemR 289" ] },
+			"Whoe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_hoe')"} ], "on_entry": [ "/scoreboard players set @s itemR 290" ] },
+			"Shoe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:stone_hoe')"} ], "on_entry": [ "/scoreboard players set @s itemR 291" ] },
+			"Ihoe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_hoe')"} ], "on_entry": [ "/scoreboard players set @s itemR 292" ] },
+			"Dhoe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_hoe')"} ], "on_entry": [ "/scoreboard players set @s itemR 293" ] },
+			"Ghoe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_hoe')"} ], "on_entry": [ "/scoreboard players set @s itemR 294" ] },
+			"Wseeds": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:wheat_seeds')"} ], "on_entry": [ "/scoreboard players set @s itemR 295" ] },
+			"wheat": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:wheat')"} ], "on_entry": [ "/scoreboard players set @s itemR 296" ] },
+			"bread": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:bread')"} ], "on_entry": [ "/scoreboard players set @s itemR 297" ] },
+			"Lhelmet": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:leather_helmet')"} ], "on_entry": [ "/scoreboard players set @s itemR 298" ] },
+			"Lchestplate": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:leather_chestplate')"} ], "on_entry": [ "/scoreboard players set @s itemR 299" ] },
+			"Lleggings": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:leather_leggings')"} ], "on_entry": [ "/scoreboard players set @s itemR 300" ] },
+			"Lboots": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:leather_boots')"} ], "on_entry": [ "/scoreboard players set @s itemR 301" ] },
+			"Chelmet": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:chainmail_helmet')"} ], "on_entry": [ "/scoreboard players set @s itemR 302" ] },
+			"Cchestplate": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:chainmail_chestplate')"} ], "on_entry": [ "/scoreboard players set @s itemR 303" ] },
+			"Cleggings": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:chainmail_leggings')"} ], "on_entry": [ "/scoreboard players set @s itemR 304" ] },
+			"Cboots": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:chainmail_boots')"} ], "on_entry": [ "/scoreboard players set @s itemR 305" ] },
+			"Ihelmet": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_helmet')"} ], "on_entry": [ "/scoreboard players set @s itemR 306" ] },
+			"Ichestplate": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_chestplate')"} ], "on_entry": [ "/scoreboard players set @s itemR 307" ] },
+			"Ileggings": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_leggings')"} ], "on_entry": [ "/scoreboard players set @s itemR 308" ] },
+			"Iboots": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_boots')"} ], "on_entry": [ "/scoreboard players set @s itemR 309" ] },
+			"Dhelmet": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_helmet')"} ], "on_entry": [ "/scoreboard players set @s itemR 310" ] },
+			"Dchestplate": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_chestplate')"} ], "on_entry": [ "/scoreboard players set @s itemR 311" ] },
+			"Dleggings": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_leggings')"} ], "on_entry": [ "/scoreboard players set @s itemR 312" ] },
+			"Dboots": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_boots')"} ], "on_entry": [ "/scoreboard players set @s itemR 313" ] },
+			"Ghelmet": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_helmet')"} ], "on_entry": [ "/scoreboard players set @s itemR 314" ] },
+			"Gchestplate": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_chestplate')"} ], "on_entry": [ "/scoreboard players set @s itemR 315" ] },
+			"Gleggings": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_leggings')"} ], "on_entry": [ "/scoreboard players set @s itemR 316" ] },
+			"Gboots": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_boots')"} ], "on_entry": [ "/scoreboard players set @s itemR 317" ] },
+			"flint": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:flint')"} ], "on_entry": [ "/scoreboard players set @s itemR 318" ] },
+			"porkchop": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:porkchop')"} ], "on_entry": [ "/scoreboard players set @s itemR 319" ] },
+			"Cporkchop": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_porkchop')"} ], "on_entry": [ "/scoreboard players set @s itemR 320" ] },
+			"painting": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:painting')"} ], "on_entry": [ "/scoreboard players set @s itemR 321" ] },
+			"Gapple": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_apple')"} ], "on_entry": [ "/scoreboard players set @s itemR 322" ] },
+			"sign": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:oak_sign')"} ], "on_entry": [ "/scoreboard players set @s itemR 323" ] },
+			"Wdoor": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:wooden_door')"} ], "on_entry": [ "/scoreboard players set @s itemR 324" ] },
+			"bucket": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:bucket')"} ], "on_entry": [ "/scoreboard players set @s itemR 3250" ] },
+			"Mbucket": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:milk_bucket')"} ], "on_entry": [ "/scoreboard players set @s itemR 3251" ] },
+			"Cbucket": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cod_bucket')"} ], "on_entry": [ "/scoreboard players set @s itemR 3252" ] },
+			"Sbucket": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:salmon_bucket')"} ], "on_entry": [ "/scoreboard players set @s itemR 3253" ] },
+			"TFbucket": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:tropical_fish_bucket')"} ], "on_entry": [ "/scoreboard players set @s itemR 3254" ] },
+			"Pbucket": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:pufferfish_bucket')"} ], "on_entry": [ "/scoreboard players set @s itemR 3255" ] },
+			"Wbucket": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:water_bucket')"} ], "on_entry": [ "/scoreboard players set @s itemR 3258" ] },
+			"Lbucket": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:lava_bucket')"} ], "on_entry": [ "/scoreboard players set @s itemR 32510" ] },
+			"minecart": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:minecart')"} ], "on_entry": [ "/scoreboard players set @s itemR 328" ] },
+			"saddle": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:saddle')"} ], "on_entry": [ "/scoreboard players set @s itemR 329" ] },
+			"Idoor": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_door')"} ], "on_entry": [ "/scoreboard players set @s itemR 330" ] },
+			"redstone": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:redstone')"} ], "on_entry": [ "/scoreboard players set @s itemR 331" ] },
+			"snowball": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:snowball')"} ], "on_entry": [ "/scoreboard players set @s itemR 332" ] },
+			"Oboat": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:oak_boat')"} ], "on_entry": [ "/scoreboard players set @s itemR 3331" ] },
+			"Sboat": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:spruce_boat')"} ], "on_entry": [ "/scoreboard players set @s itemR 3332" ] },
+			"Bboat": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:birch_boat')"} ], "on_entry": [ "/scoreboard players set @s itemR 3333" ] },
+			"Jboat": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:jungle_boat')"} ], "on_entry": [ "/scoreboard players set @s itemR 3334" ] },
+			"Aboat": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:acacia_boat')"} ], "on_entry": [ "/scoreboard players set @s itemR 3335" ] },
+			"Dboat": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:dark_oak_boat')"} ], "on_entry": [ "/scoreboard players set @s itemR 3336" ] },
+			"leather": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:leather')"} ], "on_entry": [ "/scoreboard players set @s itemR 334" ] },
+			"kelp": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:kelp')"} ], "on_entry": [ "/scoreboard players set @s itemR 335" ] },
+			"brick": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:brick')"} ], "on_entry": [ "/scoreboard players set @s itemR 336" ] },
+			"Cball": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:clay_ball')"} ], "on_entry": [ "/scoreboard players set @s itemR 337" ] },
+			"reeds": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:sugar_cane')"} ], "on_entry": [ "/scoreboard players set @s itemR 338" ] },
+			"paper": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:paper')"} ], "on_entry": [ "/scoreboard players set @s itemR 339" ] },
+			"book": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:book')"} ], "on_entry": [ "/scoreboard players set @s itemR 340" ] },
+			"Sball": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:slime_ball')"} ], "on_entry": [ "/scoreboard players set @s itemR 341" ] },
+			"Cminecart": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:chest_minecart')"} ], "on_entry": [ "/scoreboard players set @s itemR 342" ] },
+			"egg": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:egg')"} ], "on_entry": [ "/scoreboard players set @s itemR 344" ] },
+			"compass": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:compass')"} ], "on_entry": [ "/scoreboard players set @s itemR 345" ] },
+			"Frod": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:fishing_rod')"} ], "on_entry": [ "/scoreboard players set @s itemR 346" ] },
+			"clock": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:clock')"} ], "on_entry": [ "/scoreboard players set @s itemR 347" ] },
+			"Gdust": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:glowstone_dust')"} ], "on_entry": [ "/scoreboard players set @s itemR 348" ] },
+			"fish": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cod')"} ], "on_entry": [ "/scoreboard players set @s itemR 349" ] },
+			"Cfish": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_cod')"} ], "on_entry": [ "/scoreboard players set @s itemR 350" ] },
+			"Llazuli": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:lapis_lazuli')"} ], "on_entry": [ "/scoreboard players set @s itemR 35105" ] },
+			"Cbeans": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cocoa_beans')"} ], "on_entry": [ "/scoreboard players set @s itemR 35104" ] },
+			"Isac": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:ink_sac')"} ], "on_entry": [ "/scoreboard players set @s itemR 35101" ] },
+			"Bmeal": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:bone_meal')"} ], "on_entry": [ "/scoreboard players set @s itemR 35100" ] },
+			"Bdye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:black_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 3511" ] },
+			"Rdye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:red_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 3512" ] },
+			"Gdye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:green_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 3513" ] },
+			"Brdye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:brown_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 3514" ] },
+			"Bldye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:blue_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 3515" ] },
+			"Pdye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:purple_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 3516" ] },
+			"Cdye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cyan_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 3517" ] },
+			"Ldye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:light_gray_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 3518" ] },
+			"Grdye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:gray_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 3519" ] },
+			"Pidye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:pink_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 35110" ] },
+			"Lidye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:lime_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 35111" ] },
+			"Ydye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:yellow_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 35112" ] },
+			"LBdye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:light_blue_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 35113" ] },
+			"Mdye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:magenta_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 35114" ] },
+			"Odye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:orange_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 35115" ] },
+			"Wdye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:white_dye')"} ], "on_entry": [ "/scoreboard players set @s itemR 35116" ] },
+			"bone": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:bone')"} ], "on_entry": [ "/scoreboard players set @s itemR 352" ] },
+			"sugar": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:sugar')"} ], "on_entry": [ "/scoreboard players set @s itemR 353" ] },
+			"cake": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cake')"} ], "on_entry": [ "/scoreboard players set @s itemR 354" ] },
+			"bed": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:bed')"} ], "on_entry": [ "/scoreboard players set @s itemR 355" ] },
+			"repeater": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:repeater')"} ], "on_entry": [ "/scoreboard players set @s itemR 356" ] },
+			"cookie": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cookie')"} ], "on_entry": [ "/scoreboard players set @s itemR 357" ] },
+			"Mfilled": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:filled_map')"} ], "on_entry": [ "/scoreboard players set @s itemR 358" ] },
+			"shears": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:shears')"} ], "on_entry": [ "/scoreboard players set @s itemR 359" ] },
+			"Mslice": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:melon_slice')"} ], "on_entry": [ "/scoreboard players set @s itemR 360" ] },
+			"Pseeds": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:pumpkin_seeds')"} ], "on_entry": [ "/scoreboard players set @s itemR 361" ] },
+			"Mseeds": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:melon_seeds')"} ], "on_entry": [ "/scoreboard players set @s itemR 362" ] },
+			"beef": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:beef')"} ], "on_entry": [ "/scoreboard players set @s itemR 363" ] },
+			"Cbeef": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_beef')"} ], "on_entry": [ "/scoreboard players set @s itemR 364" ] },
+			"chicken": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:chicken')"} ], "on_entry": [ "/scoreboard players set @s itemR 365" ] },
+			"Cchicken": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_chicken')"} ], "on_entry": [ "/scoreboard players set @s itemR 366" ] },
+			"Rflesh": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:rotten_flesh')"} ], "on_entry": [ "/scoreboard players set @s itemR 367" ] },
+			"Epearl": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:ender_pearl')"} ], "on_entry": [ "/scoreboard players set @s itemR 368" ] },
+			"Brod": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:blaze_rod')"} ], "on_entry": [ "/scoreboard players set @s itemR 369" ] },
+			"Gtear": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:ghast_tear')"} ], "on_entry": [ "/scoreboard players set @s itemR 370" ] },
+			"Gnugget": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:gold_nugget')"} ], "on_entry": [ "/scoreboard players set @s itemR 371" ] },
+			"Nwart": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:nether_wart')"} ], "on_entry": [ "/scoreboard players set @s itemR 372" ] },
+			"potion": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:potion')"} ], "on_entry": [ "/scoreboard players set @s itemR 373" ] },
+			"Gbottle": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:glass_bottle')"} ], "on_entry": [ "/scoreboard players set @s itemR 374" ] },
+			"Seye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:spider_eye')"} ], "on_entry": [ "/scoreboard players set @s itemR 375" ] },
+			"FSeye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:fermented_spider_eye')"} ], "on_entry": [ "/scoreboard players set @s itemR 376" ] },
+			"Bpowder": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:blaze_powder')"} ], "on_entry": [ "/scoreboard players set @s itemR 377" ] },
+			"Mcream": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:magma_cream')"} ], "on_entry": [ "/scoreboard players set @s itemR 378" ] },
+			"Bstand": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:brewing_stand')"} ], "on_entry": [ "/scoreboard players set @s itemR 379" ] },
+			"cauldron": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cauldron')"} ], "on_entry": [ "/scoreboard players set @s itemR 380" ] },
+			"Eeye": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:ender_eye')"} ], "on_entry": [ "/scoreboard players set @s itemR 381" ] },
+			"Smelon": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:glistering_melon_slice')"} ], "on_entry": [ "/scoreboard players set @s itemR 382" ] },
+			"Segg": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:spawn_egg')"} ], "on_entry": [ "/scoreboard players set @s itemR 383" ] },
+			"Ebottle": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:experience_bottle')"} ], "on_entry": [ "/scoreboard players set @s itemR 384" ] },
+			"fireball": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:fire_charge')"} ], "on_entry": [ "/scoreboard players set @s itemR 385" ] },
+			"Webook": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:writable_book')"} ], "on_entry": [ "/scoreboard players set @s itemR 386" ] },
+			"Wnbook": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:written_book')"} ], "on_entry": [ "/scoreboard players set @s itemR 387" ] },
+			"emerald": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:emerald')"} ], "on_entry": [ "/scoreboard players set @s itemR 388" ] },
+			"frame": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:frame')"} ], "on_entry": [ "/scoreboard players set @s itemR 389" ] },
+			"Fpot": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:flower_pot')"} ], "on_entry": [ "/scoreboard players set @s itemR 390" ] },
+			"carrot": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:carrot')"} ], "on_entry": [ "/scoreboard players set @s itemR 391" ] },
+			"potato": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:potato')"} ], "on_entry": [ "/scoreboard players set @s itemR 392" ] },
+			"Bpotato": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:baked_potato')"} ], "on_entry": [ "/scoreboard players set @s itemR 393" ] },
+			"Ppotato": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:poisonous_potato')"} ], "on_entry": [ "/scoreboard players set @s itemR 394" ] },
+			"emptymap": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:empty_map')"} ], "on_entry": [ "/scoreboard players set @s itemR 395" ] },
+			"Gcarrot": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_carrot')"} ], "on_entry": [ "/scoreboard players set @s itemR 396" ] },
+			"skull": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:skull')"} ], "on_entry": [ "/scoreboard players set @s itemR 397" ] },
+			"carrotonastick": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:carrot_on_a_stick')"} ], "on_entry": [ "/scoreboard players set @s itemR 398" ] },
+			"netherstar": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:nether_star')"} ], "on_entry": [ "/scoreboard players set @s itemR 399" ] },
+			"Ppie": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:pumpkin_pie')"} ], "on_entry": [ "/scoreboard players set @s itemR 400" ] },
+			"fireworks": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:firework_rocket')"} ], "on_entry": [ "/scoreboard players set @s itemR 401" ] },
+			"fireworkscharge": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:firework_star')"} ], "on_entry": [ "/scoreboard players set @s itemR 402" ] },
+			"Ebook": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:enchanted_book')"} ], "on_entry": [ "/scoreboard players set @s itemR 403" ] },
+			"comparator": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:comparator')"} ], "on_entry": [ "/scoreboard players set @s itemR 404" ] },
+			"netherbrick": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherbrick')"} ], "on_entry": [ "/scoreboard players set @s itemR 405" ] },
+			"quartz": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:quartz')"} ], "on_entry": [ "/scoreboard players set @s itemR 406" ] },
+			"Tminecart": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:tnt_minecart')"} ], "on_entry": [ "/scoreboard players set @s itemR 407" ] },
+			"Hminecart": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:hopper_minecart')"} ], "on_entry": [ "/scoreboard players set @s itemR 408" ] },
+			"Pshard": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:prismarine_shard')"} ], "on_entry": [ "/scoreboard players set @s itemR 409" ] },
+			"hopper": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:hopper')"} ], "on_entry": [ "/scoreboard players set @s itemR 410" ] },
+			"rabbit": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:rabbit')"} ], "on_entry": [ "/scoreboard players set @s itemR 411" ] },
+			"Crabbit": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_rabbit')"} ], "on_entry": [ "/scoreboard players set @s itemR 412" ] },
+			"Rstew": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:rabbit_stew')"} ], "on_entry": [ "/scoreboard players set @s itemR 413" ] },
+			"Rfoot": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:rabbit_foot')"} ], "on_entry": [ "/scoreboard players set @s itemR 414" ] },
+			"Rhide": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:rabbit_hide')"} ], "on_entry": [ "/scoreboard players set @s itemR 415" ] },
+			"horsearmorleather": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:leather_horse_armor')"} ], "on_entry": [ "/scoreboard players set @s itemR 416" ] },
+			"horsearmoriron": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_horse_armor')"} ], "on_entry": [ "/scoreboard players set @s itemR 417" ] },
+			"horsearmorgold": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:golden_horse_armor')"} ], "on_entry": [ "/scoreboard players set @s itemR 418" ] },
+			"horsearmordiamond": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:diamond_horse_armor')"} ], "on_entry": [ "/scoreboard players set @s itemR 419" ] },
+			"lead": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:lead')"} ], "on_entry": [ "/scoreboard players set @s itemR 420" ] },
+			"Ntag": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:name_tag')"} ], "on_entry": [ "/scoreboard players set @s itemR 421" ] },
+			"Pcrystals": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:prismarine_crystals')"} ], "on_entry": [ "/scoreboard players set @s itemR 422" ] },
+			"muttonraw": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:mutton')"} ], "on_entry": [ "/scoreboard players set @s itemR 423" ] },
+			"muttoncooked": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_mutton')"} ], "on_entry": [ "/scoreboard players set @s itemR 424" ] },
+			"Astand": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:armor_stand')"} ], "on_entry": [ "/scoreboard players set @s itemR 425" ] },
+			"Ecrystal": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:end_crystal')"} ], "on_entry": [ "/scoreboard players set @s itemR 426" ] },
+			"Sdoor": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:spruce_door')"} ], "on_entry": [ "/scoreboard players set @s itemR 427" ] },
+			"Bdoor": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:birch_door')"} ], "on_entry": [ "/scoreboard players set @s itemR 428" ] },
+			"Jdoor": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:jungle_door')"} ], "on_entry": [ "/scoreboard players set @s itemR 429" ] },
+			"Adoor": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:acacia_door')"} ], "on_entry": [ "/scoreboard players set @s itemR 430" ] },
+			"DOdoor": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:dark_oak_door')"} ], "on_entry": [ "/scoreboard players set @s itemR 431" ] },
+			"Cfruit": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:chorus_fruit')"} ], "on_entry": [ "/scoreboard players set @s itemR 432" ] },
+			"CFpopped": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:popped_chorus_fruit')"} ], "on_entry": [ "/scoreboard players set @s itemR 433" ] },
+			"Bpattern": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:banner_pattern')"} ], "on_entry": [ "/scoreboard players set @s itemR 434" ] },
+			"Dbreath": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:dragon_breath')"} ], "on_entry": [ "/scoreboard players set @s itemR 437" ] },
+			"Spotion": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:splash_potion')"} ], "on_entry": [ "/scoreboard players set @s itemR 438" ] },
+			"Lpotion": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:lingering_potion')"} ], "on_entry": [ "/scoreboard players set @s itemR 441" ] },
+			"CBminecart": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:command_block_minecart')"} ], "on_entry": [ "/scoreboard players set @s itemR 443" ] },
+			"elytra": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:elytra')"} ], "on_entry": [ "/scoreboard players set @s itemR 444" ] },
+			"Sshell": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:shulker_shell')"} ], "on_entry": [ "/scoreboard players set @s itemR 445" ] },
+			"banner": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:banner')"} ], "on_entry": [ "/scoreboard players set @s itemR 446" ] },
+			"totem": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:totem_of_undying')"} ], "on_entry": [ "/scoreboard players set @s itemR 450" ] },
+			"Inugget": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_nugget')"} ], "on_entry": [ "/scoreboard players set @s itemR 452" ] },
+			"trident": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:trident')"} ], "on_entry": [ "/scoreboard players set @s itemR 455" ] },
+			"beetroot": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:beetroot')"} ], "on_entry": [ "/scoreboard players set @s itemR 457" ] },
+			"Bseeds": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:beetroot_seeds')"} ], "on_entry": [ "/scoreboard players set @s itemR 458" ] },
+			"Bsoup": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:beetroot_soup')"} ], "on_entry": [ "/scoreboard players set @s itemR 459" ] },
+			"salmon": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:salmon')"} ], "on_entry": [ "/scoreboard players set @s itemR 460" ] },
+			"clownfish": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:tropical_fish')"} ], "on_entry": [ "/scoreboard players set @s itemR 461" ] },
+			"pufferfish": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:pufferfish')"} ], "on_entry": [ "/scoreboard players set @s itemR 462" ] },
+			"Csalmon": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:cooked_salmon')"} ], "on_entry": [ "/scoreboard players set @s itemR 463" ] },
+			"Dkelp": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:dried_kelp')"} ], "on_entry": [ "/scoreboard players set @s itemR 464" ] },
+			"Nshell": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:nautilus_shell')"} ], "on_entry": [ "/scoreboard players set @s itemR 465" ] },
+			"appleenchanted": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:enchanted_golden_apple')"} ], "on_entry": [ "/scoreboard players set @s itemR 466" ] },
+			"HOTsea": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:heart_of_the_sea')"} ], "on_entry": [ "/scoreboard players set @s itemR 467" ] },
+			"TSpiece": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:turtle_shell_piece')"} ], "on_entry": [ "/scoreboard players set @s itemR 468" ] },
+			"Thelmet": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:turtle_helmet')"} ], "on_entry": [ "/scoreboard players set @s itemR 469" ] },
+			"Pmembrane": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:phantom_membrane')"} ], "on_entry": [ "/scoreboard players set @s itemR 470" ] },
+			"crossbow": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:crossbow')"} ], "on_entry": [ "/scoreboard players set @s itemR 471" ] },
+			"Ssign": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:spruce_sign')"} ], "on_entry": [ "/scoreboard players set @s itemR 472" ] },
+			"Bsign": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:birch_sign')"} ], "on_entry": [ "/scoreboard players set @s itemR 473" ] },
+			"Jsign": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:jungle_sign')"} ], "on_entry": [ "/scoreboard players set @s itemR 474" ] },
+			"Asign": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:acacia_sign')"} ], "on_entry": [ "/scoreboard players set @s itemR 475" ] },
+			"Dsign": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:dark_oak_sign')"} ], "on_entry": [ "/scoreboard players set @s itemR 476" ] },
+			"Sberries": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:sweet_berries')"} ], "on_entry": [ "/scoreboard players set @s itemR 477" ] },
+			"camera": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:camera')"} ], "on_entry": [ "/scoreboard players set @s itemR 498" ] },
+			"record13": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_13')"} ], "on_entry": [ "/scoreboard players set @s itemR 500" ] },
+			"recordcat": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_cat')"} ], "on_entry": [ "/scoreboard players set @s itemR 501" ] },
+			"recordblocks": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_blocks')"} ], "on_entry": [ "/scoreboard players set @s itemR 502" ] },
+			"recordchirp": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_chirp')"} ], "on_entry": [ "/scoreboard players set @s itemR 503" ] },
+			"recordfar": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_far')"} ], "on_entry": [ "/scoreboard players set @s itemR 504" ] },
+			"recordmall": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_mall')"} ], "on_entry": [ "/scoreboard players set @s itemR 505" ] },
+			"recordmellohi": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_mellohi')"} ], "on_entry": [ "/scoreboard players set @s itemR 506" ] },
+			"recordstal": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_stal')"} ], "on_entry": [ "/scoreboard players set @s itemR 507" ] },
+			"recordstrad": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_strad')"} ], "on_entry": [ "/scoreboard players set @s itemR 508" ] },
+			"recordward": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_ward')"} ], "on_entry": [ "/scoreboard players set @s itemR 509" ] },
+			"record11": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_11')"} ], "on_entry": [ "/scoreboard players set @s itemR 510" ] },
+			"recordwait": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_wait')"} ], "on_entry": [ "/scoreboard players set @s itemR 511" ] },
+			"shield": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:shield')"} ], "on_entry": [ "/scoreboard players set @s itemR 513" ] },
+			"campfire": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:campfire')"} ], "on_entry": [ "/scoreboard players set @s itemR 720" ] },
+			"Sstew": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:suspicious_stew')"} ], "on_entry": [ "/scoreboard players set @s itemR 734" ] },
+			"honeycomb": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:honeycomb')"} ], "on_entry": [ "/scoreboard players set @s itemR 736" ] },
+			"Hbottle": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:honey_bottle')"} ], "on_entry": [ "/scoreboard players set @s itemR 737" ] },
+			"lodestonecompass": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:lodestonecompass')"} ], "on_entry": [ "/scoreboard players set @s itemR 741" ] },
+			"Ningot": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_ingot')"} ], "on_entry": [ "/scoreboard players set @s itemR 742" ] },
+			"Nsword": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_sword')"} ], "on_entry": [ "/scoreboard players set @s itemR 743" ] },
+			"Nshovel": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_shovel')"} ], "on_entry": [ "/scoreboard players set @s itemR 744" ] },
+			"Npickaxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_pickaxe')"} ], "on_entry": [ "/scoreboard players set @s itemR 745" ] },
+			"Naxe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_axe')"} ], "on_entry": [ "/scoreboard players set @s itemR 746" ] },
+			"Nhoe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_hoe')"} ], "on_entry": [ "/scoreboard players set @s itemR 747" ] },
+			"Nhelmet": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_helmet')"} ], "on_entry": [ "/scoreboard players set @s itemR 748" ] },
+			"Nchestplate": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_chestplate')"} ], "on_entry": [ "/scoreboard players set @s itemR 749" ] },
+			"Nleggings": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_leggings')"} ], "on_entry": [ "/scoreboard players set @s itemR 750" ] },
+			"Nboots": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_boots')"} ], "on_entry": [ "/scoreboard players set @s itemR 751" ] },
+			"Nscrap": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:netherite_scrap')"} ], "on_entry": [ "/scoreboard players set @s itemR 752" ] },
+			"Csign": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:crimson_sign')"} ], "on_entry": [ "/scoreboard players set @s itemR 753" ] },
+			"Wsign": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:warped_sign')"} ], "on_entry": [ "/scoreboard players set @s itemR 754" ] },
+			"Cdoor": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:crimson_door')"} ], "on_entry": [ "/scoreboard players set @s itemR 755" ] },
+			"Wadoor": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:warped_door')"} ], "on_entry": [ "/scoreboard players set @s itemR 756" ] },
+			"WFOAstick": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:warped_fungus_on_a_stick')"} ], "on_entry": [ "/scoreboard players set @s itemR 757" ] },
+			"chain": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:chain')"} ], "on_entry": [ "/scoreboard players set @s itemR 758" ] },
+			"recordpigstep": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:music_disc_pigstep')"} ], "on_entry": [ "/scoreboard players set @s itemR 759" ] },
+			"Nsprouts": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:nether_sprouts')"} ], "on_entry": [ "/scoreboard players set @s itemR 760" ] },
+			"Scampfire": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:soul_campfire')"} ], "on_entry": [ "/scoreboard players set @s itemR 801" ] },
+			"barrier": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:barrier')"} ], "on_entry": [ "/scoreboard players set @s itemR 1416" ] },
+			"tnt": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:tnt')"} ], "on_entry": [ "/scoreboard players set @s itemR 1046" ] },
+			"Ctable": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:crafting_table')"} ], "on_entry": [ "/scoreboard players set @s itemR 1058" ] },
+			"furnace": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:furnace')"} ], "on_entry": [ "/scoreboard players set @s itemR 1061" ] },
+			"anvil": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:anvil')"} ], "on_entry": [ "/scoreboard players set @s itemR 1145" ] },
+			"Cpumpkin": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:carved_pumpkin')"} ], "on_entry": [ "/scoreboard players set @s itemR 1410" ] },
+			"Lpumpkin": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:lit_pumpkin')"} ], "on_entry": [ "/scoreboard players set @s itemR 1091" ] },
+			"Etable": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:enchanting_table')"} ], "on_entry": [ "/scoreboard players set @s itemR 1116" ] },
+			"EPframe": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:end_portal_frame')"} ], "on_entry": [ "/scoreboard players set @s itemR 1120" ] },
+			"Degg": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:dragon_egg')"} ], "on_entry": [ "/scoreboard players set @s itemR 1122" ] },
+			"chest": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:chest')"} ], "on_entry": [ "/scoreboard players set @s itemR 1054" ] },
+			"Echest": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:ender_chest')"} ], "on_entry": [ "/scoreboard players set @s itemR 1130" ] },
+			"Cchest": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:trapped_chest')"} ], "on_entry": [ "/scoreboard players set @s itemR 1146" ] },
+			"Thook": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:tripwire_hook')"} ], "on_entry": [ "/scoreboard players set @s itemR 1131" ] },
+			"waterlily": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:waterlily')"} ], "on_entry": [ "/scoreboard players set @s itemR 1111" ] },
+			"bamboo": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:bamboo')"} ], "on_entry": [ "/scoreboard players set @s itemR 1418" ] },
+			"web": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:web')"} ], "on_entry": [ "/scoreboard players set @s itemR 1030" ] },
+			"Ibars": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:iron_bars')"} ], "on_entry": [ "/scoreboard players set @s itemR 1101" ] },
+			"ladder": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:ladder')"} ], "on_entry": [ "/scoreboard players set @s itemR 1065" ] },
+			"Tegg": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:turtle_egg')"} ], "on_entry": [ "/scoreboard players set @s itemR 1414" ] },
+			"lantern": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:lantern')"} ], "on_entry": [ "/scoreboard players set @s itemR 1463" ] },
+			"Slantern": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:soul_lantern')"} ], "on_entry": [ "/scoreboard players set @s itemR 1524" ] },
+			"torch": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:torch')"} ], "on_entry": [ "/scoreboard players set @s itemR 1050" ] },
+			"Storch": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:soul_torch')"} ], "on_entry": [ "/scoreboard players set @s itemR 1523" ] },
+			"Rtorch": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:redstone_torch')"} ], "on_entry": [ "/scoreboard players set @s itemR 1076" ] },
+			"lever": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:lever')"} ], "on_entry": [ "/scoreboard players set @s itemR 1069" ] },
+			"Spickle": { "transitions": [ {"default": "!query.is_item_name_any('slot.weapon.mainhand','minecraft:sea_pickle')"} ], "on_entry": [ "/scoreboard players set @s itemR 1411" ] }
+}
+	},
+	//sb
+    "controller.animation.cape_flap_amount": {
+      "states": {
+        "default": {
+          "transitions": [
+            {"flap": "query.cape_flap_amount > 0"}
+          ],
+          "on_entry": [
+            "/tag @s remove cape_flapping"
+          ]
+        },
+        "flap": {
+          "transitions": [
+            {"default": "query.cape_flap_amount <= 0"}
+          ],
+          "on_entry": [
+            "/tag @s add cape_flapping",
+            "/scoreboard players set @s cape_flap_amount query.cape_flap_amount"
+          ]
+        }
+      }
+    },
+		//sb
+		"controller.animation.wet": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "wet": "query.is_in_contact_with_water"
+                        }
+                    ],
+                    "on_entry": ["/tag @s remove wet", "/tellraw @a[tag=matrix:packetLogger] {\"rawtext\":[{\"translate\":\"json.packet\",\"with\":{\"rawtext\":[{\"text\":\"WET\"},{\"text\":\"REMOVE\"},{\"selector\":\"@s\"}]}}]}"]
+                },
+                "wet": {
+                    "transitions": [
+                        {
+                            "default": "!query.is_in_contact_with_water"
+                        }
+                    ],
+                    "on_entry": ["/tag @s add wet", "/tellraw @a[tag=matrix:packetLogger] {\"rawtext\":[{\"translate\":\"json.packet\",\"with\":{\"rawtext\":[{\"text\":\"WET\"},{\"text\":\"ADD\"},{\"selector\":\"@s\"}]}}]}"]
+                }
+            }
+        },
+        "controller.animation.first_person": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "is_facing": "query.is_first_person"
+                        }
+                    ],
+                    "on_entry": ["/tag @s remove firstPerson", "/tellraw @a[tag=matrix:packetLogger] {\"rawtext\":[{\"translate\":\"json.packet\",\"with\":{\"rawtext\":[{\"text\":\"FIRST_PERSON\"},{\"text\":\"REMOVE\"},{\"selector\":\"@s\"}]}}]}"]
+                },
+                "is_facing": {
+                    "transitions": [
+                        {
+                            "is_facing": "!query.is_first_person"
+                        }
+                    ],
+                    "on_entry": ["/tag @s add firstPerson", "/tellraw @a[tag=matrix:packetLogger] {\"rawtext\":[{\"translate\":\"json.packet\",\"with\":{\"rawtext\":[{\"text\":\"FIRST_PERSON\"},{\"text\":\"ADD\"},{\"selector\":\"@s\"}]}}]}"]
+                }
+            }
+        },
+        "controller.animation.facing_north": {
+            "initial_state": "is_not_facing",
+            "states": {
+                "is_facing": {
+                    "transitions": [
+                        {
+                            "is_not_facing": "query.cardinal_facing_2d != 2"
+                        }
+                    ],
+                    "on_entry": ["/tag @s add north"]
+                },
+                "is_not_facing": {
+                    "transitions": [
+                        {
+                            "is_facing": "query.cardinal_facing_2d == 2"
+                        }
+                    ],
+                    "on_entry": ["/tag @s remove north"]
+                }
+            }
+        },
+        "controller.animation.facing_south": {
+            "initial_state": "is_not_facing",
+            "states": {
+                "is_facing": {
+                    "transitions": [
+                        {
+                            "is_not_facing": "query.cardinal_facing_2d != 3"
+                        }
+                    ],
+                    "on_entry": ["/tag @s add south"]
+                },
+                "is_not_facing": {
+                    "transitions": [
+                        {
+                            "is_facing": "query.cardinal_facing_2d == 3"
+                        }
+                    ],
+                    "on_entry": ["/tag @s remove south"]
+                }
+            }
+        },
+        "controller.animation.facing_east": {
+            "initial_state": "is_not_facing",
+            "states": {
+                "is_facing": {
+                    "transitions": [
+                        {
+                            "is_not_facing": "query.cardinal_facing_2d != 5"
+                        }
+                    ],
+                    "on_entry": ["/tag @s add east"]
+                },
+                "is_not_facing": {
+                    "transitions": [
+                        {
+                            "is_facing": "query.cardinal_facing_2d == 5"
+                        }
+                    ],
+                    "on_entry": ["/tag @s remove east"]
+                }
+            }
+        },
+        "controller.animation.facing_west": {
+            "initial_state": "is_not_facing",
+            "states": {
+                "is_facing": {
+                    "transitions": [
+                        {
+                            "is_not_facing": "query.cardinal_facing_2d != 4"
+                        }
+                    ],
+                    "on_entry": ["/tag @s add west"]
+                },
+                "is_not_facing": {
+                    "transitions": [
+                        {
+                            "is_facing": "query.cardinal_facing_2d == 4"
+                        }
+                    ],
+                    "on_entry": ["/tag @s remove west"]
+                }
+            }
+        }
+	}
+}
+
+

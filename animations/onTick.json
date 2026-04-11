@@ -1,0 +1,16 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.onTick": {
+			"timeline": {
+				"0.0": [
+					"/gamerule functioncommandlimit 10000",
+					"/gamerule randomtickspeed 1",
+					"/scoreboard players add @s[scores={timerate=-114514..114514}] timerate 1"
+				]
+			},
+			"animation_length": 0.05,
+			"loop": true
+		}
+	}
+}

@@ -1,0 +1,55 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.movement_state": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "downing": "!query.is_on_ground && !query.is_riding && query.can_fly && !query.is_gliding && !query.is_swimming && query.position_delta(1) < -0.02" },
+                        { "falling": "!query.is_on_ground && !query.is_riding && !query.can_fly && !query.is_gliding && !query.is_swimming && !query.is_levitating && !query.is_jumping && query.position_delta(1) < -0.03" },
+                        { "rising": "!query.is_on_ground && !query.is_riding && !query.is_gliding && !query.is_swimming && query.position_delta(1) > 0.03" }
+                    ],
+                    "on_entry": [
+                        "/tag @s remove downing",
+                        "/tag @s remove falling",
+                        "/tag @s remove rising"
+                    ]
+                },
+                "downing": {
+                    "transitions": [
+                        { "default": "query.is_on_ground || query.is_riding || !query.can_fly || query.is_gliding || query.is_swimming || query.position_delta(1) >= -0.01" }
+                    ],
+                    "on_entry": [
+                        "/tag @s add downing"
+                    ],
+                    "on_exit": [
+                        "/tag @s remove downing"
+                    ]
+                },
+                "falling": {
+                    "transitions": [
+                        { "default": "query.is_on_ground || query.is_riding || query.can_fly || query.is_gliding || query.is_swimming || query.is_levitating || query.position_delta(1) >= -0.015" }
+                    ],
+                    "on_entry": [
+                        "/tag @s add falling"
+                    ],
+                    "on_exit": [
+                        "/tag @s remove falling"
+                    ]
+                },
+                "rising": {
+                    "transitions": [
+                        { "default": "query.is_on_ground || query.is_riding || query.is_gliding || query.is_swimming || query.position_delta(1) <= 0.015" }
+                    ],
+                    "on_entry": [
+                        "/tag @s add rising"
+                    ],
+                    "on_exit": [
+                        "/tag @s remove rising"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,2006 @@
+{
+    "format_version": "1.18.20",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "minecraft:player",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "onTick",
+                    "onJoin",
+                    "glide",
+                    "levitate",
+                    "ground",
+                    "death",
+                    "ride",
+                    "left",
+                    "right",
+                    "sneak",
+                    "jump",
+                    "wet",
+                    "south",
+                    "east",
+                    "west",
+                    "north",
+                    "move",
+                    "autototem",
+                    "autoshield",
+                    "sprint",
+                    "attack",
+                    "attacktime",
+                    "invmove",
+                    "cape_flap_amount",
+                    "swim",
+                    "sleep",
+                    "trident",
+                    "can_climb",
+                    "can_damage_nearby_mobs",
+                    "can_dash",
+                    "can_fly",
+                    "can_power_jump",
+                    "can_swim",
+                    "can_walk",
+                    "speed_v3",
+                    "speed_v2",
+                    "speed_v1",
+                    "speed_v0",
+                    "xz_speed_v3",
+                    "xz_speed_v2",
+                    "xz_speed_v1",
+                    "xz_speed_v0",
+                    "movement_state",
+                    "hand_equip_Left",
+                    "hand_equip_Right",
+                    "helmet",
+                    "chestplate",
+                    "is_using_item",
+                    "leggings",
+                    "boots",
+                    "breath",
+                    "has_collision",
+                    "is_wall_climbing",
+                    "speed_x_v3",
+                    "speed_x_v2",
+                    "speed_x_v1",
+                    "speed_x_v0",
+                    "speed_y_v3",
+                    "speed_y_v2",
+                    "speed_y_v1",
+                    "speed_y_v0",
+                    "speed_z_v3",
+                    "speed_z_v2",
+                    "speed_z_v1",
+                    "speed_z_v0",
+                    "pos_x_s",
+                    "pos_x_v0",
+                    "pos_x_v1",
+                    "pos_x_v2",
+                    "pos_x_v3",
+                    "pos_x_v4",
+                    "pos_x_v5",
+                    "pos_x_v6",
+                    "pos_x_v7",
+                    "pos_y_s",
+                    "pos_y_v0",
+                    "pos_y_v1",
+                    "pos_y_v2",
+                    "pos_y_v3",
+                    "pos_y_v4",
+                    "pos_y_v5",
+                    "pos_y_v6",
+                    "pos_y_v7",
+                    "pos_z_s",
+                    "pos_z_v0",
+                    "pos_z_v1",
+                    "pos_z_v2",
+                    "pos_z_v3",
+                    "pos_z_v4",
+                    "pos_z_v5",
+                    "pos_z_v6",
+                    "pos_z_v7",
+                    "mv_forward",
+                    "mv_backward",
+                    "mv_leftward",
+                    "mv_rightward",
+                    "rot_x_enum",
+                    "rot_y_enum",
+                    "body_rot_x_enum",
+                    "body_rot_y_enum"
+                ]
+            },
+            "animations": {
+                "is_wall_climbing": "controller.animation.is_wall_climbing",
+                "has_collision": "controller.animation.has_collision",
+                "speed_v3": "controller.animation.ground_speed.digit_3",
+                "speed_v2": "controller.animation.ground_speed.digit_2",
+                "speed_v1": "controller.animation.ground_speed.digit_1",
+                "speed_v0": "controller.animation.ground_speed.digit_0",
+                "xz_speed_v3": "controller.animation.xz_speed.digit_3",
+                "xz_speed_v2": "controller.animation.xz_speed.digit_2",
+                "xz_speed_v1": "controller.animation.xz_speed.digit_1",
+                "xz_speed_v0": "controller.animation.xz_speed.digit_0",
+                "movement_state": "controller.animation.movement_state",
+                "is_using_item": "controller.animation.is_using_item",
+                "onTick": "animation.onTick",
+                "onJoin": "animation.onJoin",
+                "glide": "controller.animation.glide",
+                "levitate": "controller.animation.levitate",
+                "ground": "controller.animation.ground",
+                "death": "controller.animation.death",
+                "ride": "controller.animation.ride",
+                "left": "controller.animation.left",
+                "right": "controller.animation.right",
+                "sneak": "controller.animation.sneak",
+                "jump": "controller.animation.jump",
+                "wet": "controller.animation.wet",
+                "south": "controller.animation.facing_south",
+                "east": "controller.animation.facing_east",
+                "west": "controller.animation.facing_west",
+                "north": "controller.animation.facing_north",
+                "move": "controller.animation.move",
+                "autototem": "controller.animation.autototem",
+                "autoshield": "controller.animation.autoshield",
+                "sprint": "controller.animation.sprint",
+                "attack": "controller.animation.attack",
+                "invmove": "controller.animation.invmove",
+                "swim": "controller.animation.swim",
+                "sleep": "controller.animation.sleep",
+                "trident": "controller.animation.trident",
+                "attacktime": "controller.animation.attacktime",
+                "cape_flap_amount": "controller.animation.cape_flap_amount",
+                "can_climb": "controller.animation.can_climb",
+                "can_damage_nearby_mobs": "controller.animation.can_damage_nearby_mobs",
+                "can_dash": "controller.animation.can_dash",
+                "can_fly": "controller.animation.can_fly",
+                "can_power_jump": "controller.animation.can_power_jump",
+                "can_swim": "controller.animation.can_swim",
+                "can_walk": "controller.animation.can_walk",
+                "hand_equip_Left": "controller.animation.hand_equip_Left",
+                "hand_equip_Right": "controller.animation.hand_equip_Right",
+                "helmet": "controller.animation.helmet",
+                "chestplate": "controller.animation.chestplate",
+                "leggings": "controller.animation.leggings",
+                "boots": "controller.animation.boots",
+                "breath": "controller.animation.breath",
+                "speed_x_v3": "controller.animation.speed_x.digit_3",
+                "speed_x_v2": "controller.animation.speed_x.digit_2",
+                "speed_x_v1": "controller.animation.speed_x.digit_1",
+                "speed_x_v0": "controller.animation.speed_x.digit_0",
+                "speed_y_v3": "controller.animation.speed_y.digit_3",
+                "speed_y_v2": "controller.animation.speed_y.digit_2",
+                "speed_y_v1": "controller.animation.speed_y.digit_1",
+                "speed_y_v0": "controller.animation.speed_y.digit_0",
+                "speed_z_v3": "controller.animation.speed_z.digit_3",
+                "speed_z_v2": "controller.animation.speed_z.digit_2",
+                "speed_z_v1": "controller.animation.speed_z.digit_1",
+                "speed_z_v0": "controller.animation.speed_z.digit_0",
+                "pos_x_s": "controller.animation.pos_x.sign",
+                "pos_x_v0": "controller.animation.pos_x.digit_0",
+                "pos_x_v1": "controller.animation.pos_x.digit_1",
+                "pos_x_v2": "controller.animation.pos_x.digit_2",
+                "pos_x_v3": "controller.animation.pos_x.digit_3",
+                "pos_x_v4": "controller.animation.pos_x.digit_4",
+                "pos_x_v5": "controller.animation.pos_x.digit_5",
+                "pos_x_v6": "controller.animation.pos_x.digit_6",
+                "pos_x_v7": "controller.animation.pos_x.digit_7",
+                "pos_y_s": "controller.animation.pos_y.sign",
+                "pos_y_v0": "controller.animation.pos_y.digit_0",
+                "pos_y_v1": "controller.animation.pos_y.digit_1",
+                "pos_y_v2": "controller.animation.pos_y.digit_2",
+                "pos_y_v3": "controller.animation.pos_y.digit_3",
+                "pos_y_v4": "controller.animation.pos_y.digit_4",
+                "pos_y_v5": "controller.animation.pos_y.digit_5",
+                "pos_y_v6": "controller.animation.pos_y.digit_6",
+                "pos_y_v7": "controller.animation.pos_y.digit_7",
+                "pos_z_s": "controller.animation.pos_z.sign",
+                "pos_z_v0": "controller.animation.pos_z.digit_0",
+                "pos_z_v1": "controller.animation.pos_z.digit_1",
+                "pos_z_v2": "controller.animation.pos_z.digit_2",
+                "pos_z_v3": "controller.animation.pos_z.digit_3",
+                "pos_z_v4": "controller.animation.pos_z.digit_4",
+                "pos_z_v5": "controller.animation.pos_z.digit_5",
+                "pos_z_v6": "controller.animation.pos_z.digit_6",
+                "pos_z_v7": "controller.animation.pos_z.digit_7",
+                "mv_forward": "controller.animation.movement.forward",
+                "mv_backward": "controller.animation.movement.backward",
+                "mv_leftward": "controller.animation.movement.leftward",
+                "mv_rightward": "controller.animation.movement.rightward",
+                "rot_x_enum": "controller.animation.rot_x.enum",
+                "rot_y_enum": "controller.animation.rot_y.enum",
+                "body_rot_x_enum": "controller.animation.body_rot_x.enum",
+                "body_rot_y_enum": "controller.animation.body_rot_y.enum"
+            }
+        },
+        "component_groups": {
+            "minecraft:add_bad_omen": {
+                "minecraft:spell_effects": {
+                    "add_effects": [
+                        {
+                            "effect": "bad_omen",
+                            "duration": 6000,
+                            "visible": false,
+                            "display_on_screen_animation": true
+                        }
+                    ]
+                },
+                "minecraft:timer": {
+                    "time": [
+                        0,
+                        0
+                    ],
+                    "looping": false,
+                    "time_down_event": {
+                        "event": "minecraft:clear_add_bad_omen",
+                        "target": "self"
+                    }
+                }
+            },
+            "minecraft:clear_bad_omen_spell_effect": {
+                "minecraft:spell_effects": {}
+            },
+            "minecraft:raid_trigger": {
+                "minecraft:raid_trigger": {
+                    "triggered_event": {
+                        "event": "minecraft:remove_raid_trigger",
+                        "target": "self"
+                    }
+                },
+                "minecraft:spell_effects": {
+                    "remove_effects": "bad_omen"
+                }
+            },
+            "crasin:hitbox_fix": {
+                "minecraft:collision_box": {
+                    "width": 0.6,
+                    "height": 1.8
+                }
+            },
+            "conla:reset_skinid": {
+                "minecraft:skin_id": {
+                    "value": 0
+                }
+            },
+            "conla:reset_variant": {
+                "minecraft:variant": {
+                    "value": 0
+                }
+            },
+            "conla:onAttack": {
+                "minecraft:skin_id": {
+                    "value": 1
+                }
+            },
+            "conla:gui": {
+                "minecraft:variant": {
+                    "value": 1
+                }
+            },
+            "conla:illegal": {
+                "minecraft:skin_id": {
+                    "value": 2
+                }
+            },
+            "conla:kick": {
+                "minecraft:explode": {
+                    "fuse_length": 0,
+                    "fuse_lit": true,
+                    "power": 0,
+                    "causes_fire": false,
+                    "breaks_blocks": false
+                }
+            },
+            "conla:freeze": {
+                "minecraft:movement": {
+                    "value": 0
+                },
+                "minecraft:pushable": {
+                    "is_pushable": false,
+                    "is_pushable_by_piston": false
+                }
+            },
+            "conla:unfreeze": {
+                "minecraft:movement": {
+                    "value": 0.1
+                },
+                "minecraft:pushable": {
+                    "is_pushable": false,
+                    "is_pushable_by_piston": false
+                }
+            }
+        },
+        "components": {
+            "minecraft:experience_reward": {
+                "on_death": "Math.Min(query.player_level * 7, 100)"
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "player"
+                ]
+            },
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.8
+            },
+            "minecraft:can_climb": {},
+            "minecraft:movement": {
+                "value": 0.1
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {
+                        "filters": {
+                            "test": "in_lava",
+                            "subject": "self",
+                            "operator": "==",
+                            "value": true
+                        },
+                        "cause": "lava",
+                        "damage_per_tick": 4
+                    }
+                ]
+            },
+            "minecraft:attack": {
+                "damage": 1
+            },
+            "minecraft:exhaustion_values": {
+                "heal": 6,
+                "jump": 0.05,
+                "sprint_jump": 0.2,
+                "mine": 0.005,
+                "attack": 0.1,
+                "damage": 0.1,
+                "walk": 0.0,
+                "sprint": 0.1,
+                "swim": 0.01
+            },
+            "minecraft:player.saturation": {
+                "value": 5,
+                "max": 20
+            },
+            "minecraft:player.exhaustion": {
+                "value": 0,
+                "max": 20
+            },
+            "minecraft:player.level": {
+                "value": 0,
+                "max": 24791
+            },
+            "minecraft:player.experience": {
+                "value": 0,
+                "max": 1
+            },
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": -1,
+                "inhale_time": 3.75,
+                "generates_bubbles": false
+            },
+            "minecraft:nameable": {
+                "always_show": true,
+                "allow_name_tag_renaming": false
+            },
+            "minecraft:physics": {
+                "push_towards_closest_space": true
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:insomnia": {
+                "days_until_insomnia": 3
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "all",
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "has_tag",
+                                        "operator": "==",
+                                        "subject": "self",
+                                        "value": "flying"
+                                    },
+                                    {
+                                        "test": "has_ability",
+                                        "operator": "==",
+                                        "subject": "self",
+                                        "value": "mayfly"
+                                    }
+                                ]
+                            }
+                        },
+                        "deals_damage": false
+                    },
+                    {
+                        "cause": "all",
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "has_damage",
+                                        "value": "fatal"
+                                    }
+                                ]
+                            },
+                            "event": "kill"
+                        }
+                    },
+                    {
+                        "cause": "all",
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "has_damage"
+                                    }
+                                ]
+                            },
+                            "event": "hit"
+                        }
+                    },
+                    {
+                        "cause": "all",
+                        "on_damage": {
+                            "filters": {
+                                "any_of": [
+                                    {
+                                        "all_of": [
+                                            {
+                                                "test": "has_tag",
+                                                "operator": "==",
+                                                "subject": "self",
+                                                "value": "team:1"
+                                            },
+                                            {
+                                                "test": "has_tag",
+                                                "operator": "==",
+                                                "subject": "damager",
+                                                "value": "team:1"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "all_of": [
+                                            {
+                                                "test": "has_tag",
+                                                "operator": "==",
+                                                "subject": "self",
+                                                "value": "team:2"
+                                            },
+                                            {
+                                                "test": "has_tag",
+                                                "operator": "==",
+                                                "subject": "damager",
+                                                "value": "team:2"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "all_of": [
+                                            {
+                                                "test": "has_tag",
+                                                "operator": "==",
+                                                "subject": "self",
+                                                "value": "team:3"
+                                            },
+                                            {
+                                                "test": "has_tag",
+                                                "operator": "==",
+                                                "subject": "damager",
+                                                "value": "team:3"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "all_of": [
+                                            {
+                                                "test": "has_tag",
+                                                "operator": "==",
+                                                "subject": "self",
+                                                "value": "team:4"
+                                            },
+                                            {
+                                                "test": "has_tag",
+                                                "operator": "==",
+                                                "subject": "damager",
+                                                "value": "team:4"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        "deals_damage": false
+                    },
+                    {
+                        "cause": "all",
+                        "on_damage": {
+                            "filters": {
+                                "any_of": [
+                                    {
+                                        "test": "has_tag",
+                                        "operator": "==",
+                                        "subject": "self",
+                                        "value": "freeze"
+                                    },
+                                    {
+                                        "test": "has_tag",
+                                        "operator": "==",
+                                        "subject": "other",
+                                        "value": "freeze"
+                                    }
+                                ]
+                            }
+                        },
+                        "deals_damage": false
+                    },
+                    {
+                        "cause": "entity_attack",
+                        "on_damage": {
+                            "filters": {
+                                "any_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    }
+                                ]
+                            },
+                            "event": "conla:attacked",
+                            "target": "other"
+                        }
+                    },
+                    {
+                        "cause": "entity_attack",
+                        "on_damage": {
+                            "filters": {
+                                "any_of": [
+                                    {
+                                        "test": "is_family",
+                                        "subject": "other",
+                                        "value": "player"
+                                    }
+                                ]
+                            },
+                            "event": "conla:was_attacked",
+                            "target": "self"
+                        }
+                    }
+                ]
+            },
+            "minecraft:rideable": {
+                "seat_count": 2,
+                "family_types": [
+                    "parrot_tame"
+                ],
+                "pull_in_entities": true,
+                "seats": [
+                    {
+                        "position": [
+                            0.4,
+                            -0.2,
+                            -0.1
+                        ],
+                        "min_rider_count": 0,
+                        "max_rider_count": 0,
+                        "lock_rider_rotation": 0
+                    },
+                    {
+                        "position": [
+                            -0.4,
+                            -0.2,
+                            -0.1
+                        ],
+                        "min_rider_count": 1,
+                        "max_rider_count": 2,
+                        "lock_rider_rotation": 0
+                    }
+                ]
+            },
+            "minecraft:conditional_bandwidth_optimization": {},
+            "minecraft:block_climber": {},
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "subject": "self",
+                                    "value": "bad_omen"
+                                },
+                                {
+                                    "test": "is_in_village",
+                                    "subject": "self",
+                                    "value": true
+                                }
+                            ]
+                        },
+                        "event": "minecraft:trigger_raid"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_container_open",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": true
+                                }
+                            ]
+                        },
+                        "event": "conla:guiopen"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_container_open",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": false
+                                }
+                            ]
+                        },
+                        "event": "conla:reset_variant"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_sneak_held",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": true
+                                }
+                            ]
+                        },
+                        "event": "conla:sneak_held"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "is_sneak_held",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": false
+                                }
+                            ]
+                        },
+                        "event": "conla:sneak_held_stop"
+                    },
+                    {
+                        "filters": {
+                            "any_of": [
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:invisiblebedrock"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:pistonarmcollision"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:stickypistonarmcollision"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:tripwire"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:brewingstandblock"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:real_double_stone_slab"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.acacia_door"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.bed"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.beetroot"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.birch_door"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.cake"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.camera"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.campfire"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.cauldron"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.chain"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.crimson_door"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.dark_oak_door"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.flower_pot"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.frame"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.glow_frame"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.hopper"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.iron_door"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.jungle_door"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.kelp"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.nether_sprouts"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.nether_wart"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.reeds"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.skull"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.soul_campfire"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.spruce_door"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.warped_door"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.wheat"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.wooden_door"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.brewing_stand"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:tnt:2"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:tnt:3"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:stonebrick:4"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:real_double_stone_slab3"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:real_double_stone_slab4"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:double_stone_slab:2"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:cave_vines"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:cave_vines_body_with_berries"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:cave_vines_head_with_berries"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:purpur_block:1"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:purpur_block:3"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:real_double_stone_slab2"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:arrow:1"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:arrow:2"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:arrow:3"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:arrow:4"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:arrow:5"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:item.mangrove_door"
+                                },
+                                {
+                                    "test": "has_equipment",
+                                    "domain": "any",
+                                    "operator": "==",
+                                    "value": "minecraft:double_stone_block_slab"
+                                }
+                            ]
+                        },
+                        "event": "conla:illegal"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "speed"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_speed_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "speed"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_speed_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "slowness"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_slowness_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "slowness"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_slowness_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "haste"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_haste_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "haste"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_haste_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "mining_fatigue"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_mining_fatigue_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "mining_fatigue"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_mining_fatigue_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "strength"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_strength_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "strength"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_strength_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "jump_boost"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_jump_boost_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "jump_boost"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_jump_boost_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "regeneration"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_regeneration_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "regeneration"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_regeneration_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "resistance"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_resistance_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "resistance"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_resistance_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "fire_resistance"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_fire_resistance_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "fire_resistance"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_fire_resistance_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "water_breathing"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_water_breathing_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "water_breathing"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_water_breathing_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "invisibility"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_invisibility_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "invisibility"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_invisibility_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "night_vision"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_night_vision_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "night_vision"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_night_vision_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "hunger"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_hunger_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "hunger"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_hunger_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "weakness"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_weakness_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "weakness"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_weakness_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "poison"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_poison_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "poison"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_poison_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "wither"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_wither_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "wither"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_wither_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "levitation"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_levitation_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "levitation"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_levitation_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "slow_falling"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_slow_falling_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "slow_falling"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_slow_falling_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "bad_omen"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_bad_omen_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "bad_omen"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_bad_omen_off"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "==",
+                                    "subject": "self",
+                                    "value": "darkness"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_darkness_on"
+                    },
+                    {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_mob_effect",
+                                    "operator": "!=",
+                                    "subject": "self",
+                                    "value": "darkness"
+                                }
+                            ]
+                        },
+                        "event": "conla:eff_darkness_off"
+                    }
+                ]
+            }
+        },
+        "events": {
+            "conla:attacked": {
+                "add": {
+                    "component_groups": [
+                        "conla:onAttack"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "conla:reset_skinid"
+                    ]
+                },
+                "queue_command": {
+                    "command": [
+                        "tag @s add attack_evt",
+                        "scoreboard players set @s attack_evt 2"
+                    ]
+                }
+            },
+            "conla:was_attacked": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add attacked_evt",
+                        "scoreboard players set @s attacked_evt 2"
+                    ]
+                }
+            },
+            "conla:eff_speed_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_speed"
+                    ]
+                }
+            },
+            "conla:eff_speed_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_speed"
+                    ]
+                }
+            },
+            "conla:eff_slowness_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_slowness"
+                    ]
+                }
+            },
+            "conla:eff_slowness_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_slowness"
+                    ]
+                }
+            },
+            "conla:eff_haste_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_haste"
+                    ]
+                }
+            },
+            "conla:eff_haste_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_haste"
+                    ]
+                }
+            },
+            "conla:eff_mining_fatigue_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_mining_fatigue"
+                    ]
+                }
+            },
+            "conla:eff_mining_fatigue_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_mining_fatigue"
+                    ]
+                }
+            },
+            "conla:eff_strength_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_strength"
+                    ]
+                }
+            },
+            "conla:eff_strength_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_strength"
+                    ]
+                }
+            },
+            "conla:eff_jump_boost_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_jump_boost"
+                    ]
+                }
+            },
+            "conla:eff_jump_boost_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_jump_boost"
+                    ]
+                }
+            },
+            "conla:eff_regeneration_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_regeneration"
+                    ]
+                }
+            },
+            "conla:eff_regeneration_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_regeneration"
+                    ]
+                }
+            },
+            "conla:eff_resistance_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_resistance"
+                    ]
+                }
+            },
+            "conla:eff_resistance_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_resistance"
+                    ]
+                }
+            },
+            "conla:eff_fire_resistance_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_fire_resistance"
+                    ]
+                }
+            },
+            "conla:eff_fire_resistance_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_fire_resistance"
+                    ]
+                }
+            },
+            "conla:eff_water_breathing_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_water_breathing"
+                    ]
+                }
+            },
+            "conla:eff_water_breathing_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_water_breathing"
+                    ]
+                }
+            },
+            "conla:eff_invisibility_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_invisibility"
+                    ]
+                }
+            },
+            "conla:eff_invisibility_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_invisibility"
+                    ]
+                }
+            },
+            "conla:eff_night_vision_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_night_vision"
+                    ]
+                }
+            },
+            "conla:eff_night_vision_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_night_vision"
+                    ]
+                }
+            },
+            "conla:eff_hunger_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_hunger"
+                    ]
+                }
+            },
+            "conla:eff_hunger_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_hunger"
+                    ]
+                }
+            },
+            "conla:eff_weakness_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_weakness"
+                    ]
+                }
+            },
+            "conla:eff_weakness_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_weakness"
+                    ]
+                }
+            },
+            "conla:eff_poison_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_poison"
+                    ]
+                }
+            },
+            "conla:eff_poison_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_poison"
+                    ]
+                }
+            },
+            "conla:eff_wither_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_wither"
+                    ]
+                }
+            },
+            "conla:eff_wither_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_wither"
+                    ]
+                }
+            },
+            "conla:eff_levitation_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_levitation"
+                    ]
+                }
+            },
+            "conla:eff_levitation_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_levitation"
+                    ]
+                }
+            },
+            "conla:eff_slow_falling_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_slow_falling"
+                    ]
+                }
+            },
+            "conla:eff_slow_falling_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_slow_falling"
+                    ]
+                }
+            },
+            "conla:eff_bad_omen_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_bad_omen"
+                    ]
+                }
+            },
+            "conla:eff_bad_omen_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_bad_omen"
+                    ]
+                }
+            },
+            "conla:eff_darkness_on": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add effect_darkness"
+                    ]
+                }
+            },
+            "conla:eff_darkness_off": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove effect_darkness"
+                    ]
+                }
+            },
+            "conla:guiopen": {
+                "add": {
+                    "component_groups": [
+                        "conla:gui"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "conla:reset_variant"
+                    ]
+                }
+            },
+            "conla:illegal": {
+                "add": {
+                    "component_groups": [
+                        "conla:illegal"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "conla:reset_skinid"
+                    ]
+                }
+            },
+            "conla:reset_skinid": {
+                "add": {
+                    "component_groups": [
+                        "conla:reset_skinid"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "conla:onAttack",
+                        "conla:illegal"
+                    ]
+                }
+            },
+            "kill": {
+                "queue_command": {
+                    "target": "other",
+                    "command": [
+                        "execute if entity @s[family=player] run scoreboard players add @s killJ 1",
+                        "execute if entity @s[family=player] run scoreboard players add @s hitJ 1"
+                    ]
+                }
+            },
+            "hit": {
+                "queue_command": {
+                    "target": "other",
+                    "command": [
+                        "execute if entity @s[family=player] run scoreboard players add @s hitJ 1"
+                    ]
+                }
+            },
+            "conla:reset_variant": {
+                "add": {
+                    "component_groups": [
+                        "conla:reset_variant"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "conla:gui"
+                    ]
+                }
+            },
+            "conla:kick": {
+                "add": {
+                    "component_groups": [
+                        "conla:kick"
+                    ]
+                }
+            },
+            "conla:freeze": {
+                "add": {
+                    "component_groups": [
+                        "conla:freeze"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "conla:unfreeze"
+                    ]
+                }
+            },
+            "conla:unfreeze": {
+                "add": {
+                    "component_groups": [
+                        "conla:unfreeze"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "conla:freeze"
+                    ]
+                }
+            },
+            "conla:sneak_held": {
+                "queue_command": {
+                    "command": [
+                        "tag @s add sneak_held",
+                        "tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSNEAK_HELD§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+                    ]
+                }
+            },
+            "conla:sneak_held_stop": {
+                "queue_command": {
+                    "command": [
+                        "tag @s remove sneak_held",
+                        "tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSNEAK_HELD§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+                    ]
+                }
+            },
+            "minecraft:hitbox_normal": {
+                "add": {
+                    "component_groups": [
+                        "crasin:hitbox_fix"
+                    ]
+                }
+            },
+            "minecraft:entity_spawn": {
+                "add": {
+                    "component_groups": [
+                        "conla:reset_variant",
+                        "conla:reset_skinid"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "conla:onAttack",
+                        "conla:gui",
+                        "conla:illegal"
+                    ]
+                }
+            },
+            "minecraft:gain_bad_omen": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:add_bad_omen"
+                    ]
+                }
+            },
+            "minecraft:clear_add_bad_omen": {
+                "remove": {
+                    "component_groups": [
+                        "minecraft:add_bad_omen"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "minecraft:clear_bad_omen_spell_effect"
+                    ]
+                }
+            },
+            "minecraft:trigger_raid": {
+                "add": {
+                    "component_groups": [
+                        "minecraft:raid_trigger"
+                    ]
+                }
+            },
+            "minecraft:remove_raid_trigger": {
+                "remove": {
+                    "component_groups": [
+                        "minecraft:raid_trigger"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+﻿#Movement Utils
+function Fix/MovementUtils/AirTick
+function Fix/MovementUtils/MovingUtils
+#Block Utils
+function Fix/BlockUtils/SlimeUtils
+function Fix/BlockUtils/LiquidUtils
+function Fix/BlockUtils/WebUtils
+#Behavior Utils
+function Fix/BehaviorUtils/UsingUtils
+function Fix/BehaviorUtils/JumpUtils
+function Fix/BehaviorUtils/CombatEventUtils
+
