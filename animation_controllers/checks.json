@@ -52,8 +52,7 @@
 						"invmove": "query.variant == 1"
 					}],
 					"on_entry": [
-						"/tag @s remove hasGUIopen",
-						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aOpenChest§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+						"/tag @s remove hasGUIopen"
 					]
 				},
 				"invmove": {
@@ -61,8 +60,7 @@
 						"default": "query.variant != 1"
 					}],
 					"on_entry": [
-						"/tag @s add hasGUIopen",
-						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aOpenChest§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+						"/tag @s add hasGUIopen"
 					]
 				}
 			}
@@ -74,8 +72,7 @@
 						"sprint": "query.is_sprinting"
 					}],
 					"on_entry": [
-						"/tag @s remove sprint",
-						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSPRINT§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+						"/tag @s remove sprint"
 					]
 				},
 				"sprint": {
@@ -84,7 +81,6 @@
 					}],
 					"on_entry": [
 						"/tag @s add sprint",
-						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSPRINT§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}",
 						"/execute @s[scores={invalidsprint=1..}] ~~~ function checks/invalidsprint"
 					]
 				}
@@ -98,7 +94,6 @@
 					}],
 					"on_entry": [
 						"/tag @s remove attack",
-						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aATTACK§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}",
 						"@s conla:reset_skinid"
 					]
 				},
@@ -108,7 +103,6 @@
 					}],
 					"on_entry": [
 						"/tag @s add attack",
-						"/tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aATTACK§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}",
 						"/execute @s[tag=right,scores={right=3..}] ~~~ function checks/alerts/interactuse",
 						"@s conla:reset_skinid"
 					]
@@ -139,3 +133,4 @@
 		*/
 	}
 }
+

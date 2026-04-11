@@ -1,4 +1,4 @@
-{
+﻿{
     "format_version": "1.18.20",
     "minecraft:entity": {
         "description": {
@@ -15,16 +15,23 @@
                     "ground",
                     "death",
                     "ride",
+                    "on_screen",
                     "left",
                     "right",
                     "sneak",
                     "jump",
                     "wet",
+                    "is_on_fire_tag",
+                    "is_in_water_tag",
+                    "is_in_lava_tag",
+                    "is_in_water_or_rain_tag",
+                    "is_emoting_tag",
                     "south",
                     "east",
                     "west",
                     "north",
                     "move",
+                    "m_moving",
                     "autototem",
                     "autoshield",
                     "sprint",
@@ -46,6 +53,11 @@
                     "speed_v2",
                     "speed_v1",
                     "speed_v0",
+                    "modified_move_speed_v4",
+                    "modified_move_speed_v3",
+                    "modified_move_speed_v2",
+                    "modified_move_speed_v1",
+                    "modified_move_speed_v0",
                     "xz_speed_v3",
                     "xz_speed_v2",
                     "xz_speed_v1",
@@ -107,16 +119,28 @@
                     "rot_x_enum",
                     "rot_y_enum",
                     "body_rot_x_enum",
-                    "body_rot_y_enum"
+                    "body_rot_y_enum",
+                    "is_blocking_tag",
+                    "turn_math_update",
+                    "is_in_ui_q",
+                    "is_delayed_attacking_q",
+                    "is_critical_q",
+                    "is_charged_q"
                 ]
             },
             "animations": {
+                "on_screen":"controller.animation.on_screen",
                 "is_wall_climbing": "controller.animation.is_wall_climbing",
                 "has_collision": "controller.animation.has_collision",
                 "speed_v3": "controller.animation.ground_speed.digit_3",
                 "speed_v2": "controller.animation.ground_speed.digit_2",
                 "speed_v1": "controller.animation.ground_speed.digit_1",
                 "speed_v0": "controller.animation.ground_speed.digit_0",
+                "modified_move_speed_v4": "controller.animation.modified_move_speed.digit_4",
+                "modified_move_speed_v3": "controller.animation.modified_move_speed.digit_3",
+                "modified_move_speed_v2": "controller.animation.modified_move_speed.digit_2",
+                "modified_move_speed_v1": "controller.animation.modified_move_speed.digit_1",
+                "modified_move_speed_v0": "controller.animation.modified_move_speed.digit_0",
                 "xz_speed_v3": "controller.animation.xz_speed.digit_3",
                 "xz_speed_v2": "controller.animation.xz_speed.digit_2",
                 "xz_speed_v1": "controller.animation.xz_speed.digit_1",
@@ -135,11 +159,17 @@
                 "sneak": "controller.animation.sneak",
                 "jump": "controller.animation.jump",
                 "wet": "controller.animation.wet",
+                "is_on_fire_tag": "controller.animation.is_on_fire_tag",
+                "is_in_water_tag": "controller.animation.is_in_water_tag",
+                "is_in_lava_tag": "controller.animation.is_in_lava_tag",
+                "is_in_water_or_rain_tag": "controller.animation.is_in_water_or_rain_tag",
+                "is_emoting_tag": "controller.animation.is_emoting_tag",
                 "south": "controller.animation.facing_south",
                 "east": "controller.animation.facing_east",
                 "west": "controller.animation.facing_west",
                 "north": "controller.animation.facing_north",
                 "move": "controller.animation.move",
+                "m_moving": "controller.animation.m_moving",
                 "autototem": "controller.animation.autototem",
                 "autoshield": "controller.animation.autoshield",
                 "sprint": "controller.animation.sprint",
@@ -210,7 +240,13 @@
                 "rot_x_enum": "controller.animation.rot_x.enum",
                 "rot_y_enum": "controller.animation.rot_y.enum",
                 "body_rot_x_enum": "controller.animation.body_rot_x.enum",
-                "body_rot_y_enum": "controller.animation.body_rot_y.enum"
+                "body_rot_y_enum": "controller.animation.body_rot_y.enum",
+                "is_blocking_tag": "controller.animation.is_blocking_tag",
+                "turn_math_update": "controller.animation.turn_math.update",
+                "is_in_ui_q": "controller.animation.is_in_ui",
+                "is_delayed_attacking_q": "controller.animation.is_delayed_attacking",
+                "is_critical_q": "controller.animation.is_critical",
+                "is_charged_q": "controller.animation.is_charged"
             }
         },
         "component_groups": {
@@ -1933,16 +1969,14 @@
             "conla:sneak_held": {
                 "queue_command": {
                     "command": [
-                        "tag @s add sneak_held",
-                        "tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSNEAK_HELD§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=start)\"}]}"
+                        "tag @s add sneak_held"
                     ]
                 }
             },
             "conla:sneak_held_stop": {
                 "queue_command": {
                     "command": [
-                        "tag @s remove sneak_held",
-                        "tellraw @a[tag=packetlogger] {\"rawtext\":[{\"text\":\"§邎§r§6[§aConla§6]§r §breceived §aSNEAK_HELD§r packet from: §g\"},{\"selector\":\"@s\"},{\"text\":\" §7(type=stop)\"}]}"
+                        "tag @s remove sneak_held"
                     ]
                 }
             },

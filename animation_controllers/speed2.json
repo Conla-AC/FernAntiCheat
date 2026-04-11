@@ -1,4 +1,4 @@
-{
+﻿{
     "format_version": "1.10.0",
     "animation_controllers": {
         "controller.animation.xz_speed.digit_0": {
@@ -6,9 +6,7 @@
                 "default_state": {
                     "transitions": [{ "running_state": "(q.time_stamp - v.time_stamp) > 1" }],
                     "on_entry": [
-                        "v.pos_x = q.position(0); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.xz_digit_0 = 0;",
-                        "/scoreboard objectives add xz_d0 dummy"
-                    ]
+                        "v.pos_x = q.position(0); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.xz_digit_0 = 0;"                    ]
                 },
                 "running_state": {
                     "on_exit": ["v.time_stamp = q.time_stamp;"],
@@ -46,9 +44,7 @@
                 "default_state": {
                     "transitions": [{ "running_state": "(q.time_stamp - v.time_stamp) > 1" }],
                     "on_entry": [
-                        "v.pos_x = q.position(0); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.xz_digit_1 = 0;",
-                        "/scoreboard objectives add xz_d1 dummy"
-                    ]
+                        "v.pos_x = q.position(0); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.xz_digit_1 = 0;"                    ]
                 },
                 "running_state": {
                     "on_exit": ["v.time_stamp = q.time_stamp;"],
@@ -86,9 +82,7 @@
                 "default_state": {
                     "transitions": [{ "running_state": "(q.time_stamp - v.time_stamp) > 1" }],
                     "on_entry": [
-                        "v.pos_x = q.position(0); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.xz_digit_2 = 0;",
-                        "/scoreboard objectives add xz_d2 dummy"
-                    ]
+                        "v.pos_x = q.position(0); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.xz_digit_2 = 0;"                    ]
                 },
                 "running_state": {
                     "on_exit": ["v.time_stamp = q.time_stamp;"],
@@ -126,9 +120,7 @@
                 "default_state": {
                     "transitions": [{ "running_state": "(q.time_stamp - v.time_stamp) > 1" }],
                     "on_entry": [
-                        "v.pos_x = q.position(0); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.xz_digit_3 = 0;",
-                        "/scoreboard objectives add xz_d3 dummy"
-                    ]
+                        "v.pos_x = q.position(0); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.xz_digit_3 = 0;"                    ]
                 },
                 "running_state": {
                     "on_exit": ["v.time_stamp = q.time_stamp;"],

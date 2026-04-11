@@ -1,165 +1,636 @@
-{
-    "format_version": "1.10.0",
-    "animation_controllers": {
-        "controller.animation.ground_speed.digit_0": {
-            "states": {
-                "default_state": {
-                    "transitions": [{ "running_state": "(q.time_stamp - v.time_stamp) > 1" }],
-                    "on_entry": [
-                        "v.pos_x = q.position(0); v.pos_y = q.position(1); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.digit_0 = 0;",
-                        "/scoreboard objectives add d0 dummy"
-                    ]
-                },
-                "running_state": {
-                    "on_exit": ["v.time_stamp = q.time_stamp;"],
-                    "transitions": [
-                        { "d0.0": "v.digit_0 == 0" },
-                        { "d0.1": "v.digit_0 == 1" },
-                        { "d0.2": "v.digit_0 == 2" },
-                        { "d0.3": "v.digit_0 == 3" },
-                        { "d0.4": "v.digit_0 == 4" },
-                        { "d0.5": "v.digit_0 == 5" },
-                        { "d0.6": "v.digit_0 == 6" },
-                        { "d0.7": "v.digit_0 == 7" },
-                        { "d0.8": "v.digit_0 == 8" },
-                        { "d0.9": "v.digit_0 == 9" }
-                    ],
-                    "on_entry": [
-                        "v.x = (q.position(0) - v.pos_x); v.y = (q.position(1) - v.pos_y); v.z = (q.position(2) - v.pos_z); v.distance = Math.sqrt((v.x * v.x) + (v.y * v.y) + (v.z * v.z)); v.digit_0 = Math.mod(Math.floor((v.distance * 10) / math.pow(10, 1) * 100), 10);"
-                    ]
-                },
-                "d0.0": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d0 0"] },
-                "d0.1": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d0 1"] },
-                "d0.2": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d0 2"] },
-                "d0.3": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d0 3"] },
-                "d0.4": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d0 4"] },
-                "d0.5": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d0 5"] },
-                "d0.6": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d0 6"] },
-                "d0.7": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d0 7"] },
-                "d0.8": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d0 8"] },
-                "d0.9": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d0 9"] }
-            },
-            "initial_state": "default_state"
-        },
-        "controller.animation.ground_speed.digit_1": {
-            "states": {
-                "default_state": {
-                    "transitions": [{ "running_state": "(q.time_stamp - v.time_stamp) > 1" }],
-                    "on_entry": [
-                        "v.pos_x = q.position(0); v.pos_y = q.position(1); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.digit_1 = 0;",
-                        "/scoreboard objectives add d1 dummy"
-                    ]
-                },
-                "running_state": {
-                    "on_exit": ["v.time_stamp = q.time_stamp;"],
-                    "transitions": [
-                        { "d1.0": "v.digit_1 == 0" },
-                        { "d1.1": "v.digit_1 == 1" },
-                        { "d1.2": "v.digit_1 == 2" },
-                        { "d1.3": "v.digit_1 == 3" },
-                        { "d1.4": "v.digit_1 == 4" },
-                        { "d1.5": "v.digit_1 == 5" },
-                        { "d1.6": "v.digit_1 == 6" },
-                        { "d1.7": "v.digit_1 == 7" },
-                        { "d1.8": "v.digit_1 == 8" },
-                        { "d1.9": "v.digit_1 == 9" }
-                    ],
-                    "on_entry": [
-                        "v.x = (q.position(0) - v.pos_x); v.y = (q.position(1) - v.pos_y); v.z = (q.position(2) - v.pos_z); v.distance = Math.sqrt((v.x * v.x) + (v.y * v.y) + (v.z * v.z)); v.digit_1 = Math.mod(Math.floor(v.distance / math.pow(10, 1) * 100), 10);"
-                    ]
-                },
-                "d1.0": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d1 0"] },
-                "d1.1": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d1 10"] },
-                "d1.2": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d1 20"] },
-                "d1.3": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d1 30"] },
-                "d1.4": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d1 40"] },
-                "d1.5": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d1 50"] },
-                "d1.6": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d1 60"] },
-                "d1.7": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d1 70"] },
-                "d1.8": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d1 80"] },
-                "d1.9": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d1 90"] }
-            },
-            "initial_state": "default_state"
-        },
-        "controller.animation.ground_speed.digit_2": {
-            "states": {
-                "default_state": {
-                    "transitions": [{ "running_state": "(q.time_stamp - v.time_stamp) > 1" }],
-                    "on_entry": [
-                        "v.pos_x = q.position(0); v.pos_y = q.position(1); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.digit_2 = 0;",
-                        "/scoreboard objectives add d2 dummy"
-                    ]
-                },
-                "running_state": {
-                    "on_exit": ["v.time_stamp = q.time_stamp;"],
-                    "transitions": [
-                        { "d2.0": "v.digit_2 == 0" },
-                        { "d2.1": "v.digit_2 == 1" },
-                        { "d2.2": "v.digit_2 == 2" },
-                        { "d2.3": "v.digit_2 == 3" },
-                        { "d2.4": "v.digit_2 == 4" },
-                        { "d2.5": "v.digit_2 == 5" },
-                        { "d2.6": "v.digit_2 == 6" },
-                        { "d2.7": "v.digit_2 == 7" },
-                        { "d2.8": "v.digit_2 == 8" },
-                        { "d2.9": "v.digit_2 == 9" }
-                    ],
-                    "on_entry": [
-                        "v.x = (q.position(0) - v.pos_x); v.y = (q.position(1) - v.pos_y); v.z = (q.position(2) - v.pos_z); v.distance = Math.sqrt((v.x * v.x) + (v.y * v.y) + (v.z * v.z)); v.digit_2 = Math.mod(Math.floor(v.distance / math.pow(10, 2) * 100), 10);"
-                    ]
-                },
-                "d2.0": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d2 0"] },
-                "d2.1": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d2 100"] },
-                "d2.2": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d2 200"] },
-                "d2.3": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d2 300"] },
-                "d2.4": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d2 400"] },
-                "d2.5": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d2 500"] },
-                "d2.6": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d2 600"] },
-                "d2.7": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d2 700"] },
-                "d2.8": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d2 800"] },
-                "d2.9": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d2 900"] }
-            },
-            "initial_state": "default_state"
-        },
-        "controller.animation.ground_speed.digit_3": {
-            "states": {
-                "default_state": {
-                    "transitions": [{ "running_state": "(q.time_stamp - v.time_stamp) > 1" }],
-                    "on_entry": [
-                        "v.pos_x = q.position(0); v.pos_y = q.position(1); v.pos_z = q.position(2); v.time_stamp = q.time_stamp; v.digit_3 = 0;",
-                        "/scoreboard objectives add d3 dummy"
-                    ]
-                },
-                "running_state": {
-                    "on_exit": ["v.time_stamp = q.time_stamp;"],
-                    "transitions": [
-                        { "d3.0": "v.digit_3 == 0" },
-                        { "d3.1": "v.digit_3 == 1" },
-                        { "d3.2": "v.digit_3 == 2" },
-                        { "d3.3": "v.digit_3 == 3" },
-                        { "d3.4": "v.digit_3 == 4" },
-                        { "d3.5": "v.digit_3 == 5" },
-                        { "d3.6": "v.digit_3 == 6" },
-                        { "d3.7": "v.digit_3 == 7" },
-                        { "d3.8": "v.digit_3 == 8" },
-                        { "d3.9": "v.digit_3 == 9" }
-                    ],
-                    "on_entry": [
-                        "v.x = (q.position(0) - v.pos_x); v.y = (q.position(1) - v.pos_y); v.z = (q.position(2) - v.pos_z); v.distance = Math.sqrt((v.x * v.x) + (v.y * v.y) + (v.z * v.z)); v.digit_3 = Math.mod(Math.floor(v.distance / math.pow(10, 3) * 100), 10);"
-                    ]
-                },
-                "d3.0": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d3 0"] },
-                "d3.1": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d3 1000"] },
-                "d3.2": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d3 2000"] },
-                "d3.3": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d3 3000"] },
-                "d3.4": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d3 4000"] },
-                "d3.5": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d3 5000"] },
-                "d3.6": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d3 6000"] },
-                "d3.7": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d3 7000"] },
-                "d3.8": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d3 8000"] },
-                "d3.9": { "transitions": [{ "default_state": "(1.0)" }], "on_entry": ["/scoreboard players set @s d3 9000"] }
-            },
-            "initial_state": "default_state"
-        }
-    }
+﻿{
+    "format_version":  "1.10.0",
+    "animation_controllers":  {
+                                  "controller.animation.ground_speed.digit_0":  {
+                                                                                    "states":  {
+                                                                                                   "default_state":  {
+                                                                                                                         "transitions":  [
+                                                                                                                                             {
+                                                                                                                                                 "running_state":  "(q.time_stamp - v.spd_time_stamp) \u003e 1"
+                                                                                                                                             }
+                                                                                                                                         ],
+                                                                                                                         "on_entry":  [
+                                                                                                                                          "v.spd_pos_x = q.position(0); v.spd_pos_y = q.position(1); v.spd_pos_z = q.position(2); v.spd_time_stamp = q.time_stamp; v.spd_digit_0 = 0;"                                                                                                                                      ]
+                                                                                                                     },
+                                                                                                   "running_state":  {
+                                                                                                                         "on_exit":  [
+                                                                                                                                         "v.spd_time_stamp = q.time_stamp;"
+                                                                                                                                     ],
+                                                                                                                         "transitions":  [
+                                                                                                                                             {
+                                                                                                                                                 "d0.0":  "v.spd_digit_0 == 0"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d0.1":  "v.spd_digit_0 == 1"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d0.2":  "v.spd_digit_0 == 2"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d0.3":  "v.spd_digit_0 == 3"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d0.4":  "v.spd_digit_0 == 4"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d0.5":  "v.spd_digit_0 == 5"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d0.6":  "v.spd_digit_0 == 6"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d0.7":  "v.spd_digit_0 == 7"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d0.8":  "v.spd_digit_0 == 8"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d0.9":  "v.spd_digit_0 == 9"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d0.0":  "(1.0)"
+                                                                                                                                             }
+                                                                                                                                         ],
+                                                                                                                         "on_entry":  [
+                                                                                                                                          "v.spd_x = (q.position(0) - v.spd_pos_x); v.spd_y = (q.position(1) - v.spd_pos_y); v.spd_z = (q.position(2) - v.spd_pos_z); v.spd_distance = Math.sqrt((v.spd_x * v.spd_x) + (v.spd_y * v.spd_y) + (v.spd_z * v.spd_z)); v.spd_digit_0 = Math.mod(Math.floor((v.spd_distance * 10) / math.pow(10, 1) * 100), 10);"
+                                                                                                                                      ]
+                                                                                                                     },
+                                                                                                   "d0.0":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d0 0"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d0.1":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d0 1"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d0.2":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d0 2"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d0.3":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d0 3"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d0.4":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d0 4"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d0.5":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d0 5"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d0.6":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d0 6"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d0.7":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d0 7"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d0.8":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d0 8"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d0.9":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d0 9"
+                                                                                                                             ]
+                                                                                                            }
+                                                                                               },
+                                                                                    "initial_state":  "default_state"
+                                                                                },
+                                  "controller.animation.ground_speed.digit_1":  {
+                                                                                    "states":  {
+                                                                                                   "default_state":  {
+                                                                                                                         "transitions":  [
+                                                                                                                                             {
+                                                                                                                                                 "running_state":  "(q.time_stamp - v.spd_time_stamp) \u003e 1"
+                                                                                                                                             }
+                                                                                                                                         ],
+                                                                                                                         "on_entry":  [
+                                                                                                                                          "v.spd_pos_x = q.position(0); v.spd_pos_y = q.position(1); v.spd_pos_z = q.position(2); v.spd_time_stamp = q.time_stamp; v.spd_digit_1 = 0;"                                                                                                                                      ]
+                                                                                                                     },
+                                                                                                   "running_state":  {
+                                                                                                                         "on_exit":  [
+                                                                                                                                         "v.spd_time_stamp = q.time_stamp;"
+                                                                                                                                     ],
+                                                                                                                         "transitions":  [
+                                                                                                                                             {
+                                                                                                                                                 "d1.0":  "v.spd_digit_1 == 0"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d1.1":  "v.spd_digit_1 == 1"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d1.2":  "v.spd_digit_1 == 2"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d1.3":  "v.spd_digit_1 == 3"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d1.4":  "v.spd_digit_1 == 4"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d1.5":  "v.spd_digit_1 == 5"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d1.6":  "v.spd_digit_1 == 6"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d1.7":  "v.spd_digit_1 == 7"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d1.8":  "v.spd_digit_1 == 8"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d1.9":  "v.spd_digit_1 == 9"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d1.0":  "(1.0)"
+                                                                                                                                             }
+                                                                                                                                         ],
+                                                                                                                         "on_entry":  [
+                                                                                                                                          "v.spd_x = (q.position(0) - v.spd_pos_x); v.spd_y = (q.position(1) - v.spd_pos_y); v.spd_z = (q.position(2) - v.spd_pos_z); v.spd_distance = Math.sqrt((v.spd_x * v.spd_x) + (v.spd_y * v.spd_y) + (v.spd_z * v.spd_z)); v.spd_digit_1 = Math.mod(Math.floor(v.spd_distance / math.pow(10, 1) * 100), 10);"
+                                                                                                                                      ]
+                                                                                                                     },
+                                                                                                   "d1.0":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d1 0"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d1.1":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d1 10"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d1.2":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d1 20"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d1.3":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d1 30"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d1.4":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d1 40"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d1.5":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d1 50"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d1.6":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d1 60"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d1.7":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d1 70"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d1.8":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d1 80"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d1.9":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d1 90"
+                                                                                                                             ]
+                                                                                                            }
+                                                                                               },
+                                                                                    "initial_state":  "default_state"
+                                                                                },
+                                  "controller.animation.ground_speed.digit_2":  {
+                                                                                    "states":  {
+                                                                                                   "default_state":  {
+                                                                                                                         "transitions":  [
+                                                                                                                                             {
+                                                                                                                                                 "running_state":  "(q.time_stamp - v.spd_time_stamp) \u003e 1"
+                                                                                                                                             }
+                                                                                                                                         ],
+                                                                                                                         "on_entry":  [
+                                                                                                                                          "v.spd_pos_x = q.position(0); v.spd_pos_y = q.position(1); v.spd_pos_z = q.position(2); v.spd_time_stamp = q.time_stamp; v.spd_digit_2 = 0;"                                                                                                                                      ]
+                                                                                                                     },
+                                                                                                   "running_state":  {
+                                                                                                                         "on_exit":  [
+                                                                                                                                         "v.spd_time_stamp = q.time_stamp;"
+                                                                                                                                     ],
+                                                                                                                         "transitions":  [
+                                                                                                                                             {
+                                                                                                                                                 "d2.0":  "v.spd_digit_2 == 0"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d2.1":  "v.spd_digit_2 == 1"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d2.2":  "v.spd_digit_2 == 2"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d2.3":  "v.spd_digit_2 == 3"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d2.4":  "v.spd_digit_2 == 4"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d2.5":  "v.spd_digit_2 == 5"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d2.6":  "v.spd_digit_2 == 6"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d2.7":  "v.spd_digit_2 == 7"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d2.8":  "v.spd_digit_2 == 8"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d2.9":  "v.spd_digit_2 == 9"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d2.0":  "(1.0)"
+                                                                                                                                             }
+                                                                                                                                         ],
+                                                                                                                         "on_entry":  [
+                                                                                                                                          "v.spd_x = (q.position(0) - v.spd_pos_x); v.spd_y = (q.position(1) - v.spd_pos_y); v.spd_z = (q.position(2) - v.spd_pos_z); v.spd_distance = Math.sqrt((v.spd_x * v.spd_x) + (v.spd_y * v.spd_y) + (v.spd_z * v.spd_z)); v.spd_digit_2 = Math.mod(Math.floor(v.spd_distance / math.pow(10, 2) * 100), 10);"
+                                                                                                                                      ]
+                                                                                                                     },
+                                                                                                   "d2.0":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d2 0"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d2.1":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d2 100"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d2.2":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d2 200"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d2.3":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d2 300"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d2.4":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d2 400"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d2.5":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d2 500"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d2.6":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d2 600"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d2.7":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d2 700"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d2.8":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d2 800"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d2.9":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d2 900"
+                                                                                                                             ]
+                                                                                                            }
+                                                                                               },
+                                                                                    "initial_state":  "default_state"
+                                                                                },
+                                  "controller.animation.ground_speed.digit_3":  {
+                                                                                    "states":  {
+                                                                                                   "default_state":  {
+                                                                                                                         "transitions":  [
+                                                                                                                                             {
+                                                                                                                                                 "running_state":  "(q.time_stamp - v.spd_time_stamp) \u003e 1"
+                                                                                                                                             }
+                                                                                                                                         ],
+                                                                                                                         "on_entry":  [
+                                                                                                                                          "v.spd_pos_x = q.position(0); v.spd_pos_y = q.position(1); v.spd_pos_z = q.position(2); v.spd_time_stamp = q.time_stamp; v.spd_digit_3 = 0;"                                                                                                                                      ]
+                                                                                                                     },
+                                                                                                   "running_state":  {
+                                                                                                                         "on_exit":  [
+                                                                                                                                         "v.spd_time_stamp = q.time_stamp;"
+                                                                                                                                     ],
+                                                                                                                         "transitions":  [
+                                                                                                                                             {
+                                                                                                                                                 "d3.0":  "v.spd_digit_3 == 0"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d3.1":  "v.spd_digit_3 == 1"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d3.2":  "v.spd_digit_3 == 2"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d3.3":  "v.spd_digit_3 == 3"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d3.4":  "v.spd_digit_3 == 4"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d3.5":  "v.spd_digit_3 == 5"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d3.6":  "v.spd_digit_3 == 6"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d3.7":  "v.spd_digit_3 == 7"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d3.8":  "v.spd_digit_3 == 8"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d3.9":  "v.spd_digit_3 == 9"
+                                                                                                                                             },
+                                                                                                                                             {
+                                                                                                                                                 "d3.0":  "(1.0)"
+                                                                                                                                             }
+                                                                                                                                         ],
+                                                                                                                         "on_entry":  [
+                                                                                                                                          "v.spd_x = (q.position(0) - v.spd_pos_x); v.spd_y = (q.position(1) - v.spd_pos_y); v.spd_z = (q.position(2) - v.spd_pos_z); v.spd_distance = Math.sqrt((v.spd_x * v.spd_x) + (v.spd_y * v.spd_y) + (v.spd_z * v.spd_z)); v.spd_digit_3 = Math.mod(Math.floor(v.spd_distance / math.pow(10, 3) * 100), 10);"
+                                                                                                                                      ]
+                                                                                                                     },
+                                                                                                   "d3.0":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d3 0"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d3.1":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d3 1000"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d3.2":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d3 2000"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d3.3":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d3 3000"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d3.4":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d3 4000"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d3.5":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d3 5000"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d3.6":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d3 6000"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d3.7":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d3 7000"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d3.8":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d3 8000"
+                                                                                                                             ]
+                                                                                                            },
+                                                                                                   "d3.9":  {
+                                                                                                                "transitions":  [
+                                                                                                                                    {
+                                                                                                                                        "default_state":  "(1.0)"
+                                                                                                                                    }
+                                                                                                                                ],
+                                                                                                                "on_entry":  [
+                                                                                                                                 "/scoreboard players set @s d3 9000"
+                                                                                                                             ]
+                                                                                                            }
+                                                                                               },
+                                                                                    "initial_state":  "default_state"
+                                                                                }
+                              }
 }
+
+
+

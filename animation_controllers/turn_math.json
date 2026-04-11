@@ -1,0 +1,74 @@
+﻿{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.turn_math.update": {
+      "initial_state": "a",
+      "states": {
+        "a": {
+          "transitions": [
+            {
+              "b": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players add @s yaw_prev 0",
+            "/scoreboard players add @s pitch_prev 0",
+            "/scoreboard players add @s delta_yaw 0",
+            "/scoreboard players add @s delta_pitch 0",
+            "/scoreboard players add @s turn_rate 0",
+            "/scoreboard players add @s m_move_prev 0",
+            "/scoreboard players add @s sprint_burst_val 0",
+            "/scoreboard players operation @s delta_yaw = @s rot_y_s",
+            "/scoreboard players operation @s delta_yaw -= @s yaw_prev",
+            "/execute if score @s delta_yaw matches 181.. run scoreboard players remove @s delta_yaw 360",
+            "/execute if score @s delta_yaw matches ..-181 run scoreboard players add @s delta_yaw 360",
+            "/scoreboard players operation @s delta_pitch = @s rot_x_s",
+            "/scoreboard players operation @s delta_pitch -= @s pitch_prev",
+            "/scoreboard players operation @s turn_rate = @s delta_yaw",
+            "/execute if score @s turn_rate matches ..-1 run scoreboard players operation @s turn_rate *= const_neg1 math_const",
+            "/scoreboard players operation @s sprint_burst_val = @s m_move_spd",
+            "/scoreboard players operation @s sprint_burst_val -= @s m_move_prev",
+            "/execute if entity @s[tag=sprint] if score @s sprint_burst_val matches 15.. run tag @s add sprint_burst",
+            "/execute unless entity @s[tag=sprint] run tag @s remove sprint_burst",
+            "/execute if score @s sprint_burst_val matches ..14 run tag @s remove sprint_burst",
+            "/scoreboard players operation @s yaw_prev = @s rot_y_s",
+            "/scoreboard players operation @s pitch_prev = @s rot_x_s",
+            "/scoreboard players operation @s m_move_prev = @s m_move_spd"
+          ]
+        },
+        "b": {
+          "transitions": [
+            {
+              "a": "(1.0)"
+            }
+          ],
+          "on_entry": [
+            "/scoreboard players add @s yaw_prev 0",
+            "/scoreboard players add @s pitch_prev 0",
+            "/scoreboard players add @s delta_yaw 0",
+            "/scoreboard players add @s delta_pitch 0",
+            "/scoreboard players add @s turn_rate 0",
+            "/scoreboard players add @s m_move_prev 0",
+            "/scoreboard players add @s sprint_burst_val 0",
+            "/scoreboard players operation @s delta_yaw = @s rot_y_s",
+            "/scoreboard players operation @s delta_yaw -= @s yaw_prev",
+            "/execute if score @s delta_yaw matches 181.. run scoreboard players remove @s delta_yaw 360",
+            "/execute if score @s delta_yaw matches ..-181 run scoreboard players add @s delta_yaw 360",
+            "/scoreboard players operation @s delta_pitch = @s rot_x_s",
+            "/scoreboard players operation @s delta_pitch -= @s pitch_prev",
+            "/scoreboard players operation @s turn_rate = @s delta_yaw",
+            "/execute if score @s turn_rate matches ..-1 run scoreboard players operation @s turn_rate *= const_neg1 math_const",
+            "/scoreboard players operation @s sprint_burst_val = @s m_move_spd",
+            "/scoreboard players operation @s sprint_burst_val -= @s m_move_prev",
+            "/execute if entity @s[tag=sprint] if score @s sprint_burst_val matches 15.. run tag @s add sprint_burst",
+            "/execute unless entity @s[tag=sprint] run tag @s remove sprint_burst",
+            "/execute if score @s sprint_burst_val matches ..14 run tag @s remove sprint_burst",
+            "/scoreboard players operation @s yaw_prev = @s rot_y_s",
+            "/scoreboard players operation @s pitch_prev = @s rot_x_s",
+            "/scoreboard players operation @s m_move_prev = @s m_move_spd"
+          ]
+        }
+      }
+    }
+  }
+}
