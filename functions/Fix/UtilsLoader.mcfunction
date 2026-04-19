@@ -9,4 +9,4 @@ function Fix/BlockUtils/WebUtils
 function Fix/BehaviorUtils/UsingUtils
 function Fix/BehaviorUtils/JumpUtils
 function Fix/BehaviorUtils/CombatEventUtils
-
+function Fix/BehaviorUtils/DeadEventUtils

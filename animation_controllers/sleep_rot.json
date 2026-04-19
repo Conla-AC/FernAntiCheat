@@ -1,0 +1,3265 @@
+﻿{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.sleep_rot.enum": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "n180": "math.floor(query.sleep_rotation) == -180" },
+                        { "n179": "math.floor(query.sleep_rotation) == -179" },
+                        { "n178": "math.floor(query.sleep_rotation) == -178" },
+                        { "n177": "math.floor(query.sleep_rotation) == -177" },
+                        { "n176": "math.floor(query.sleep_rotation) == -176" },
+                        { "n175": "math.floor(query.sleep_rotation) == -175" },
+                        { "n174": "math.floor(query.sleep_rotation) == -174" },
+                        { "n173": "math.floor(query.sleep_rotation) == -173" },
+                        { "n172": "math.floor(query.sleep_rotation) == -172" },
+                        { "n171": "math.floor(query.sleep_rotation) == -171" },
+                        { "n170": "math.floor(query.sleep_rotation) == -170" },
+                        { "n169": "math.floor(query.sleep_rotation) == -169" },
+                        { "n168": "math.floor(query.sleep_rotation) == -168" },
+                        { "n167": "math.floor(query.sleep_rotation) == -167" },
+                        { "n166": "math.floor(query.sleep_rotation) == -166" },
+                        { "n165": "math.floor(query.sleep_rotation) == -165" },
+                        { "n164": "math.floor(query.sleep_rotation) == -164" },
+                        { "n163": "math.floor(query.sleep_rotation) == -163" },
+                        { "n162": "math.floor(query.sleep_rotation) == -162" },
+                        { "n161": "math.floor(query.sleep_rotation) == -161" },
+                        { "n160": "math.floor(query.sleep_rotation) == -160" },
+                        { "n159": "math.floor(query.sleep_rotation) == -159" },
+                        { "n158": "math.floor(query.sleep_rotation) == -158" },
+                        { "n157": "math.floor(query.sleep_rotation) == -157" },
+                        { "n156": "math.floor(query.sleep_rotation) == -156" },
+                        { "n155": "math.floor(query.sleep_rotation) == -155" },
+                        { "n154": "math.floor(query.sleep_rotation) == -154" },
+                        { "n153": "math.floor(query.sleep_rotation) == -153" },
+                        { "n152": "math.floor(query.sleep_rotation) == -152" },
+                        { "n151": "math.floor(query.sleep_rotation) == -151" },
+                        { "n150": "math.floor(query.sleep_rotation) == -150" },
+                        { "n149": "math.floor(query.sleep_rotation) == -149" },
+                        { "n148": "math.floor(query.sleep_rotation) == -148" },
+                        { "n147": "math.floor(query.sleep_rotation) == -147" },
+                        { "n146": "math.floor(query.sleep_rotation) == -146" },
+                        { "n145": "math.floor(query.sleep_rotation) == -145" },
+                        { "n144": "math.floor(query.sleep_rotation) == -144" },
+                        { "n143": "math.floor(query.sleep_rotation) == -143" },
+                        { "n142": "math.floor(query.sleep_rotation) == -142" },
+                        { "n141": "math.floor(query.sleep_rotation) == -141" },
+                        { "n140": "math.floor(query.sleep_rotation) == -140" },
+                        { "n139": "math.floor(query.sleep_rotation) == -139" },
+                        { "n138": "math.floor(query.sleep_rotation) == -138" },
+                        { "n137": "math.floor(query.sleep_rotation) == -137" },
+                        { "n136": "math.floor(query.sleep_rotation) == -136" },
+                        { "n135": "math.floor(query.sleep_rotation) == -135" },
+                        { "n134": "math.floor(query.sleep_rotation) == -134" },
+                        { "n133": "math.floor(query.sleep_rotation) == -133" },
+                        { "n132": "math.floor(query.sleep_rotation) == -132" },
+                        { "n131": "math.floor(query.sleep_rotation) == -131" },
+                        { "n130": "math.floor(query.sleep_rotation) == -130" },
+                        { "n129": "math.floor(query.sleep_rotation) == -129" },
+                        { "n128": "math.floor(query.sleep_rotation) == -128" },
+                        { "n127": "math.floor(query.sleep_rotation) == -127" },
+                        { "n126": "math.floor(query.sleep_rotation) == -126" },
+                        { "n125": "math.floor(query.sleep_rotation) == -125" },
+                        { "n124": "math.floor(query.sleep_rotation) == -124" },
+                        { "n123": "math.floor(query.sleep_rotation) == -123" },
+                        { "n122": "math.floor(query.sleep_rotation) == -122" },
+                        { "n121": "math.floor(query.sleep_rotation) == -121" },
+                        { "n120": "math.floor(query.sleep_rotation) == -120" },
+                        { "n119": "math.floor(query.sleep_rotation) == -119" },
+                        { "n118": "math.floor(query.sleep_rotation) == -118" },
+                        { "n117": "math.floor(query.sleep_rotation) == -117" },
+                        { "n116": "math.floor(query.sleep_rotation) == -116" },
+                        { "n115": "math.floor(query.sleep_rotation) == -115" },
+                        { "n114": "math.floor(query.sleep_rotation) == -114" },
+                        { "n113": "math.floor(query.sleep_rotation) == -113" },
+                        { "n112": "math.floor(query.sleep_rotation) == -112" },
+                        { "n111": "math.floor(query.sleep_rotation) == -111" },
+                        { "n110": "math.floor(query.sleep_rotation) == -110" },
+                        { "n109": "math.floor(query.sleep_rotation) == -109" },
+                        { "n108": "math.floor(query.sleep_rotation) == -108" },
+                        { "n107": "math.floor(query.sleep_rotation) == -107" },
+                        { "n106": "math.floor(query.sleep_rotation) == -106" },
+                        { "n105": "math.floor(query.sleep_rotation) == -105" },
+                        { "n104": "math.floor(query.sleep_rotation) == -104" },
+                        { "n103": "math.floor(query.sleep_rotation) == -103" },
+                        { "n102": "math.floor(query.sleep_rotation) == -102" },
+                        { "n101": "math.floor(query.sleep_rotation) == -101" },
+                        { "n100": "math.floor(query.sleep_rotation) == -100" },
+                        { "n99": "math.floor(query.sleep_rotation) == -99" },
+                        { "n98": "math.floor(query.sleep_rotation) == -98" },
+                        { "n97": "math.floor(query.sleep_rotation) == -97" },
+                        { "n96": "math.floor(query.sleep_rotation) == -96" },
+                        { "n95": "math.floor(query.sleep_rotation) == -95" },
+                        { "n94": "math.floor(query.sleep_rotation) == -94" },
+                        { "n93": "math.floor(query.sleep_rotation) == -93" },
+                        { "n92": "math.floor(query.sleep_rotation) == -92" },
+                        { "n91": "math.floor(query.sleep_rotation) == -91" },
+                        { "n90": "math.floor(query.sleep_rotation) == -90" },
+                        { "n89": "math.floor(query.sleep_rotation) == -89" },
+                        { "n88": "math.floor(query.sleep_rotation) == -88" },
+                        { "n87": "math.floor(query.sleep_rotation) == -87" },
+                        { "n86": "math.floor(query.sleep_rotation) == -86" },
+                        { "n85": "math.floor(query.sleep_rotation) == -85" },
+                        { "n84": "math.floor(query.sleep_rotation) == -84" },
+                        { "n83": "math.floor(query.sleep_rotation) == -83" },
+                        { "n82": "math.floor(query.sleep_rotation) == -82" },
+                        { "n81": "math.floor(query.sleep_rotation) == -81" },
+                        { "n80": "math.floor(query.sleep_rotation) == -80" },
+                        { "n79": "math.floor(query.sleep_rotation) == -79" },
+                        { "n78": "math.floor(query.sleep_rotation) == -78" },
+                        { "n77": "math.floor(query.sleep_rotation) == -77" },
+                        { "n76": "math.floor(query.sleep_rotation) == -76" },
+                        { "n75": "math.floor(query.sleep_rotation) == -75" },
+                        { "n74": "math.floor(query.sleep_rotation) == -74" },
+                        { "n73": "math.floor(query.sleep_rotation) == -73" },
+                        { "n72": "math.floor(query.sleep_rotation) == -72" },
+                        { "n71": "math.floor(query.sleep_rotation) == -71" },
+                        { "n70": "math.floor(query.sleep_rotation) == -70" },
+                        { "n69": "math.floor(query.sleep_rotation) == -69" },
+                        { "n68": "math.floor(query.sleep_rotation) == -68" },
+                        { "n67": "math.floor(query.sleep_rotation) == -67" },
+                        { "n66": "math.floor(query.sleep_rotation) == -66" },
+                        { "n65": "math.floor(query.sleep_rotation) == -65" },
+                        { "n64": "math.floor(query.sleep_rotation) == -64" },
+                        { "n63": "math.floor(query.sleep_rotation) == -63" },
+                        { "n62": "math.floor(query.sleep_rotation) == -62" },
+                        { "n61": "math.floor(query.sleep_rotation) == -61" },
+                        { "n60": "math.floor(query.sleep_rotation) == -60" },
+                        { "n59": "math.floor(query.sleep_rotation) == -59" },
+                        { "n58": "math.floor(query.sleep_rotation) == -58" },
+                        { "n57": "math.floor(query.sleep_rotation) == -57" },
+                        { "n56": "math.floor(query.sleep_rotation) == -56" },
+                        { "n55": "math.floor(query.sleep_rotation) == -55" },
+                        { "n54": "math.floor(query.sleep_rotation) == -54" },
+                        { "n53": "math.floor(query.sleep_rotation) == -53" },
+                        { "n52": "math.floor(query.sleep_rotation) == -52" },
+                        { "n51": "math.floor(query.sleep_rotation) == -51" },
+                        { "n50": "math.floor(query.sleep_rotation) == -50" },
+                        { "n49": "math.floor(query.sleep_rotation) == -49" },
+                        { "n48": "math.floor(query.sleep_rotation) == -48" },
+                        { "n47": "math.floor(query.sleep_rotation) == -47" },
+                        { "n46": "math.floor(query.sleep_rotation) == -46" },
+                        { "n45": "math.floor(query.sleep_rotation) == -45" },
+                        { "n44": "math.floor(query.sleep_rotation) == -44" },
+                        { "n43": "math.floor(query.sleep_rotation) == -43" },
+                        { "n42": "math.floor(query.sleep_rotation) == -42" },
+                        { "n41": "math.floor(query.sleep_rotation) == -41" },
+                        { "n40": "math.floor(query.sleep_rotation) == -40" },
+                        { "n39": "math.floor(query.sleep_rotation) == -39" },
+                        { "n38": "math.floor(query.sleep_rotation) == -38" },
+                        { "n37": "math.floor(query.sleep_rotation) == -37" },
+                        { "n36": "math.floor(query.sleep_rotation) == -36" },
+                        { "n35": "math.floor(query.sleep_rotation) == -35" },
+                        { "n34": "math.floor(query.sleep_rotation) == -34" },
+                        { "n33": "math.floor(query.sleep_rotation) == -33" },
+                        { "n32": "math.floor(query.sleep_rotation) == -32" },
+                        { "n31": "math.floor(query.sleep_rotation) == -31" },
+                        { "n30": "math.floor(query.sleep_rotation) == -30" },
+                        { "n29": "math.floor(query.sleep_rotation) == -29" },
+                        { "n28": "math.floor(query.sleep_rotation) == -28" },
+                        { "n27": "math.floor(query.sleep_rotation) == -27" },
+                        { "n26": "math.floor(query.sleep_rotation) == -26" },
+                        { "n25": "math.floor(query.sleep_rotation) == -25" },
+                        { "n24": "math.floor(query.sleep_rotation) == -24" },
+                        { "n23": "math.floor(query.sleep_rotation) == -23" },
+                        { "n22": "math.floor(query.sleep_rotation) == -22" },
+                        { "n21": "math.floor(query.sleep_rotation) == -21" },
+                        { "n20": "math.floor(query.sleep_rotation) == -20" },
+                        { "n19": "math.floor(query.sleep_rotation) == -19" },
+                        { "n18": "math.floor(query.sleep_rotation) == -18" },
+                        { "n17": "math.floor(query.sleep_rotation) == -17" },
+                        { "n16": "math.floor(query.sleep_rotation) == -16" },
+                        { "n15": "math.floor(query.sleep_rotation) == -15" },
+                        { "n14": "math.floor(query.sleep_rotation) == -14" },
+                        { "n13": "math.floor(query.sleep_rotation) == -13" },
+                        { "n12": "math.floor(query.sleep_rotation) == -12" },
+                        { "n11": "math.floor(query.sleep_rotation) == -11" },
+                        { "n10": "math.floor(query.sleep_rotation) == -10" },
+                        { "n9": "math.floor(query.sleep_rotation) == -9" },
+                        { "n8": "math.floor(query.sleep_rotation) == -8" },
+                        { "n7": "math.floor(query.sleep_rotation) == -7" },
+                        { "n6": "math.floor(query.sleep_rotation) == -6" },
+                        { "n5": "math.floor(query.sleep_rotation) == -5" },
+                        { "n4": "math.floor(query.sleep_rotation) == -4" },
+                        { "n3": "math.floor(query.sleep_rotation) == -3" },
+                        { "n2": "math.floor(query.sleep_rotation) == -2" },
+                        { "n1": "math.floor(query.sleep_rotation) == -1" },
+                        { "p0": "math.floor(query.sleep_rotation) == 0" },
+                        { "p1": "math.floor(query.sleep_rotation) == 1" },
+                        { "p2": "math.floor(query.sleep_rotation) == 2" },
+                        { "p3": "math.floor(query.sleep_rotation) == 3" },
+                        { "p4": "math.floor(query.sleep_rotation) == 4" },
+                        { "p5": "math.floor(query.sleep_rotation) == 5" },
+                        { "p6": "math.floor(query.sleep_rotation) == 6" },
+                        { "p7": "math.floor(query.sleep_rotation) == 7" },
+                        { "p8": "math.floor(query.sleep_rotation) == 8" },
+                        { "p9": "math.floor(query.sleep_rotation) == 9" },
+                        { "p10": "math.floor(query.sleep_rotation) == 10" },
+                        { "p11": "math.floor(query.sleep_rotation) == 11" },
+                        { "p12": "math.floor(query.sleep_rotation) == 12" },
+                        { "p13": "math.floor(query.sleep_rotation) == 13" },
+                        { "p14": "math.floor(query.sleep_rotation) == 14" },
+                        { "p15": "math.floor(query.sleep_rotation) == 15" },
+                        { "p16": "math.floor(query.sleep_rotation) == 16" },
+                        { "p17": "math.floor(query.sleep_rotation) == 17" },
+                        { "p18": "math.floor(query.sleep_rotation) == 18" },
+                        { "p19": "math.floor(query.sleep_rotation) == 19" },
+                        { "p20": "math.floor(query.sleep_rotation) == 20" },
+                        { "p21": "math.floor(query.sleep_rotation) == 21" },
+                        { "p22": "math.floor(query.sleep_rotation) == 22" },
+                        { "p23": "math.floor(query.sleep_rotation) == 23" },
+                        { "p24": "math.floor(query.sleep_rotation) == 24" },
+                        { "p25": "math.floor(query.sleep_rotation) == 25" },
+                        { "p26": "math.floor(query.sleep_rotation) == 26" },
+                        { "p27": "math.floor(query.sleep_rotation) == 27" },
+                        { "p28": "math.floor(query.sleep_rotation) == 28" },
+                        { "p29": "math.floor(query.sleep_rotation) == 29" },
+                        { "p30": "math.floor(query.sleep_rotation) == 30" },
+                        { "p31": "math.floor(query.sleep_rotation) == 31" },
+                        { "p32": "math.floor(query.sleep_rotation) == 32" },
+                        { "p33": "math.floor(query.sleep_rotation) == 33" },
+                        { "p34": "math.floor(query.sleep_rotation) == 34" },
+                        { "p35": "math.floor(query.sleep_rotation) == 35" },
+                        { "p36": "math.floor(query.sleep_rotation) == 36" },
+                        { "p37": "math.floor(query.sleep_rotation) == 37" },
+                        { "p38": "math.floor(query.sleep_rotation) == 38" },
+                        { "p39": "math.floor(query.sleep_rotation) == 39" },
+                        { "p40": "math.floor(query.sleep_rotation) == 40" },
+                        { "p41": "math.floor(query.sleep_rotation) == 41" },
+                        { "p42": "math.floor(query.sleep_rotation) == 42" },
+                        { "p43": "math.floor(query.sleep_rotation) == 43" },
+                        { "p44": "math.floor(query.sleep_rotation) == 44" },
+                        { "p45": "math.floor(query.sleep_rotation) == 45" },
+                        { "p46": "math.floor(query.sleep_rotation) == 46" },
+                        { "p47": "math.floor(query.sleep_rotation) == 47" },
+                        { "p48": "math.floor(query.sleep_rotation) == 48" },
+                        { "p49": "math.floor(query.sleep_rotation) == 49" },
+                        { "p50": "math.floor(query.sleep_rotation) == 50" },
+                        { "p51": "math.floor(query.sleep_rotation) == 51" },
+                        { "p52": "math.floor(query.sleep_rotation) == 52" },
+                        { "p53": "math.floor(query.sleep_rotation) == 53" },
+                        { "p54": "math.floor(query.sleep_rotation) == 54" },
+                        { "p55": "math.floor(query.sleep_rotation) == 55" },
+                        { "p56": "math.floor(query.sleep_rotation) == 56" },
+                        { "p57": "math.floor(query.sleep_rotation) == 57" },
+                        { "p58": "math.floor(query.sleep_rotation) == 58" },
+                        { "p59": "math.floor(query.sleep_rotation) == 59" },
+                        { "p60": "math.floor(query.sleep_rotation) == 60" },
+                        { "p61": "math.floor(query.sleep_rotation) == 61" },
+                        { "p62": "math.floor(query.sleep_rotation) == 62" },
+                        { "p63": "math.floor(query.sleep_rotation) == 63" },
+                        { "p64": "math.floor(query.sleep_rotation) == 64" },
+                        { "p65": "math.floor(query.sleep_rotation) == 65" },
+                        { "p66": "math.floor(query.sleep_rotation) == 66" },
+                        { "p67": "math.floor(query.sleep_rotation) == 67" },
+                        { "p68": "math.floor(query.sleep_rotation) == 68" },
+                        { "p69": "math.floor(query.sleep_rotation) == 69" },
+                        { "p70": "math.floor(query.sleep_rotation) == 70" },
+                        { "p71": "math.floor(query.sleep_rotation) == 71" },
+                        { "p72": "math.floor(query.sleep_rotation) == 72" },
+                        { "p73": "math.floor(query.sleep_rotation) == 73" },
+                        { "p74": "math.floor(query.sleep_rotation) == 74" },
+                        { "p75": "math.floor(query.sleep_rotation) == 75" },
+                        { "p76": "math.floor(query.sleep_rotation) == 76" },
+                        { "p77": "math.floor(query.sleep_rotation) == 77" },
+                        { "p78": "math.floor(query.sleep_rotation) == 78" },
+                        { "p79": "math.floor(query.sleep_rotation) == 79" },
+                        { "p80": "math.floor(query.sleep_rotation) == 80" },
+                        { "p81": "math.floor(query.sleep_rotation) == 81" },
+                        { "p82": "math.floor(query.sleep_rotation) == 82" },
+                        { "p83": "math.floor(query.sleep_rotation) == 83" },
+                        { "p84": "math.floor(query.sleep_rotation) == 84" },
+                        { "p85": "math.floor(query.sleep_rotation) == 85" },
+                        { "p86": "math.floor(query.sleep_rotation) == 86" },
+                        { "p87": "math.floor(query.sleep_rotation) == 87" },
+                        { "p88": "math.floor(query.sleep_rotation) == 88" },
+                        { "p89": "math.floor(query.sleep_rotation) == 89" },
+                        { "p90": "math.floor(query.sleep_rotation) == 90" },
+                        { "p91": "math.floor(query.sleep_rotation) == 91" },
+                        { "p92": "math.floor(query.sleep_rotation) == 92" },
+                        { "p93": "math.floor(query.sleep_rotation) == 93" },
+                        { "p94": "math.floor(query.sleep_rotation) == 94" },
+                        { "p95": "math.floor(query.sleep_rotation) == 95" },
+                        { "p96": "math.floor(query.sleep_rotation) == 96" },
+                        { "p97": "math.floor(query.sleep_rotation) == 97" },
+                        { "p98": "math.floor(query.sleep_rotation) == 98" },
+                        { "p99": "math.floor(query.sleep_rotation) == 99" },
+                        { "p100": "math.floor(query.sleep_rotation) == 100" },
+                        { "p101": "math.floor(query.sleep_rotation) == 101" },
+                        { "p102": "math.floor(query.sleep_rotation) == 102" },
+                        { "p103": "math.floor(query.sleep_rotation) == 103" },
+                        { "p104": "math.floor(query.sleep_rotation) == 104" },
+                        { "p105": "math.floor(query.sleep_rotation) == 105" },
+                        { "p106": "math.floor(query.sleep_rotation) == 106" },
+                        { "p107": "math.floor(query.sleep_rotation) == 107" },
+                        { "p108": "math.floor(query.sleep_rotation) == 108" },
+                        { "p109": "math.floor(query.sleep_rotation) == 109" },
+                        { "p110": "math.floor(query.sleep_rotation) == 110" },
+                        { "p111": "math.floor(query.sleep_rotation) == 111" },
+                        { "p112": "math.floor(query.sleep_rotation) == 112" },
+                        { "p113": "math.floor(query.sleep_rotation) == 113" },
+                        { "p114": "math.floor(query.sleep_rotation) == 114" },
+                        { "p115": "math.floor(query.sleep_rotation) == 115" },
+                        { "p116": "math.floor(query.sleep_rotation) == 116" },
+                        { "p117": "math.floor(query.sleep_rotation) == 117" },
+                        { "p118": "math.floor(query.sleep_rotation) == 118" },
+                        { "p119": "math.floor(query.sleep_rotation) == 119" },
+                        { "p120": "math.floor(query.sleep_rotation) == 120" },
+                        { "p121": "math.floor(query.sleep_rotation) == 121" },
+                        { "p122": "math.floor(query.sleep_rotation) == 122" },
+                        { "p123": "math.floor(query.sleep_rotation) == 123" },
+                        { "p124": "math.floor(query.sleep_rotation) == 124" },
+                        { "p125": "math.floor(query.sleep_rotation) == 125" },
+                        { "p126": "math.floor(query.sleep_rotation) == 126" },
+                        { "p127": "math.floor(query.sleep_rotation) == 127" },
+                        { "p128": "math.floor(query.sleep_rotation) == 128" },
+                        { "p129": "math.floor(query.sleep_rotation) == 129" },
+                        { "p130": "math.floor(query.sleep_rotation) == 130" },
+                        { "p131": "math.floor(query.sleep_rotation) == 131" },
+                        { "p132": "math.floor(query.sleep_rotation) == 132" },
+                        { "p133": "math.floor(query.sleep_rotation) == 133" },
+                        { "p134": "math.floor(query.sleep_rotation) == 134" },
+                        { "p135": "math.floor(query.sleep_rotation) == 135" },
+                        { "p136": "math.floor(query.sleep_rotation) == 136" },
+                        { "p137": "math.floor(query.sleep_rotation) == 137" },
+                        { "p138": "math.floor(query.sleep_rotation) == 138" },
+                        { "p139": "math.floor(query.sleep_rotation) == 139" },
+                        { "p140": "math.floor(query.sleep_rotation) == 140" },
+                        { "p141": "math.floor(query.sleep_rotation) == 141" },
+                        { "p142": "math.floor(query.sleep_rotation) == 142" },
+                        { "p143": "math.floor(query.sleep_rotation) == 143" },
+                        { "p144": "math.floor(query.sleep_rotation) == 144" },
+                        { "p145": "math.floor(query.sleep_rotation) == 145" },
+                        { "p146": "math.floor(query.sleep_rotation) == 146" },
+                        { "p147": "math.floor(query.sleep_rotation) == 147" },
+                        { "p148": "math.floor(query.sleep_rotation) == 148" },
+                        { "p149": "math.floor(query.sleep_rotation) == 149" },
+                        { "p150": "math.floor(query.sleep_rotation) == 150" },
+                        { "p151": "math.floor(query.sleep_rotation) == 151" },
+                        { "p152": "math.floor(query.sleep_rotation) == 152" },
+                        { "p153": "math.floor(query.sleep_rotation) == 153" },
+                        { "p154": "math.floor(query.sleep_rotation) == 154" },
+                        { "p155": "math.floor(query.sleep_rotation) == 155" },
+                        { "p156": "math.floor(query.sleep_rotation) == 156" },
+                        { "p157": "math.floor(query.sleep_rotation) == 157" },
+                        { "p158": "math.floor(query.sleep_rotation) == 158" },
+                        { "p159": "math.floor(query.sleep_rotation) == 159" },
+                        { "p160": "math.floor(query.sleep_rotation) == 160" },
+                        { "p161": "math.floor(query.sleep_rotation) == 161" },
+                        { "p162": "math.floor(query.sleep_rotation) == 162" },
+                        { "p163": "math.floor(query.sleep_rotation) == 163" },
+                        { "p164": "math.floor(query.sleep_rotation) == 164" },
+                        { "p165": "math.floor(query.sleep_rotation) == 165" },
+                        { "p166": "math.floor(query.sleep_rotation) == 166" },
+                        { "p167": "math.floor(query.sleep_rotation) == 167" },
+                        { "p168": "math.floor(query.sleep_rotation) == 168" },
+                        { "p169": "math.floor(query.sleep_rotation) == 169" },
+                        { "p170": "math.floor(query.sleep_rotation) == 170" },
+                        { "p171": "math.floor(query.sleep_rotation) == 171" },
+                        { "p172": "math.floor(query.sleep_rotation) == 172" },
+                        { "p173": "math.floor(query.sleep_rotation) == 173" },
+                        { "p174": "math.floor(query.sleep_rotation) == 174" },
+                        { "p175": "math.floor(query.sleep_rotation) == 175" },
+                        { "p176": "math.floor(query.sleep_rotation) == 176" },
+                        { "p177": "math.floor(query.sleep_rotation) == 177" },
+                        { "p178": "math.floor(query.sleep_rotation) == 178" },
+                        { "p179": "math.floor(query.sleep_rotation) == 179" },
+                        { "p180": "math.floor(query.sleep_rotation) == 180" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 0"
+                    ]
+                }
+                ,"n180": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -180" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -180"
+                    ]
+                }
+                ,"n179": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -179" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -179"
+                    ]
+                }
+                ,"n178": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -178" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -178"
+                    ]
+                }
+                ,"n177": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -177" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -177"
+                    ]
+                }
+                ,"n176": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -176" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -176"
+                    ]
+                }
+                ,"n175": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -175" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -175"
+                    ]
+                }
+                ,"n174": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -174" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -174"
+                    ]
+                }
+                ,"n173": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -173" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -173"
+                    ]
+                }
+                ,"n172": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -172" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -172"
+                    ]
+                }
+                ,"n171": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -171" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -171"
+                    ]
+                }
+                ,"n170": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -170" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -170"
+                    ]
+                }
+                ,"n169": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -169" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -169"
+                    ]
+                }
+                ,"n168": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -168" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -168"
+                    ]
+                }
+                ,"n167": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -167" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -167"
+                    ]
+                }
+                ,"n166": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -166" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -166"
+                    ]
+                }
+                ,"n165": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -165" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -165"
+                    ]
+                }
+                ,"n164": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -164" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -164"
+                    ]
+                }
+                ,"n163": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -163" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -163"
+                    ]
+                }
+                ,"n162": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -162" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -162"
+                    ]
+                }
+                ,"n161": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -161" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -161"
+                    ]
+                }
+                ,"n160": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -160" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -160"
+                    ]
+                }
+                ,"n159": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -159" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -159"
+                    ]
+                }
+                ,"n158": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -158" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -158"
+                    ]
+                }
+                ,"n157": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -157" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -157"
+                    ]
+                }
+                ,"n156": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -156" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -156"
+                    ]
+                }
+                ,"n155": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -155" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -155"
+                    ]
+                }
+                ,"n154": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -154" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -154"
+                    ]
+                }
+                ,"n153": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -153" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -153"
+                    ]
+                }
+                ,"n152": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -152" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -152"
+                    ]
+                }
+                ,"n151": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -151" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -151"
+                    ]
+                }
+                ,"n150": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -150" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -150"
+                    ]
+                }
+                ,"n149": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -149" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -149"
+                    ]
+                }
+                ,"n148": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -148" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -148"
+                    ]
+                }
+                ,"n147": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -147" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -147"
+                    ]
+                }
+                ,"n146": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -146" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -146"
+                    ]
+                }
+                ,"n145": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -145" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -145"
+                    ]
+                }
+                ,"n144": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -144" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -144"
+                    ]
+                }
+                ,"n143": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -143" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -143"
+                    ]
+                }
+                ,"n142": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -142" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -142"
+                    ]
+                }
+                ,"n141": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -141" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -141"
+                    ]
+                }
+                ,"n140": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -140" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -140"
+                    ]
+                }
+                ,"n139": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -139" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -139"
+                    ]
+                }
+                ,"n138": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -138" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -138"
+                    ]
+                }
+                ,"n137": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -137" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -137"
+                    ]
+                }
+                ,"n136": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -136" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -136"
+                    ]
+                }
+                ,"n135": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -135" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -135"
+                    ]
+                }
+                ,"n134": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -134" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -134"
+                    ]
+                }
+                ,"n133": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -133" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -133"
+                    ]
+                }
+                ,"n132": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -132" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -132"
+                    ]
+                }
+                ,"n131": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -131" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -131"
+                    ]
+                }
+                ,"n130": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -130" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -130"
+                    ]
+                }
+                ,"n129": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -129" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -129"
+                    ]
+                }
+                ,"n128": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -128" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -128"
+                    ]
+                }
+                ,"n127": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -127" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -127"
+                    ]
+                }
+                ,"n126": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -126" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -126"
+                    ]
+                }
+                ,"n125": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -125" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -125"
+                    ]
+                }
+                ,"n124": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -124" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -124"
+                    ]
+                }
+                ,"n123": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -123" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -123"
+                    ]
+                }
+                ,"n122": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -122" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -122"
+                    ]
+                }
+                ,"n121": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -121" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -121"
+                    ]
+                }
+                ,"n120": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -120" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -120"
+                    ]
+                }
+                ,"n119": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -119" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -119"
+                    ]
+                }
+                ,"n118": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -118" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -118"
+                    ]
+                }
+                ,"n117": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -117" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -117"
+                    ]
+                }
+                ,"n116": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -116" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -116"
+                    ]
+                }
+                ,"n115": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -115" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -115"
+                    ]
+                }
+                ,"n114": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -114" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -114"
+                    ]
+                }
+                ,"n113": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -113" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -113"
+                    ]
+                }
+                ,"n112": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -112" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -112"
+                    ]
+                }
+                ,"n111": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -111" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -111"
+                    ]
+                }
+                ,"n110": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -110" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -110"
+                    ]
+                }
+                ,"n109": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -109" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -109"
+                    ]
+                }
+                ,"n108": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -108" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -108"
+                    ]
+                }
+                ,"n107": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -107" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -107"
+                    ]
+                }
+                ,"n106": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -106" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -106"
+                    ]
+                }
+                ,"n105": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -105" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -105"
+                    ]
+                }
+                ,"n104": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -104" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -104"
+                    ]
+                }
+                ,"n103": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -103" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -103"
+                    ]
+                }
+                ,"n102": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -102" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -102"
+                    ]
+                }
+                ,"n101": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -101" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -101"
+                    ]
+                }
+                ,"n100": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -100" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -100"
+                    ]
+                }
+                ,"n99": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -99" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -99"
+                    ]
+                }
+                ,"n98": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -98" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -98"
+                    ]
+                }
+                ,"n97": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -97" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -97"
+                    ]
+                }
+                ,"n96": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -96" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -96"
+                    ]
+                }
+                ,"n95": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -95" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -95"
+                    ]
+                }
+                ,"n94": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -94" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -94"
+                    ]
+                }
+                ,"n93": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -93" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -93"
+                    ]
+                }
+                ,"n92": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -92" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -92"
+                    ]
+                }
+                ,"n91": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -91" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -91"
+                    ]
+                }
+                ,"n90": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -90" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -90"
+                    ]
+                }
+                ,"n89": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -89" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -89"
+                    ]
+                }
+                ,"n88": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -88" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -88"
+                    ]
+                }
+                ,"n87": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -87" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -87"
+                    ]
+                }
+                ,"n86": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -86" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -86"
+                    ]
+                }
+                ,"n85": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -85" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -85"
+                    ]
+                }
+                ,"n84": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -84" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -84"
+                    ]
+                }
+                ,"n83": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -83" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -83"
+                    ]
+                }
+                ,"n82": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -82" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -82"
+                    ]
+                }
+                ,"n81": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -81" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -81"
+                    ]
+                }
+                ,"n80": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -80" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -80"
+                    ]
+                }
+                ,"n79": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -79" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -79"
+                    ]
+                }
+                ,"n78": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -78" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -78"
+                    ]
+                }
+                ,"n77": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -77" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -77"
+                    ]
+                }
+                ,"n76": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -76" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -76"
+                    ]
+                }
+                ,"n75": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -75" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -75"
+                    ]
+                }
+                ,"n74": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -74" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -74"
+                    ]
+                }
+                ,"n73": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -73" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -73"
+                    ]
+                }
+                ,"n72": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -72" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -72"
+                    ]
+                }
+                ,"n71": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -71" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -71"
+                    ]
+                }
+                ,"n70": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -70" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -70"
+                    ]
+                }
+                ,"n69": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -69" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -69"
+                    ]
+                }
+                ,"n68": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -68" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -68"
+                    ]
+                }
+                ,"n67": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -67" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -67"
+                    ]
+                }
+                ,"n66": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -66" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -66"
+                    ]
+                }
+                ,"n65": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -65" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -65"
+                    ]
+                }
+                ,"n64": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -64" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -64"
+                    ]
+                }
+                ,"n63": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -63" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -63"
+                    ]
+                }
+                ,"n62": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -62" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -62"
+                    ]
+                }
+                ,"n61": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -61" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -61"
+                    ]
+                }
+                ,"n60": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -60" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -60"
+                    ]
+                }
+                ,"n59": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -59" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -59"
+                    ]
+                }
+                ,"n58": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -58" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -58"
+                    ]
+                }
+                ,"n57": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -57" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -57"
+                    ]
+                }
+                ,"n56": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -56" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -56"
+                    ]
+                }
+                ,"n55": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -55" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -55"
+                    ]
+                }
+                ,"n54": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -54" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -54"
+                    ]
+                }
+                ,"n53": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -53" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -53"
+                    ]
+                }
+                ,"n52": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -52" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -52"
+                    ]
+                }
+                ,"n51": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -51" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -51"
+                    ]
+                }
+                ,"n50": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -50" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -50"
+                    ]
+                }
+                ,"n49": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -49" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -49"
+                    ]
+                }
+                ,"n48": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -48" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -48"
+                    ]
+                }
+                ,"n47": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -47" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -47"
+                    ]
+                }
+                ,"n46": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -46" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -46"
+                    ]
+                }
+                ,"n45": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -45" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -45"
+                    ]
+                }
+                ,"n44": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -44" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -44"
+                    ]
+                }
+                ,"n43": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -43" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -43"
+                    ]
+                }
+                ,"n42": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -42" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -42"
+                    ]
+                }
+                ,"n41": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -41" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -41"
+                    ]
+                }
+                ,"n40": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -40" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -40"
+                    ]
+                }
+                ,"n39": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -39" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -39"
+                    ]
+                }
+                ,"n38": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -38" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -38"
+                    ]
+                }
+                ,"n37": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -37" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -37"
+                    ]
+                }
+                ,"n36": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -36" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -36"
+                    ]
+                }
+                ,"n35": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -35" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -35"
+                    ]
+                }
+                ,"n34": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -34" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -34"
+                    ]
+                }
+                ,"n33": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -33" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -33"
+                    ]
+                }
+                ,"n32": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -32" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -32"
+                    ]
+                }
+                ,"n31": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -31" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -31"
+                    ]
+                }
+                ,"n30": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -30" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -30"
+                    ]
+                }
+                ,"n29": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -29" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -29"
+                    ]
+                }
+                ,"n28": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -28" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -28"
+                    ]
+                }
+                ,"n27": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -27" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -27"
+                    ]
+                }
+                ,"n26": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -26" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -26"
+                    ]
+                }
+                ,"n25": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -25" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -25"
+                    ]
+                }
+                ,"n24": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -24" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -24"
+                    ]
+                }
+                ,"n23": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -23" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -23"
+                    ]
+                }
+                ,"n22": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -22" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -22"
+                    ]
+                }
+                ,"n21": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -21" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -21"
+                    ]
+                }
+                ,"n20": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -20" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -20"
+                    ]
+                }
+                ,"n19": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -19" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -19"
+                    ]
+                }
+                ,"n18": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -18" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -18"
+                    ]
+                }
+                ,"n17": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -17" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -17"
+                    ]
+                }
+                ,"n16": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -16" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -16"
+                    ]
+                }
+                ,"n15": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -15" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -15"
+                    ]
+                }
+                ,"n14": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -14" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -14"
+                    ]
+                }
+                ,"n13": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -13" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -13"
+                    ]
+                }
+                ,"n12": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -12" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -12"
+                    ]
+                }
+                ,"n11": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -11" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -11"
+                    ]
+                }
+                ,"n10": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -10" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -10"
+                    ]
+                }
+                ,"n9": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -9" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -9"
+                    ]
+                }
+                ,"n8": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -8" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -8"
+                    ]
+                }
+                ,"n7": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -7" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -7"
+                    ]
+                }
+                ,"n6": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -6" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -6"
+                    ]
+                }
+                ,"n5": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -5" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -5"
+                    ]
+                }
+                ,"n4": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -4" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -4"
+                    ]
+                }
+                ,"n3": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -3" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -3"
+                    ]
+                }
+                ,"n2": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -2" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -2"
+                    ]
+                }
+                ,"n1": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != -1" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s -1"
+                    ]
+                }
+                ,"p0": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 0" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 0"
+                    ]
+                }
+                ,"p1": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 1" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 1"
+                    ]
+                }
+                ,"p2": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 2" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 2"
+                    ]
+                }
+                ,"p3": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 3" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 3"
+                    ]
+                }
+                ,"p4": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 4" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 4"
+                    ]
+                }
+                ,"p5": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 5" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 5"
+                    ]
+                }
+                ,"p6": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 6" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 6"
+                    ]
+                }
+                ,"p7": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 7" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 7"
+                    ]
+                }
+                ,"p8": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 8" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 8"
+                    ]
+                }
+                ,"p9": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 9" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 9"
+                    ]
+                }
+                ,"p10": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 10" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 10"
+                    ]
+                }
+                ,"p11": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 11" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 11"
+                    ]
+                }
+                ,"p12": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 12" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 12"
+                    ]
+                }
+                ,"p13": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 13" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 13"
+                    ]
+                }
+                ,"p14": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 14" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 14"
+                    ]
+                }
+                ,"p15": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 15" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 15"
+                    ]
+                }
+                ,"p16": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 16" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 16"
+                    ]
+                }
+                ,"p17": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 17" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 17"
+                    ]
+                }
+                ,"p18": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 18" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 18"
+                    ]
+                }
+                ,"p19": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 19" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 19"
+                    ]
+                }
+                ,"p20": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 20" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 20"
+                    ]
+                }
+                ,"p21": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 21" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 21"
+                    ]
+                }
+                ,"p22": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 22" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 22"
+                    ]
+                }
+                ,"p23": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 23" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 23"
+                    ]
+                }
+                ,"p24": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 24" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 24"
+                    ]
+                }
+                ,"p25": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 25" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 25"
+                    ]
+                }
+                ,"p26": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 26" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 26"
+                    ]
+                }
+                ,"p27": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 27" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 27"
+                    ]
+                }
+                ,"p28": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 28" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 28"
+                    ]
+                }
+                ,"p29": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 29" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 29"
+                    ]
+                }
+                ,"p30": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 30" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 30"
+                    ]
+                }
+                ,"p31": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 31" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 31"
+                    ]
+                }
+                ,"p32": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 32" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 32"
+                    ]
+                }
+                ,"p33": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 33" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 33"
+                    ]
+                }
+                ,"p34": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 34" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 34"
+                    ]
+                }
+                ,"p35": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 35" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 35"
+                    ]
+                }
+                ,"p36": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 36" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 36"
+                    ]
+                }
+                ,"p37": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 37" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 37"
+                    ]
+                }
+                ,"p38": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 38" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 38"
+                    ]
+                }
+                ,"p39": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 39" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 39"
+                    ]
+                }
+                ,"p40": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 40" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 40"
+                    ]
+                }
+                ,"p41": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 41" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 41"
+                    ]
+                }
+                ,"p42": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 42" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 42"
+                    ]
+                }
+                ,"p43": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 43" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 43"
+                    ]
+                }
+                ,"p44": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 44" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 44"
+                    ]
+                }
+                ,"p45": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 45" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 45"
+                    ]
+                }
+                ,"p46": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 46" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 46"
+                    ]
+                }
+                ,"p47": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 47" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 47"
+                    ]
+                }
+                ,"p48": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 48" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 48"
+                    ]
+                }
+                ,"p49": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 49" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 49"
+                    ]
+                }
+                ,"p50": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 50" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 50"
+                    ]
+                }
+                ,"p51": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 51" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 51"
+                    ]
+                }
+                ,"p52": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 52" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 52"
+                    ]
+                }
+                ,"p53": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 53" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 53"
+                    ]
+                }
+                ,"p54": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 54" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 54"
+                    ]
+                }
+                ,"p55": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 55" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 55"
+                    ]
+                }
+                ,"p56": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 56" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 56"
+                    ]
+                }
+                ,"p57": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 57" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 57"
+                    ]
+                }
+                ,"p58": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 58" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 58"
+                    ]
+                }
+                ,"p59": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 59" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 59"
+                    ]
+                }
+                ,"p60": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 60" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 60"
+                    ]
+                }
+                ,"p61": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 61" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 61"
+                    ]
+                }
+                ,"p62": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 62" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 62"
+                    ]
+                }
+                ,"p63": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 63" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 63"
+                    ]
+                }
+                ,"p64": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 64" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 64"
+                    ]
+                }
+                ,"p65": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 65" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 65"
+                    ]
+                }
+                ,"p66": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 66" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 66"
+                    ]
+                }
+                ,"p67": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 67" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 67"
+                    ]
+                }
+                ,"p68": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 68" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 68"
+                    ]
+                }
+                ,"p69": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 69" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 69"
+                    ]
+                }
+                ,"p70": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 70" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 70"
+                    ]
+                }
+                ,"p71": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 71" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 71"
+                    ]
+                }
+                ,"p72": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 72" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 72"
+                    ]
+                }
+                ,"p73": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 73" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 73"
+                    ]
+                }
+                ,"p74": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 74" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 74"
+                    ]
+                }
+                ,"p75": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 75" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 75"
+                    ]
+                }
+                ,"p76": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 76" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 76"
+                    ]
+                }
+                ,"p77": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 77" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 77"
+                    ]
+                }
+                ,"p78": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 78" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 78"
+                    ]
+                }
+                ,"p79": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 79" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 79"
+                    ]
+                }
+                ,"p80": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 80" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 80"
+                    ]
+                }
+                ,"p81": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 81" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 81"
+                    ]
+                }
+                ,"p82": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 82" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 82"
+                    ]
+                }
+                ,"p83": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 83" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 83"
+                    ]
+                }
+                ,"p84": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 84" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 84"
+                    ]
+                }
+                ,"p85": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 85" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 85"
+                    ]
+                }
+                ,"p86": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 86" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 86"
+                    ]
+                }
+                ,"p87": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 87" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 87"
+                    ]
+                }
+                ,"p88": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 88" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 88"
+                    ]
+                }
+                ,"p89": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 89" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 89"
+                    ]
+                }
+                ,"p90": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 90" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 90"
+                    ]
+                }
+                ,"p91": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 91" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 91"
+                    ]
+                }
+                ,"p92": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 92" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 92"
+                    ]
+                }
+                ,"p93": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 93" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 93"
+                    ]
+                }
+                ,"p94": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 94" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 94"
+                    ]
+                }
+                ,"p95": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 95" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 95"
+                    ]
+                }
+                ,"p96": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 96" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 96"
+                    ]
+                }
+                ,"p97": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 97" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 97"
+                    ]
+                }
+                ,"p98": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 98" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 98"
+                    ]
+                }
+                ,"p99": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 99" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 99"
+                    ]
+                }
+                ,"p100": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 100" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 100"
+                    ]
+                }
+                ,"p101": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 101" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 101"
+                    ]
+                }
+                ,"p102": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 102" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 102"
+                    ]
+                }
+                ,"p103": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 103" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 103"
+                    ]
+                }
+                ,"p104": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 104" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 104"
+                    ]
+                }
+                ,"p105": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 105" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 105"
+                    ]
+                }
+                ,"p106": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 106" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 106"
+                    ]
+                }
+                ,"p107": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 107" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 107"
+                    ]
+                }
+                ,"p108": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 108" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 108"
+                    ]
+                }
+                ,"p109": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 109" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 109"
+                    ]
+                }
+                ,"p110": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 110" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 110"
+                    ]
+                }
+                ,"p111": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 111" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 111"
+                    ]
+                }
+                ,"p112": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 112" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 112"
+                    ]
+                }
+                ,"p113": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 113" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 113"
+                    ]
+                }
+                ,"p114": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 114" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 114"
+                    ]
+                }
+                ,"p115": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 115" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 115"
+                    ]
+                }
+                ,"p116": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 116" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 116"
+                    ]
+                }
+                ,"p117": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 117" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 117"
+                    ]
+                }
+                ,"p118": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 118" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 118"
+                    ]
+                }
+                ,"p119": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 119" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 119"
+                    ]
+                }
+                ,"p120": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 120" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 120"
+                    ]
+                }
+                ,"p121": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 121" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 121"
+                    ]
+                }
+                ,"p122": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 122" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 122"
+                    ]
+                }
+                ,"p123": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 123" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 123"
+                    ]
+                }
+                ,"p124": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 124" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 124"
+                    ]
+                }
+                ,"p125": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 125" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 125"
+                    ]
+                }
+                ,"p126": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 126" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 126"
+                    ]
+                }
+                ,"p127": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 127" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 127"
+                    ]
+                }
+                ,"p128": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 128" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 128"
+                    ]
+                }
+                ,"p129": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 129" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 129"
+                    ]
+                }
+                ,"p130": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 130" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 130"
+                    ]
+                }
+                ,"p131": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 131" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 131"
+                    ]
+                }
+                ,"p132": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 132" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 132"
+                    ]
+                }
+                ,"p133": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 133" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 133"
+                    ]
+                }
+                ,"p134": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 134" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 134"
+                    ]
+                }
+                ,"p135": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 135" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 135"
+                    ]
+                }
+                ,"p136": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 136" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 136"
+                    ]
+                }
+                ,"p137": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 137" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 137"
+                    ]
+                }
+                ,"p138": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 138" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 138"
+                    ]
+                }
+                ,"p139": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 139" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 139"
+                    ]
+                }
+                ,"p140": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 140" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 140"
+                    ]
+                }
+                ,"p141": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 141" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 141"
+                    ]
+                }
+                ,"p142": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 142" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 142"
+                    ]
+                }
+                ,"p143": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 143" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 143"
+                    ]
+                }
+                ,"p144": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 144" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 144"
+                    ]
+                }
+                ,"p145": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 145" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 145"
+                    ]
+                }
+                ,"p146": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 146" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 146"
+                    ]
+                }
+                ,"p147": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 147" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 147"
+                    ]
+                }
+                ,"p148": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 148" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 148"
+                    ]
+                }
+                ,"p149": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 149" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 149"
+                    ]
+                }
+                ,"p150": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 150" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 150"
+                    ]
+                }
+                ,"p151": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 151" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 151"
+                    ]
+                }
+                ,"p152": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 152" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 152"
+                    ]
+                }
+                ,"p153": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 153" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 153"
+                    ]
+                }
+                ,"p154": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 154" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 154"
+                    ]
+                }
+                ,"p155": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 155" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 155"
+                    ]
+                }
+                ,"p156": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 156" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 156"
+                    ]
+                }
+                ,"p157": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 157" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 157"
+                    ]
+                }
+                ,"p158": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 158" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 158"
+                    ]
+                }
+                ,"p159": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 159" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 159"
+                    ]
+                }
+                ,"p160": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 160" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 160"
+                    ]
+                }
+                ,"p161": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 161" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 161"
+                    ]
+                }
+                ,"p162": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 162" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 162"
+                    ]
+                }
+                ,"p163": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 163" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 163"
+                    ]
+                }
+                ,"p164": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 164" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 164"
+                    ]
+                }
+                ,"p165": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 165" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 165"
+                    ]
+                }
+                ,"p166": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 166" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 166"
+                    ]
+                }
+                ,"p167": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 167" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 167"
+                    ]
+                }
+                ,"p168": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 168" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 168"
+                    ]
+                }
+                ,"p169": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 169" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 169"
+                    ]
+                }
+                ,"p170": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 170" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 170"
+                    ]
+                }
+                ,"p171": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 171" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 171"
+                    ]
+                }
+                ,"p172": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 172" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 172"
+                    ]
+                }
+                ,"p173": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 173" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 173"
+                    ]
+                }
+                ,"p174": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 174" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 174"
+                    ]
+                }
+                ,"p175": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 175" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 175"
+                    ]
+                }
+                ,"p176": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 176" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 176"
+                    ]
+                }
+                ,"p177": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 177" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 177"
+                    ]
+                }
+                ,"p178": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 178" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 178"
+                    ]
+                }
+                ,"p179": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 179" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 179"
+                    ]
+                }
+                ,"p180": {
+                    "transitions": [
+                        { "default": "math.floor(query.sleep_rotation) != 180" }
+                    ],
+                    "on_entry": [
+                        "/scoreboard players set @s sleep_rot_s 180"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -197,8 +197,7 @@
 						}
 					],
 					"on_entry": [
-						"/tag @s add left",
-						"/scriptevent conla:left"
+						"/tag @s add left"
 					]
 				}
 			}
@@ -311,7 +310,7 @@
 				"default": {
 					"transitions": [
 						{
-							"forward": "query.is_moving && ((query.cardinal_facing_2d == 2 && query.movement_direction(2) < -0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) > 0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) > 0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) < -0.35))"
+							"forward": "query.is_moving && query.modified_move_speed > 0.03 && ((query.cardinal_facing_2d == 2 && query.movement_direction(2) < -0.45) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) > 0.45) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) > 0.45) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) < -0.45))"
 						}
 					],
 					"on_entry": [
@@ -321,7 +320,7 @@
 				"forward": {
 					"transitions": [
 						{
-							"default": "!query.is_moving || ((query.cardinal_facing_2d == 2 && query.movement_direction(2) >= -0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) <= 0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) <= 0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) >= -0.35))"
+							"default": "!query.is_moving || query.modified_move_speed <= 0.02 || !((query.cardinal_facing_2d == 2 && query.movement_direction(2) < -0.25) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) > 0.25) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) > 0.25) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) < -0.25))"
 						}
 					],
 					"on_entry": [
@@ -335,7 +334,7 @@
 				"default": {
 					"transitions": [
 						{
-							"backward": "query.is_moving && ((query.cardinal_facing_2d == 2 && query.movement_direction(2) > 0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) < -0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) < -0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) > 0.35))"
+							"backward": "query.is_moving && query.modified_move_speed > 0.03 && ((query.cardinal_facing_2d == 2 && query.movement_direction(2) > 0.45) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) < -0.45) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) < -0.45) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) > 0.45))"
 						}
 					],
 					"on_entry": [
@@ -345,7 +344,7 @@
 				"backward": {
 					"transitions": [
 						{
-							"default": "!query.is_moving || ((query.cardinal_facing_2d == 2 && query.movement_direction(2) <= 0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) >= -0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) >= -0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) <= 0.35))"
+							"default": "!query.is_moving || query.modified_move_speed <= 0.02 || !((query.cardinal_facing_2d == 2 && query.movement_direction(2) > 0.25) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) < -0.25) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) < -0.25) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) > 0.25))"
 						}
 					],
 					"on_entry": [
@@ -359,7 +358,7 @@
 				"default": {
 					"transitions": [
 						{
-							"leftward": "query.is_moving && ((query.cardinal_facing_2d == 2 && query.movement_direction(0) < -0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) > 0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) < -0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) > 0.35))"
+							"leftward": "query.is_moving && query.modified_move_speed > 0.03 && ((query.cardinal_facing_2d == 2 && query.movement_direction(0) < -0.65) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) > 0.65) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) < -0.65) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) > 0.65))"
 						}
 					],
 					"on_entry": [
@@ -369,7 +368,7 @@
 				"leftward": {
 					"transitions": [
 						{
-							"default": "!query.is_moving || ((query.cardinal_facing_2d == 2 && query.movement_direction(0) >= -0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) <= 0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) >= -0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) <= 0.35))"
+							"default": "!query.is_moving || query.modified_move_speed <= 0.02 || !((query.cardinal_facing_2d == 2 && query.movement_direction(0) < -0.40) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) > 0.40) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) < -0.40) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) > 0.40))"
 						}
 					],
 					"on_entry": [
@@ -383,7 +382,7 @@
 				"default": {
 					"transitions": [
 						{
-							"rightward": "query.is_moving && ((query.cardinal_facing_2d == 2 && query.movement_direction(0) > 0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) < -0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) > 0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) < -0.35))"
+							"rightward": "query.is_moving && query.modified_move_speed > 0.03 && ((query.cardinal_facing_2d == 2 && query.movement_direction(0) > 0.65) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) < -0.65) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) > 0.65) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) < -0.65))"
 						}
 					],
 					"on_entry": [
@@ -393,7 +392,7 @@
 				"rightward": {
 					"transitions": [
 						{
-							"default": "!query.is_moving || ((query.cardinal_facing_2d == 2 && query.movement_direction(0) <= 0.35) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) >= -0.35) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) <= 0.35) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) >= -0.35))"
+							"default": "!query.is_moving || query.modified_move_speed <= 0.02 || !((query.cardinal_facing_2d == 2 && query.movement_direction(0) > 0.40) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) < -0.40) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) > 0.40) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) < -0.40))"
 						}
 					],
 					"on_entry": [
@@ -5696,7 +5695,166 @@
                     "on_entry": ["/tag @s add charged"]
                 }
             }
-        },"controller.animation.on_screen": {
+        },
+        "controller.animation.is_in_contact_with_water_tag": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "active": "query.is_in_contact_with_water" }
+                    ],
+                    "on_entry": ["/tag @s remove in_contact_with_water"]
+                },
+                "active": {
+                    "transitions": [
+                        { "default": "!query.is_in_contact_with_water" }
+                    ],
+                    "on_entry": ["/tag @s add in_contact_with_water"]
+                }
+            }
+        },
+        "controller.animation.is_local_player_tag": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "active": "query.is_local_player" }
+                    ],
+                    "on_entry": ["/tag @s remove local_player"]
+                },
+                "active": {
+                    "transitions": [
+                        { "default": "!query.is_local_player" }
+                    ],
+                    "on_entry": ["/tag @s add local_player"]
+                }
+            }
+        },
+        "controller.animation.is_silent_tag": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "active": "query.is_silent" }
+                    ],
+                    "on_entry": ["/tag @s remove silent"]
+                },
+                "active": {
+                    "transitions": [
+                        { "default": "!query.is_silent" }
+                    ],
+                    "on_entry": ["/tag @s add silent"]
+                }
+            }
+        },
+        "controller.animation.is_ignited_tag": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "active": "query.is_ignited" }
+                    ],
+                    "on_entry": ["/tag @s remove ignited"]
+                },
+                "active": {
+                    "transitions": [
+                        { "default": "!query.is_ignited" }
+                    ],
+                    "on_entry": ["/tag @s add ignited"]
+                }
+            }
+        },
+        "controller.animation.client_memory_tier_score": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "t0": "query.client_memory_tier == 0" },
+                        { "t1": "query.client_memory_tier == 1" },
+                        { "t2": "query.client_memory_tier == 2" },
+                        { "t3": "query.client_memory_tier == 3" },
+                        { "t4": "query.client_memory_tier == 4" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s client_mem_tier -1"]
+                },
+                "t0": {
+                    "transitions": [
+                        { "default": "query.client_memory_tier != 0" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s client_mem_tier 0"]
+                },
+                "t1": {
+                    "transitions": [
+                        { "default": "query.client_memory_tier != 1" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s client_mem_tier 1"]
+                },
+                "t2": {
+                    "transitions": [
+                        { "default": "query.client_memory_tier != 2" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s client_mem_tier 2"]
+                },
+                "t3": {
+                    "transitions": [
+                        { "default": "query.client_memory_tier != 3" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s client_mem_tier 3"]
+                },
+                "t4": {
+                    "transitions": [
+                        { "default": "query.client_memory_tier != 4" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s client_mem_tier 4"]
+                }
+            }
+        },
+        "controller.animation.server_memory_tier_score": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        { "t0": "query.server_memory_tier == 0" },
+                        { "t1": "query.server_memory_tier == 1" },
+                        { "t2": "query.server_memory_tier == 2" },
+                        { "t3": "query.server_memory_tier == 3" },
+                        { "t4": "query.server_memory_tier == 4" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s server_mem_tier -1"]
+                },
+                "t0": {
+                    "transitions": [
+                        { "default": "query.server_memory_tier != 0" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s server_mem_tier 0"]
+                },
+                "t1": {
+                    "transitions": [
+                        { "default": "query.server_memory_tier != 1" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s server_mem_tier 1"]
+                },
+                "t2": {
+                    "transitions": [
+                        { "default": "query.server_memory_tier != 2" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s server_mem_tier 2"]
+                },
+                "t3": {
+                    "transitions": [
+                        { "default": "query.server_memory_tier != 3" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s server_mem_tier 3"]
+                },
+                "t4": {
+                    "transitions": [
+                        { "default": "query.server_memory_tier != 4" }
+                    ],
+                    "on_entry": ["/scoreboard players set @s server_mem_tier 4"]
+                }
+            }
+        },
+        "controller.animation.on_screen": {
 			"initial_state": "default",
 			"states": {
 				"default": {
@@ -5723,3 +5881,6 @@
 		}
 	}
 }
+
+
+

@@ -19,6 +19,7 @@ function Checks/Movement/Fly/FlyE
 function Checks/Movement/Fly/FlyF
 function Checks/Movement/Fly/FlyG
 function Checks/Movement/Fly/FlyH
+function Checks/Movement/Fly/FlyI
 #NoSlow Check
 function Checks/Movement/NoSlow/NoSlowA
 function Checks/Movement/NoSlow/NoSlowB
@@ -30,3 +31,6 @@ function Checks/Movement/NoSlow/NoSlowF
 function Checks/Movement/Jump/JumpA
 function Checks/Movement/Jump/JumpB
 function Checks/Movement/Jump/JumpC
+#Climb Check
+function Checks/Movement/Climb/ClimbA
+function Checks/Movement/Climb/ClimbB
