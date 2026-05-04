@@ -310,7 +310,7 @@
 				"default": {
 					"transitions": [
 						{
-							"forward": "query.is_moving && query.modified_move_speed > 0.03 && ((query.cardinal_facing_2d == 2 && query.movement_direction(2) < -0.45) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) > 0.45) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) > 0.45) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) < -0.45))"
+							"forward": "query.is_moving && query.modified_move_speed > 0.01 && (((-query.position_delta(0) * math.sin(query.head_y_rotation(0))) + (query.position_delta(2) * math.cos(query.head_y_rotation(0)))) > 0.018)"
 						}
 					],
 					"on_entry": [
@@ -320,7 +320,7 @@
 				"forward": {
 					"transitions": [
 						{
-							"default": "!query.is_moving || query.modified_move_speed <= 0.02 || !((query.cardinal_facing_2d == 2 && query.movement_direction(2) < -0.25) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) > 0.25) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) > 0.25) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) < -0.25))"
+							"default": "!query.is_moving || query.modified_move_speed <= 0.005 || (((-query.position_delta(0) * math.sin(query.head_y_rotation(0))) + (query.position_delta(2) * math.cos(query.head_y_rotation(0)))) <= 0.006)"
 						}
 					],
 					"on_entry": [
@@ -334,7 +334,7 @@
 				"default": {
 					"transitions": [
 						{
-							"backward": "query.is_moving && query.modified_move_speed > 0.03 && ((query.cardinal_facing_2d == 2 && query.movement_direction(2) > 0.45) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) < -0.45) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) < -0.45) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) > 0.45))"
+							"backward": "query.is_moving && query.modified_move_speed > 0.01 && (((-query.position_delta(0) * math.sin(query.head_y_rotation(0))) + (query.position_delta(2) * math.cos(query.head_y_rotation(0)))) < -0.018)"
 						}
 					],
 					"on_entry": [
@@ -344,7 +344,7 @@
 				"backward": {
 					"transitions": [
 						{
-							"default": "!query.is_moving || query.modified_move_speed <= 0.02 || !((query.cardinal_facing_2d == 2 && query.movement_direction(2) > 0.25) || (query.cardinal_facing_2d == 3 && query.movement_direction(2) < -0.25) || (query.cardinal_facing_2d == 5 && query.movement_direction(0) < -0.25) || (query.cardinal_facing_2d == 4 && query.movement_direction(0) > 0.25))"
+							"default": "!query.is_moving || query.modified_move_speed <= 0.005 || (((-query.position_delta(0) * math.sin(query.head_y_rotation(0))) + (query.position_delta(2) * math.cos(query.head_y_rotation(0)))) >= -0.006)"
 						}
 					],
 					"on_entry": [
@@ -358,7 +358,7 @@
 				"default": {
 					"transitions": [
 						{
-							"leftward": "query.is_moving && query.modified_move_speed > 0.03 && ((query.cardinal_facing_2d == 2 && query.movement_direction(0) < -0.65) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) > 0.65) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) < -0.65) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) > 0.65))"
+							"leftward": "query.is_moving && query.modified_move_speed > 0.01 && (((query.position_delta(0) * math.cos(query.head_y_rotation(0))) + (query.position_delta(2) * math.sin(query.head_y_rotation(0)))) > 0.018)"
 						}
 					],
 					"on_entry": [
@@ -368,7 +368,7 @@
 				"leftward": {
 					"transitions": [
 						{
-							"default": "!query.is_moving || query.modified_move_speed <= 0.02 || !((query.cardinal_facing_2d == 2 && query.movement_direction(0) < -0.40) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) > 0.40) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) < -0.40) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) > 0.40))"
+							"default": "!query.is_moving || query.modified_move_speed <= 0.005 || (((query.position_delta(0) * math.cos(query.head_y_rotation(0))) + (query.position_delta(2) * math.sin(query.head_y_rotation(0)))) <= 0.006)"
 						}
 					],
 					"on_entry": [
@@ -382,7 +382,7 @@
 				"default": {
 					"transitions": [
 						{
-							"rightward": "query.is_moving && query.modified_move_speed > 0.03 && ((query.cardinal_facing_2d == 2 && query.movement_direction(0) > 0.65) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) < -0.65) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) > 0.65) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) < -0.65))"
+							"rightward": "query.is_moving && query.modified_move_speed > 0.01 && (((query.position_delta(0) * math.cos(query.head_y_rotation(0))) + (query.position_delta(2) * math.sin(query.head_y_rotation(0)))) < -0.018)"
 						}
 					],
 					"on_entry": [
@@ -392,7 +392,7 @@
 				"rightward": {
 					"transitions": [
 						{
-							"default": "!query.is_moving || query.modified_move_speed <= 0.02 || !((query.cardinal_facing_2d == 2 && query.movement_direction(0) > 0.40) || (query.cardinal_facing_2d == 3 && query.movement_direction(0) < -0.40) || (query.cardinal_facing_2d == 5 && query.movement_direction(2) > 0.40) || (query.cardinal_facing_2d == 4 && query.movement_direction(2) < -0.40))"
+							"default": "!query.is_moving || query.modified_move_speed <= 0.005 || (((query.position_delta(0) * math.cos(query.head_y_rotation(0))) + (query.position_delta(2) * math.sin(query.head_y_rotation(0)))) >= -0.006)"
 						}
 					],
 					"on_entry": [
@@ -5881,6 +5881,8 @@
 		}
 	}
 }
+
+
 
 
 

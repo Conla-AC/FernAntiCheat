@@ -31,6 +31,9 @@ function Checks/Movement/NoSlow/NoSlowF
 function Checks/Movement/Jump/JumpA
 function Checks/Movement/Jump/JumpB
 function Checks/Movement/Jump/JumpC
+function Checks/Movement/Jump/JumpD
+function Checks/Movement/Jump/JumpE
+function Checks/Movement/Jump/JumpF
 #Climb Check
 function Checks/Movement/Climb/ClimbA
 function Checks/Movement/Climb/ClimbB

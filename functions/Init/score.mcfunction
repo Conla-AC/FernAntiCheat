@@ -11,6 +11,8 @@ scoreboard objectives add __Iwater__ dummy
 scoreboard objectives add __web__ dummy
 scoreboard objectives add __speed_tick__ dummy
 scoreboard objectives add __dead_time__ dummy
+scoreboard objectives add __rising__ dummy
+scoreboard objectives add __falling__ dummy
 #vl
 scoreboard objectives add Flyvl dummy
 scoreboard objectives add Speedvl dummy
@@ -174,6 +176,10 @@ scoreboard objectives add path_jitter dummy
 scoreboard objectives add stop_to_turn dummy
 scoreboard objectives add movement_efficiency dummy
 scoreboard objectives add me_den dummy
+scoreboard objectives add air_turn_ratio dummy
+scoreboard objectives add atr_den dummy
+scoreboard objectives add ground_friction dummy
+scoreboard objectives add move_smoothness dummy
 scoreboard players add @s accel_2d_prev 0
 scoreboard players add @s jerk_2d 0
 scoreboard players add @s stop_hard 0
@@ -206,8 +212,13 @@ scoreboard players add @s path_jitter 0
 scoreboard players add @s stop_to_turn 0
 scoreboard players add @s movement_efficiency 0
 scoreboard players add @s me_den 0
+scoreboard players add @s air_turn_ratio 0
+scoreboard players add @s atr_den 0
+scoreboard players add @s ground_friction 0
+scoreboard players add @s move_smoothness 0
 #Math Const
 scoreboard players set const_100 math_const 100
+scoreboard players set const_10000 math_const 10000
 scoreboard players set abs math_const -1
 
 #Molang Scire

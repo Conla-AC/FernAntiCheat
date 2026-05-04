@@ -1,6 +1,7 @@
 ﻿#Movement Utils
 function Fix/MovementUtils/AirTick
 function Fix/MovementUtils/MovingUtils
+function Fix/MovementUtils/FallingRisingUtils
 #Block Utils
 function Fix/BlockUtils/SlimeUtils
 function Fix/BlockUtils/LiquidUtils

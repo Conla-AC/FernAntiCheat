@@ -1,4 +1,4 @@
-﻿scoreboard players add @s[tag=jump,scores={speed_y=..19,__Iwater__=!1..},tag=!DEV_OP,tag=!climbing] __tmp_jumpslow 1
+﻿scoreboard players add @s[tag=jump,scores={speed_y=..19,__Iwater__=!1..,__Ilava__=!1..},tag=!DEV_OP,tag=!climbing] __tmp_jumpslow 1
 scoreboard players set @s[scores={speed_y=!..19}] __tmp_jumpslow 0
 scoreboard players set @s[scores={__Iwater__=1..}] __tmp_jumpslow 0
 execute unless block ~~2~ air run scoreboard players set @s __tmp_jumpslow 0

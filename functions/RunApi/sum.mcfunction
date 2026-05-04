@@ -107,6 +107,14 @@ execute if score @s vc_abs_sy matches ..-1 run scoreboard players operation @s v
 scoreboard players operation @s vertical_control = @s vc_abs_dyaw
 scoreboard players operation @s vertical_control *= @s vc_abs_sy
 
+# air_turn_ratio = vertical_control * 100 / (xz_speed + 1), ground resets
+scoreboard players operation @s air_turn_ratio = @s vertical_control
+scoreboard players operation @s air_turn_ratio *= const_100 math_const
+scoreboard players operation @s atr_den = @s xz_speed
+scoreboard players add @s atr_den 1
+execute if score @s atr_den matches 1.. run scoreboard players operation @s air_turn_ratio /= @s atr_den
+scoreboard players set @s[tag=ground] air_turn_ratio 0
+
 # strafe_ratio = abs(speed_x) * 100 / (abs(speed_z) + 1)
 scoreboard players operation @s sr_num = @s speed_x
 execute if score @s sr_num matches ..-1 run scoreboard players operation @s sr_num *= const_neg1 math_const
@@ -127,12 +135,24 @@ scoreboard players operation @s path_jitter = @s accel_2d
 execute if score @s path_jitter matches ..-1 run scoreboard players operation @s path_jitter *= const_neg1 math_const
 scoreboard players operation @s path_jitter += @s jerk_2d
 
+# move_smoothness = 10000 / (path_jitter + 1)
+scoreboard players operation @s move_smoothness = const_10000 math_const
+scoreboard players operation @s atr_den = @s path_jitter
+scoreboard players add @s atr_den 1
+execute if score @s atr_den matches 1.. run scoreboard players operation @s move_smoothness /= @s atr_den
+
 # stop_to_turn = stop_hard * (turn_rate + 1)
 scoreboard players operation @s stop_to_turn = @s stop_hard
 scoreboard players operation @s tps_den = @s turn_rate
 execute if score @s tps_den matches ..-1 run scoreboard players operation @s tps_den *= const_neg1 math_const
 scoreboard players add @s tps_den 1
 scoreboard players operation @s stop_to_turn *= @s tps_den
+
+# ground_friction = max(0, xz_prev - xz_speed), only on ground
+scoreboard players operation @s ground_friction = @s xz_prev
+scoreboard players operation @s ground_friction -= @s xz_speed
+execute if score @s ground_friction matches ..-1 run scoreboard players set @s ground_friction 0
+scoreboard players set @s[tag=!ground] ground_friction 0
 
 # motion energy = xz_speed^2 + speed_y^2
 scoreboard players operation @s me_xz_sq = @s xz_speed
